@@ -1,7 +1,7 @@
 # t_and_c_generator_team75
 
 ## Background
-Policify
+# Policify
 
 a website that enables users to create terms and conditions and privacy policies tailored to their particular line of work.
 
@@ -31,7 +31,7 @@ Businesses spend thousands in legal fees for lack of agreement on core terms at 
 
 Policify aims at reducing the hassles of individuals and Companies of  having to generate privacy policy and or t and c
 
-## Objectives of Policy
+## Objectives of Policify
 
 * To provide a platform where various industry-specific terms and conditions and privacy policies can be generated.
 
@@ -77,7 +77,7 @@ Policify aims at reducing the hassles of individuals and Companies of  having to
         ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
 
-* __Version Control Sysytem__<br/>
+* __Version Control System__<br/>
         ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 ## Product Specification
@@ -120,7 +120,7 @@ Policify aims at reducing the hassles of individuals and Companies of  having to
 
 * Denapo Moses Damilola
     * Track- Product Design
-    * Github - 
+    * Github - https://github.com/DMD121
 
 * Duruaku Ebuka Micheal
     * Track - Fullstack
