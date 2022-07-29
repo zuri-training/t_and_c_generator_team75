@@ -87,84 +87,84 @@ Policify aims at reducing the hassles of individuals and Companies of  having to
 ## Contributors 
 
 * Tijani Abiodun(Team Lead)
-* Track -  Fullstack
-* Github - https://github.com/Harbeytee
+    * Track -  Fullstack
+    * Github - https://github.com/Harbeytee
 
 * Arthur Akalazu(Assistant Team Lead)
-* Track - Product Design
-* Github - https://github.com/aakalazu
+    * Track - Product Design
+    * Github - https://github.com/aakalazu
 
 * Olaide Awwal-Bolanta(Assistant Team Lead)
-* Track - Product Design
-* Github - https://github.com/Olaide-Awwal-Bolanta
+    * Track - Product Design
+    * Github - https://github.com/Olaide-Awwal-Bolanta
 
 * OleseadeObari Charles Emere
-* Track - Fullstack
-* Github - https://github.com/OleseadeObari
+    * Track - Fullstack
+    * Github - https://github.com/OleseadeObari
 
 * Beauty Adepoju
-* Track - Product Design
-* Github - https://github.com/wittyglam
+    * Track - Product Design
+    * Github - https://github.com/wittyglam
 
 * Adeyeye Emmanuel Oluwagbemi
-* Track - Fullstack
-* Github - https://github.com/Gomagg
+    * Track - Fullstack
+    * Github - https://github.com/Gomagg
 
 * Misturat Temitope Akinbani
-* Track - Product Design
-* Github - https://github.com/Mysttykinz
+    * Track - Product Design
+    * Github - https://github.com/Mysttykinz
 
 * Adepoju Adebola
-* Track - Fullstack
-* Github - https://github.com/Adebola-Adepoju
+    * Track - Fullstack
+    * Github - https://github.com/Adebola-Adepoju
 
 * Denapo Moses Damilola
-* Track- Product Design
-* Github - 
+    * Track- Product Design
+    * Github - 
 
 * Duruaku Ebuka Micheal
-* Track - Fullstack
-* Github - https://github.com/D3troit98
+    * Track - Fullstack
+    * Github - https://github.com/D3troit98
 
 * Amarachi Joan Nwankwo
-* Track - Product Design
-* Github - https://github.com/Joan-Amie
+    * Track - Product Design
+    * Github - https://github.com/Joan-Amie
 
 * Ogubuike Ikechukwu Jude
-* Track - Fullstack
-* Github - https://github.com/charlesjude
+    * Track - Fullstack
+    * Github - https://github.com/charlesjude
 
 * Rita E
-* Track - Product Design
-* Github - https://github.com/RitaEbigwei
+    * Track - Product Design
+    * Github - https://github.com/RitaEbigwei
 
 * Soetan Oluwafikayomi
-* Track - Fullstack
-* Github - https://github.com/fikayo1
+    * Track - Fullstack
+    * Github - https://github.com/fikayo1
 
 * Roliat Yinusa
-* Track - Product Design
-* Github - https://github.com/Roliat
+    * Track - Product Design
+    * Github - https://github.com/Roliat
 
 * George Angel
-* Track - Fullstack
-* Github - https://github.com/Khylex
+    * Track - Fullstack
+    * Github - https://github.com/Khylex
 
 * Ohagorom Judith
-* Track - Product Design
-* Github - https://github.com/Juu-coder
+    * Track - Product Design
+    * Github - https://github.com/Juu-coder
 
 * Orolade Jasope
-* Track - Fullstack
-* Github - https://github.com/oroladejasope7
+    * Track - Fullstack
+    * Github - https://github.com/oroladejasope7
 
 * Eze Nnamdi Shedrack
-* Track - Product Design
-* Github - 
+    * Track - Product Design
+    * Github - 
 
 * Haleema Aderayo Mustapha
-* Track - Fullstack
-* Github - https://github.com/HaleemaGit
+    * Track - Fullstack
+    * Github - https://github.com/HaleemaGit
 
 ## Project Status
 * Project is : *currently in progress*
