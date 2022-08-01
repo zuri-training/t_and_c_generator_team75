@@ -134,7 +134,7 @@ Policify aims at reducing the hassles of individuals and Companies of  having to
     * Track - Fullstack
     * Github - https://github.com/charlesjude
 
-* Rita E
+* Rita Ebigwe
     * Track - Product Design
     * Github - https://github.com/RitaEbigwei
 
