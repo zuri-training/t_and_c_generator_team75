@@ -5,10 +5,266 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Policify</title>
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>{% block 'title' %}Policify{% endblock 'title' %}</title>
+    <link rel="stylesheet" href="{% static 'css/pages/home.css' %}">
+    <script src="{% static 'js/base.js' %}" defer></script>
 </head>
 <body>
+    <!-- Start Header -->
+    <header >
+        <div id ="header">
+            <img src="{% static 'images/headerlogo.svg' %}" alt="headerlogo">
+        <div id="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        </div>
+         <!-- Start  Nav Bar -->
+        <div class="navbar">
+            <nav class="navigation">
+                <a href="#" class ="nav-item">Products</a>
+                <a href="#" class ="nav-item">Templates</a>
+                <a href="#" class ="nav-item">About Us</a>
+                <a href="#" class ="nav-item">Feedbacks</a>
+                <a href="#" class ="nav-item">FAQs</a>
+                <a href="#" class ="nav-item">Contact us</a>
+    
+            </nav>
+            <div class="register-and-login">
+                <a class="login-link" href ="#">Login</a>
+                <a class="signup-link" href="#">Sign Up</a>
+            </div>
+
+        </div>
+        <!-- End Nav Bar -->
+    </header>
+
+    <!-- End Header -->
+
+   <!-- Start Intro Section -->
+
+    <section id="intro">
+        <h1>Your Reliable Solution for Terms and Conditions and Legal Policies</h1>
+
+        <p>Generate customised, simple and Free Terms and Conditions and privacy policy custom-designed to your specific business needs in minutes for websites and mobile applications to protect your business, products and services.</p>
+    
+        <a href ="#" class="signup-btn">Get started for free</a>
+
+        <div class="img-space1">j</div>
+
+    </section>
+
+    <!-- End Intro Section-->
+
+    <!-- Start Product Section -->
+
+    <section id="products" class="product-section">
+        <div class="product-header">
+            <h2>Our Products</h2>
+            <p>Policify's free terms & Conditions and Privacy Policy generator is designed to lay out all the legal requirements and terms of service for your website in simplified language that is easily understandable by your customers.</p>
+            <p>We help generate handy policies and Terms & Conditions for your online business' website or mobile app</p>
+
+        </div>
+        
+        <div class="products">
+            <div class="product-box">
+
+                <div class="circle">j</div>
+
+                <h3>Terms and Conditions</h3>
+
+                <p class="product-description">Policify's terms and conditions generator lets anyone create terms of service without any stress.</p>
+                
+                <div class="generate">
+                    <a href="#" class="generate-btn">Generate</a>
+                    <a href="#" class="readmore-btn">Read more</a>
+                </div>
+
+            </div>
+
+            <div class="product-box">
+                <div class="circle">k</div>
+                
+                <h3>Privacy Policy</h3>
+
+                <p class="product-description">Policify's Privacy Policy  generator helps you generate policie that are concise and covers all information or data collected from clients</p>
+
+                <div class="generate">
+                    <a href="#" class="generate-btn">Generate</a>
+                    <a href="#" class="readmore-btn">Read more</a>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- End Product Section -->
+
+    <!-- How it works Section -->
+
+    <section class ="how-it-works">
+        <div class="explanation">
+            <h2>How it works</h2>
+            <p> Here is a stage by stage representation of how to generate terms and conditions and privacy policy</p>
+
+        </div>
+        
+        <div class="steps">
+            <div class="step-words">
+                <h3>Fill the form</h3>
+            <p>Start the Policify free privacy policy generator or terms and condition generator by simply filling required details into the form provided.</p>
+            
+
+            </div>
+            <div class="img-space2">j</div>
+
+        </div>
+
+        <div class="steps">
+            <div class="step-words">
+                <h3>Generate Documents</h3>
+                <p>Generate the final document after all necessary details have been submitted </p>
+            </div>
+            <div class="img-space2">j</div>
+
+        </div>
+
+        <div class="steps">
+            <div class="step-words">
+                <h3>Link into platform</h3>
+                <p>You can download, share, export, website embed or link to any other platform of choice</p>
+            </div>
+            <div class="img-space2">j</div>
+
+        </div>
+        
+        
+
+    </section>
+
+    <!-- End How it works Section -->
+    
+    <!-- Start Benefits Section -->
+
+    <section class="benefits">
+        <div class="benefit-header">
+            <h2>Benefits from using our services</h2>
+            <p>Ours is to make sure customers get a good value from our variety of services</p>
+        </div>
+
+        <div class="benefits-boxes">
+            <div class="benefit-box">
+                <div class="circle"></div>
+                <h3>Constant updates</h3>
+                <p>Our contents are constantly updated to reflect changes in all relevant laws and regulations, in compliance with national and international standard</p> 
+            </div>
+
+            <div class="benefit-box">
+                <div class="circle"></div>
+                <h3>Specialized content</h3>
+                <p>We provide terms & conditions and privacy policies tailor-made to your specific type of business or service</p>
+            </div>
+
+            <div class="benefit-box">
+                <div class="circle"></div>
+                <h3>Presented in varieties of formats</h3>
+                <p>The generated policy or terms and conditions can be downloaded in TXT, PDF and HTML format.
+            </div>
+
+        </div>
+        
+    </section>
+    
+    <!-- End Benefits Section -->
+
+    <!-- Start Feedbacks Section -->
+
+    <section id ="feedbacks" class="feedback-section">
+        <div class="feedback-header">
+            <h2> Don't just take our word for it</h2>
+            <p>Our exceptional sevices have been attested to by hundreds of users across the world.</p>
+        </div>
+        <div class="feedback-boxes">
+            <div class="feedback-box">
+                <div class="stars"></div>
+                <p>&quot;Policify made my life so much easier. Thanks to their website. I was able to get my Privacy Policy within a few minutes. It saved me hours and hours of research and writing&quot;</p>
+                <div class="client"></div>
+
+            </div>
+
+            <div class="feedback-box">
+                <div class="stars"></div>
+                <p>&quot;The fact that I get updated on significant charges in laws that regulate privacy policies and i can constantly update my policies accordingly is exceptional.&quot;</p>
+                <div class="client"></div>
+            </div>
+            
+            <div class="feedback-box">
+                <div class="stars"></div>
+                <p>&quot;It's a priceless service to be able to generate terms and conditions specific to your business and this is what policify offers.&quot;</p>
+                <div class="client"></div>
+            </div>
+
+            <div class="more">
+                <p>See more</p>
+                <div class="arrows">
+                    <button class="arrow1">first arrow</button>
+                    <button class="arrow1">seccond arrow</button>
+                </p>
+            </div>
+        </div>
+
+    </section>
+    
+    <!-- End Feedbacks Section -->
+
+    <!-- Start FAQs Section-->
+
+    <section id="FAQ">
+
+        <div class="FAQ-header">
+            <h2>Frequently asked questions</h2>
+            <p>At lacus vitae nulla sagittis scelerisque nisl. Pellentesque duis cursus vestibuum, facilii ac, sed faucibus.</p>
+        </div>
+    </section>
+
+    <!-- End FAQs Section-->
+
+    <!-- Start SignUp Section -->
+
+    <div class="signup">
+        <h2>Sign up with us today and gain more trust from your clients</h2>
+        <a href="#" class="signup-btn">Get started for free</a>
+    </div>
+
+    <!-- End SignUp Section -->
+
+    <!-- Start Footer-->
+    <footer>
+        <hr>
+        <img src="{% static 'images/footerlogo.svg' %}"
+        <nav class="footer-nav">
+            <div>
+                <a href="#">Products</a>
+                <a href="#">Templates</a>
+                <a href="#">Feedbacks</a>
+                <a href="#">About Us</a>
+            </div>
+            <div>
+                <a href="#">Contact Us</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </nav>
+        <div class="links"></div>
+        <p>&copy; 2022 Policify. All Rights Reserved.</p>
+
+    </footer>
+    
+    <!-- End Footer-->
+
+
+
     
 </body>
 </html>
