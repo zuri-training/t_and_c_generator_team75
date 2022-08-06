@@ -6,28 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block 'title' %}Policify{% endblock 'title' %}</title>
-    <link rel="stylesheet" href="{% static 'css/pages/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/homes.css' %}">
     <script src="{% static 'js/base.js' %}" defer></script>
+    <script src="https://kit.fontawesome.com/4111ca9f76.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Start Header -->
-    <header >
+    <header>
+        
         <div id ="header">
             <img src="{% static 'images/headerlogo.svg' %}" alt="headerlogo">
-        <div id="hamburger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-        </div>
+            <div class="desktop-navbar">
+                <nav class="desktop-navigation">
+                    <a href="#products" class ="nav-item product-dropdown">Products</a>
+                    <a href="#usage" class ="nav-item">Templates</a>
+                    <a href="#feedbacks" class ="nav-item">Feedbacks</a>
+                    
+                    <a href="#faq" class ="nav-item">About Us</a>
+                    <a href="#footer" class ="nav-item">Contact us</a>
+        
+                </nav>
+                <div class="desktop-register-and-login">
+                    <a class="login-link" href ="#">Login</a>
+                    <a class="signup-link" href="#">Sign Up</a>
+                </div>
+    
+            </div>
+            <div id="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </div>
         </div>
          <!-- Start  Nav Bar -->
         <div class="navbar">
             <nav class="navigation">
-                <a href="#" class ="nav-item">Products</a>
-                <a href="#" class ="nav-item">Templates</a>
-                <a href="#" class ="nav-item">About Us</a>
-                <a href="#" class ="nav-item">Feedbacks</a>
-                <a href="#" class ="nav-item">FAQs</a>
-                <a href="#" class ="nav-item">Contact us</a>
+                <a href="#products" class ="nav-item product-dropdown">Products</a>
+                <a href="#usage" class ="nav-item">Templates</a>
+                <a href="#header" class ="nav-item">About Us</a>
+                <a href="#feedbacks" class ="nav-item">Feedbacks</a>
+                <a href="#faq" class ="nav-item">About Us</a>
+                <a href="#footer" class ="nav-item">Contact us</a>
     
             </nav>
             <div class="register-and-login">
@@ -36,6 +54,8 @@
             </div>
 
         </div>
+        
+    
         <!-- End Nav Bar -->
     </header>
 
@@ -50,7 +70,7 @@
     
         <a href ="#" class="signup-btn">Get started for free</a>
 
-        <div class="img-space1">j</div>
+        <div class="mobile-illus"><img src="{% static 'images/mobileillus.svg' %}"></div>
 
     </section>
 
@@ -69,7 +89,7 @@
         <div class="products">
             <div class="product-box">
 
-                <div class="circle">j</div>
+                <div class="circle"><img src="{% static 'images/termslogo.svg' %}" alt="termslogo"></div>
 
                 <h3>Terms and Conditions</h3>
 
@@ -83,7 +103,7 @@
             </div>
 
             <div class="product-box">
-                <div class="circle">k</div>
+                <div class="circle"><img src="{% static 'images/privacylog.svg' %}" alt="privacylogo"></div>
                 
                 <h3>Privacy Policy</h3>
 
@@ -103,7 +123,7 @@
 
     <!-- How it works Section -->
 
-    <section class ="how-it-works">
+    <section id="usage" class ="how-it-works">
         <div class="explanation">
             <h2>How it works</h2>
             <p> Here is a stage by stage representation of how to generate terms and conditions and privacy policy</p>
@@ -111,31 +131,37 @@
         </div>
         
         <div class="steps">
+            
             <div class="step-words">
+                <div class="pink-circle"></div>
                 <h3>Fill the form</h3>
-            <p>Start the Policify free privacy policy generator or terms and condition generator by simply filling required details into the form provided.</p>
+                <p>Start the Policify free privacy policy generator or terms and condition generator by simply filling required details into the form provided.</p>
             
 
             </div>
-            <div class="img-space2">j</div>
+            <div class="img-space2"><img src="{% static 'images/fillform.svg' %}"></div>
 
         </div>
 
         <div class="steps">
+            
             <div class="step-words">
+                <div class="pink-circle"></div>
                 <h3>Generate Documents</h3>
                 <p>Generate the final document after all necessary details have been submitted </p>
             </div>
-            <div class="img-space2">j</div>
+            <div class="img-space2"><img src="{% static 'images/generate.svg' %}"></div>
 
         </div>
 
         <div class="steps">
+            
             <div class="step-words">
+                <div class="pink-circle"></div>
                 <h3>Link into platform</h3>
                 <p>You can download, share, export, website embed or link to any other platform of choice</p>
             </div>
-            <div class="img-space2">j</div>
+            <div class="img-space2"><img src="{% static 'images/link.svg' %}"></div>
 
         </div>
         
@@ -155,19 +181,19 @@
 
         <div class="benefits-boxes">
             <div class="benefit-box">
-                <div class="circle"></div>
+                <div class="circle"><img src="{% static 'images/updates.svg' %}"></div>
                 <h3>Constant updates</h3>
                 <p>Our contents are constantly updated to reflect changes in all relevant laws and regulations, in compliance with national and international standard</p> 
             </div>
 
             <div class="benefit-box">
-                <div class="circle"></div>
+                <div class="circle"><img src="{% static 'images/content.svg' %}"></div>
                 <h3>Specialized content</h3>
                 <p>We provide terms & conditions and privacy policies tailor-made to your specific type of business or service</p>
             </div>
 
             <div class="benefit-box">
-                <div class="circle"></div>
+                <div class="circle"><img src="{% static 'images/format.svg' %}"></div>
                 <h3>Presented in varieties of formats</h3>
                 <p>The generated policy or terms and conditions can be downloaded in TXT, PDF and HTML format.
             </div>
@@ -187,31 +213,50 @@
         </div>
         <div class="feedback-boxes">
             <div class="feedback-box">
-                <div class="stars"></div>
+                <div class="stars">
+                    <span class="star-icon filled">★</span>
+                    <span class="star-icon filled">★</span>
+                    <span class="star-icon filled">★</span>
+                    <span class="star-icon filled">★</span>
+                    <span class="star-icon filled">★</span>
+                </div>
                 <p>&quot;Policify made my life so much easier. Thanks to their website. I was able to get my Privacy Policy within a few minutes. It saved me hours and hours of research and writing&quot;</p>
                 <div class="client"></div>
 
             </div>
 
             <div class="feedback-box">
-                <div class="stars"></div>
+                <div class="stars">
+                    <span class="star-icon filled">★</span>
+                    <span class="star-icon filled">★</span>
+                    <span class="star-icon filled">★</span>
+                    <span class="star-icon filled">★</span>
+                    <span class="star-icon">★</span>
+                </div>
                 <p>&quot;The fact that I get updated on significant charges in laws that regulate privacy policies and i can constantly update my policies accordingly is exceptional.&quot;</p>
                 <div class="client"></div>
             </div>
             
             <div class="feedback-box">
-                <div class="stars"></div>
+                <div class="stars">
+                    <span class="star-icon filled">★</span>
+                    <span class="star-icon filled">★</span>
+                    <span class="star-icon filled">★</span>
+                    <span class="star-icon filled">★</span>
+                    <span class="star-icon">★</span>
+                </div>
                 <p>&quot;It's a priceless service to be able to generate terms and conditions specific to your business and this is what policify offers.&quot;</p>
                 <div class="client"></div>
             </div>
 
-            <div class="more">
-                <p>See more</p>
-                <div class="arrows">
-                    <button class="arrow1">first arrow</button>
-                    <button class="arrow1">seccond arrow</button>
-                </p>
-            </div>
+            
+        </div>
+        <div class="more">
+            <p>See more</p>
+            <div class="arrows">
+                <button class="arrow1"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="arrow2"><i class="fa-solid fa-chevron-right"></i></button>
+            </p>
         </div>
 
     </section>
@@ -220,43 +265,107 @@
 
     <!-- Start FAQs Section-->
 
-    <section id="FAQ">
+    <section id="faq">
 
-        <div class="FAQ-header">
+        <div class="faq-header">
             <h2>Frequently asked questions</h2>
             <p>At lacus vitae nulla sagittis scelerisque nisl. Pellentesque duis cursus vestibuum, facilii ac, sed faucibus.</p>
         </div>
+       
+        <div class="accordion">
+            <div class="accord">
+                <button class="tab">What are Terms and Conditions?</button>
+                <div class="tab-content">
+                    <p>The terms and conditions agreement is a website page or document that clarifies the rights, responsibilities, terms, conditions, and usages of anyone visiting a site. Essentially, it is a simple way to create a contract between the site owner and the site users. Terms and conditions usually feature an explanation of any key phrases used in the terms and conditions agreement, and an outline of the restrictions on the legal liability of the website owner incase of any damages incurred during use of the website. It will also include the website’s policy for any legal action that could be taken against any users that break the terms and provide users with legal advice as to the rights of the website owner to do so.</p>
+                </div>
+                
+            </div>              
+            
+            <div class="accord">
+                <button class="tab"> Why terms and conditions are important?</button>
+                <div class="tab-content">
+                    <p>wordssssss</p>
+                </div>
+                
+            </div> 
+            <div class="accord">
+                <button class="tab">How long does it take to generate Terms and Conditions or Privacy Policy?</button>
+                <div class="tab-content">
+                </p>wordssssss</p>
+                </div>
+                
+            </div> 
+            
+            <div class="accord">
+                <button class="tab">What is the difference between Terms and Conditions and Privacy Policy?</button>
+                <div class="tab-content">
+                    <p>wordssssss</p>
+                </div>
+                
+            </div> 
+            <div class="accord">
+                <button class="tab">Is the Privacy Policy Free to use?</button>
+                <div class="tab-content">
+                    <p>wordssssss</p>
+                </div>
+                
+            </div> 
+            <div class="accord">
+                <button class="tab">What does a good Terms and conditions contain?</button>
+                <div class="tab-content">
+                    <p>wordssssss</p>
+                </div>
+                
+            </div> 
+            
+            
+        </div>
+
     </section>
 
     <!-- End FAQs Section-->
 
     <!-- Start SignUp Section -->
+   <section class="signup-section">
+        <div class="signup">
+            <h2>Sign up with us today and gain more trust from your clients</h2>
+            <a href="#" class="signup-btn">Get started for free</a>
+        </div>
 
-    <div class="signup">
-        <h2>Sign up with us today and gain more trust from your clients</h2>
-        <a href="#" class="signup-btn">Get started for free</a>
-    </div>
+    </section>
+
+    
 
     <!-- End SignUp Section -->
 
     <!-- Start Footer-->
-    <footer>
-        <hr>
-        <img src="{% static 'images/footerlogo.svg' %}"
-        <nav class="footer-nav">
-            <div>
-                <a href="#">Products</a>
-                <a href="#">Templates</a>
-                <a href="#">Feedbacks</a>
-                <a href="#">About Us</a>
+    <footer id="footer">
+        <div class="line"></div>
+        <div class="desktop-footer">
+            <div class= "footer-line">
+                <img class="footer-logo" src="{% static 'images/footerlog.svg' %}">
+                <nav class="footer-nav">
+                    <div class="first">
+                        <a href="#" class="product-dropdown">Products</a>
+                        <a href="#">Templates</a>
+                        <a href="#">Feedbacks</a>
+                        <a href="#">About Us</a>
+                    </div>
+                    <div class="second">
+                        <a href="#">Contact Us</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </nav>
+                
             </div>
-            <div>
-                <a href="#">Contact Us</a>
-                <a href="#">Terms</a>
-                <a href="#">Privacy Policy</a>
+            <div class="links">
+                <a href="#"><img class="dribble-logo" src="{% static 'images/basketball.svg' %}"></a>
+                <a href="#"><img class="instagram-logo" src="{% static 'images/instagram.svg' %}"></a>
+                <a href="#"><img class="linkedin-logo" src="{% static 'images/linkedin.svg' %}"></a>
+                
             </div>
-        </nav>
-        <div class="links"></div>
+        </div>
         <p>&copy; 2022 Policify. All Rights Reserved.</p>
 
     </footer>
