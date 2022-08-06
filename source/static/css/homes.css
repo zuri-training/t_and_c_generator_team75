@@ -262,8 +262,8 @@ h1 {
 }
 .img-space2 img{
     display: flex;
-    margin:12% auto;
-    width: 70%;
+    margin:7% auto;
+    width: 55%;
     
     
     
@@ -394,11 +394,11 @@ h1 {
    
 }
 .client {
-    height: 130px;
-    width: 130px;
-    background-color: rgb(114, 107, 107);
+    
+    width: 75%;
+   
     display: block;
-    margin-top: 15%;
+    margin-top: 8%;
 }
 
 .more {

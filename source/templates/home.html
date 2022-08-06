@@ -1,65 +1,13 @@
+{% extends 'base.html' %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block 'title' %}Policify{% endblock 'title' %}</title>
-    <link rel="stylesheet" href="{% static 'css/homes.css' %}">
-    <script src="{% static 'js/base.js' %}" defer></script>
-    <script src="https://kit.fontawesome.com/4111ca9f76.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <!-- Start Header -->
-    <header>
-        
-        <div id ="header">
-            <img src="{% static 'images/headerlogo.svg' %}" alt="headerlogo">
-            <div class="desktop-navbar">
-                <nav class="desktop-navigation">
-                    <a href="#products" class ="nav-item product-dropdown">Products</a>
-                    <a href="#usage" class ="nav-item">Templates</a>
-                    <a href="#feedbacks" class ="nav-item">Feedbacks</a>
-                    
-                    <a href="#faq" class ="nav-item">About Us</a>
-                    <a href="#footer" class ="nav-item">Contact us</a>
-        
-                </nav>
-                <div class="desktop-register-and-login">
-                    <a class="login-link" href ="#">Login</a>
-                    <a class="signup-link" href="#">Sign Up</a>
-                </div>
-    
-            </div>
-            <div id="hamburger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-            </div>
-        </div>
-         <!-- Start  Nav Bar -->
-        <div class="navbar">
-            <nav class="navigation">
-                <a href="#products" class ="nav-item product-dropdown">Products</a>
-                <a href="#usage" class ="nav-item">Templates</a>
-                <a href="#header" class ="nav-item">About Us</a>
-                <a href="#feedbacks" class ="nav-item">Feedbacks</a>
-                <a href="#faq" class ="nav-item">About Us</a>
-                <a href="#footer" class ="nav-item">Contact us</a>
-    
-            </nav>
-            <div class="register-and-login">
-                <a class="login-link" href ="#">Login</a>
-                <a class="signup-link" href="#">Sign Up</a>
-            </div>
 
-        </div>
-        
-    
-        <!-- End Nav Bar -->
-    </header>
+{% block title %}Home{% endblock title %}
 
-    <!-- End Header -->
+
+{% block content %}
+
+
 
    <!-- Start Intro Section -->
 
@@ -221,7 +169,7 @@
                     <span class="star-icon filled">★</span>
                 </div>
                 <p>&quot;Policify made my life so much easier. Thanks to their website. I was able to get my Privacy Policy within a few minutes. It saved me hours and hours of research and writing&quot;</p>
-                <div class="client"></div>
+                <div class="client"><img src="{% static 'images/clients/blessing.svg' %}"></div>
 
             </div>
 
@@ -234,7 +182,7 @@
                     <span class="star-icon">★</span>
                 </div>
                 <p>&quot;The fact that I get updated on significant charges in laws that regulate privacy policies and i can constantly update my policies accordingly is exceptional.&quot;</p>
-                <div class="client"></div>
+                <div class="client"><img src="{% static 'images/clients/blessing.svg' %}"></div>
             </div>
             
             <div class="feedback-box">
@@ -246,7 +194,7 @@
                     <span class="star-icon">★</span>
                 </div>
                 <p>&quot;It's a priceless service to be able to generate terms and conditions specific to your business and this is what policify offers.&quot;</p>
-                <div class="client"></div>
+                <div class="client"><img src="{% static 'images/clients/blessing.svg' %}"></div>
             </div>
 
             
@@ -338,42 +286,11 @@
 
     <!-- End SignUp Section -->
 
-    <!-- Start Footer-->
-    <footer id="footer">
-        <div class="line"></div>
-        <div class="desktop-footer">
-            <div class= "footer-line">
-                <img class="footer-logo" src="{% static 'images/footerlog.svg' %}">
-                <nav class="footer-nav">
-                    <div class="first">
-                        <a href="#" class="product-dropdown">Products</a>
-                        <a href="#">Templates</a>
-                        <a href="#">Feedbacks</a>
-                        <a href="#">About Us</a>
-                    </div>
-                    <div class="second">
-                        <a href="#">Contact Us</a>
-                        <a href="#">Terms</a>
-                        <a href="#">Privacy Policy</a>
-                    </div>
-                </nav>
-                
-            </div>
-            <div class="links">
-                <a href="#"><img class="dribble-logo" src="{% static 'images/basketball.svg' %}"></a>
-                <a href="#"><img class="instagram-logo" src="{% static 'images/instagram.svg' %}"></a>
-                <a href="#"><img class="linkedin-logo" src="{% static 'images/linkedin.svg' %}"></a>
-                
-            </div>
-        </div>
-        <p>&copy; 2022 Policify. All Rights Reserved.</p>
-
-    </footer>
     
-    <!-- End Footer-->
 
 
 
     
-</body>
-</html>
+
+
+{% endblock content %}
