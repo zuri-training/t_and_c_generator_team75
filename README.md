@@ -86,15 +86,15 @@ Policify aims at reducing the hassles of individuals and Companies of  having to
 * Personal computers
 ## Contributors 
 
-* Tijani Abiodun(Team Lead)
+* Tijani Abiodun (Team Lead)
     * Track -  Fullstack
     * Github - https://github.com/Harbeytee
 
-* Arthur Akalazu(Assistant Team Lead)
+* Arthur Akalazu (Assistant Team Lead)
     * Track - Product Design
     * Github - https://github.com/aakalazu
 
-* Olaide Awwal-Bolanta(Assistant Team Lead)
+* Olaide Awwal-Bolanta (Assistant Team Lead)
     * Track - Product Design
     * Github - https://github.com/Olaide-Awwal-Bolanta
 
