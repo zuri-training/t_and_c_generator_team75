@@ -4,3 +4,6 @@ from django.views.generic import TemplateView
 # Create your views here.
 class HomePageView(TemplateView):
     template_name ="home.html"
+    
+class FeedbackPageView(TemplateView):
+    template_name = "feedback.html"

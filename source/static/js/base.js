@@ -38,90 +38,13 @@ for( let i = 0; i < tab.length; i++ ) {
 
 /******** End Hamburger  *******/
 
-function slide() {
-    if (mediaQuery.matches) {
-        const prev = document.querySelector('.arrow1');
-        const next = document.querySelector('.arrow2');
-        /*
-
-        const slides = document.querySelectorAll('.feedback-boxes');
 
 
-        slides.forEach((slide, index) => {
-        slide.style.transform = `translateX(${index * 100}%)`;
-        });
-
-        let currentSlide = 0;
-
-        let maxSlide = slides.length -1;*/
-        const boxes = document.querySelectorAll('.feedback-box');
-
-        const first = boxes[0];
-        const second = boxes[1];
-        const third = boxes[2];
-        let array = [first, second, third];
-        let currentSlide = 0;
-        let maxSlide = 2;
-
-        for(let i = 1; i < array.length; i++) {
-            array[i].style.display = 'none';
-
-        }
-        next.addEventListener("click", function () {
-            
-            
-            if(currentSlide === maxSlide) {
-                currentSlide = 0;
-            }
-            else {
-                currentSlide++;
-            }
-            for(let i = 0; i < array.length; i++) {
-                array[i].style.display = 'none';
-            
-            }
-
-            array[currentSlide].style.display = 'flex';
+/**feedback js */
 
 
-            
 
-            /*array.forEach((array, index) => {
-                array.style.transform = `translateX(${ 100 * (index - currentSlide )}%)`;
-            });*/
 
-            
-        });
-
-        prev.addEventListener("click", function () {
-            console.log('click');
-            if(currentSlide === 0 ) {
-                currentSlide = maxSlide;
-            }
-            else {
-                currentSlide--;
-            }
-            for(let i = 0; i < array.length; i++) {
-                array[i].style.display = 'none';
-            
-            }
-            array[currentSlide].style.display = 'flex';
-            /*
-
-            slides.forEach((slide, index) => {
-                slide.style.transform = `translateX(${ 100 * (index - currentSlide )}%)`;
-            });*/
-
-            
-        });
-
-    }
-}
-
-const mediaQuery = window.matchMedia('(max-width: 960px)');
-
-slide(mediaQuery);
-mediaQuery.addEventListener(slide);
 
 
 

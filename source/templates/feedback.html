@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/feedback.css' %}">
+
+{% endblock extrahead %}
+    
+{% block title %}Feedbacks{% endblock title %}
+
+
+{% block content %}
+
+    <!-- Start Header -->
+
+    <div class="feedback-head">
+        <h2>Feedbacks</h2>
+        <p>We are loved by thousands of businesses all over the world.</p>
+
+    </div>
+
+    
+
+    <!-- End Header -->
+
+    <!-- Start Grid -->
+
+    <div class="feedback-grid">
+
+        <div class="feedback">
+            <div class="stars">
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon">★</span>
+            </div>
+            <p>“Super easy and simple to complete! Finally a policy generator that makes sense, is easy to use and friendly”</p>
+            <div class="client"><img src="{% static 'images/clients/blessing.svg' %}"></div>
+
+        </div>
+        <div class="feedback">
+            <div class="stars">
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon">★</span>
+            </div>
+            <p>"Great! I'm a first time app builder. Policify had just what I needed to publish a solid privacy and terms of service statement."</p>
+            <div class="client"><img src="{% static 'images/clients/micheal.svg' %}"></div>
+
+        </div>
+        <div class="feedback">
+            <div class="stars">
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon">★</span>
+            </div>
+            <p>"A fantastic service I've used a few times now and I keep coming back because it is easy, comprehensive, and absolutely free."</p>
+            <div class="client"><img src="{% static 'images/clients/martina.svg' %}"></div>
+
+        </div>
+        
+        <div class="feedback hide">
+            <div class="stars">
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon">★</span>
+            </div>
+            <p>"Time saving, this service took the hassle out of drafting Policy as well as Terms and Conditions out for myself. Thank you."</p>
+            <div class="client"><img src="{% static 'images/clients/david.svg' %}"></div>
+
+        </div>
+        <div class="feedback hide">
+            <div class="stars">
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon">★</span>
+            </div>
+            <p>"I was looking for a quick and easy policy creator and this is it. You input your information and they simply apply it to the policy."</p>
+            <div class="client"><img src="{% static 'images/clients/aminah.svg' %}"></div>
+
+        </div>
+        <div class="feedback hide">
+            <div class="stars">
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon filled">★</span>
+                <span class="star-icon">★</span>
+            </div>
+            <p>"I keep returning to generate new policies with my clients. A comprehensive and excellently presented service."</p>
+            <div class="client"><img src="{% static 'images/clients/rose.svg' %}"></div>
+
+        </div>
+        <p class="see-more">See more</p>
+
+
+    </div>
+    
+
+    <!-- End Grid -->
+
+    <!-- Start Feedback Form-->
+
+    <section class="feedback-form">
+        <div class="form-header">
+            <h2>Submit your feedbacks</h2>
+            <p>Help us to improve our services by telling us your experience, how you feel about it and where you think we can improve. Thank you.</p>
+        </div>
+        <form method="POST">{% csrf_token %}
+            
+            <label for="email" name="email">Email</label>
+            <input type="email" name="email" placeholder="example@email.com">
+            <h3>How do you rate our website?</h3>
+            <div class="feedback-stars">
+                <span class="feedback-star-icon filled">★</span>
+                <span class="feedback-star-icon filled">★</span>
+                <span class="feedback-star-icon filled">★</span>
+                <span class="feedback-star-icon filled">★</span>
+                <span class="feedback-star-icon">★</span>
+            </div>
+            <h3>Do you want to inform us of something else?</h3>
+            <label for="message" name="message">Message</label>
+            <textarea type="text" class="textarea" name="message" placeholder="Type your message"></textarea>
+            <input type="submit">
+        </form>
+        
+    </section>
+
+    <!-- End Feedback Form-->
+
+    <script>
+        const feedbackStar = document.querySelectorAll('.feedback-star-icon');
+        for( let i = 0; i < feedbackStar.length; i++) {
+
+            feedbackStar[i].addEventListener('click', function(){
+                
+                this.classList.toggle('color')
+                
+                
+            });
+    
+        }
+    </script>
+{% endblock content %}

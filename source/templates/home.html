@@ -5,6 +5,8 @@
 {% block title %}Home{% endblock title %}
 
 
+
+
 {% block content %}
 
 
@@ -217,7 +219,7 @@
 
         <div class="faq-header">
             <h2>Frequently asked questions</h2>
-            <p>At lacus vitae nulla sagittis scelerisque nisl. Pellentesque duis cursus vestibuum, facilii ac, sed faucibus.</p>
+            <p>For clarity on the importance of terms and condition and privacy policy and how it can be generated, some frequently asked questions are answered below</p>
         </div>
        
         <div class="accordion">
@@ -232,14 +234,14 @@
             <div class="accord">
                 <button class="tab"> Why terms and conditions are important?</button>
                 <div class="tab-content">
-                    <p>wordssssss</p>
+                    <p>In case of legal dispute involving your website, product or service, the terms of this agreement will form the basis of your defense against any claim. Due to this, all websites, apps and online stores should create a terms of use agreement.</p>
                 </div>
                 
             </div> 
             <div class="accord">
                 <button class="tab">How long does it take to generate Terms and Conditions or Privacy Policy?</button>
                 <div class="tab-content">
-                </p>wordssssss</p>
+                </p>With our simple and fast online terms and conditions generator, users can generate terms and conditions agreement customized for their businesses in just few clicks.</p>
                 </div>
                 
             </div> 
@@ -247,21 +249,21 @@
             <div class="accord">
                 <button class="tab">What is the difference between Terms and Conditions and Privacy Policy?</button>
                 <div class="tab-content">
-                    <p>wordssssss</p>
+                    <p>A privacy policy is a document that is designed to make sure that all users are aware of the rules regarding the collection, retention, sharing and use of any personal information. Generate yours for free right now with Policify’s Privacy Policy Generator. A terms and conditions agreement lays out the rules and requirements that website users must agree with to use your services. It is not a legal requirement.</p>
                 </div>
                 
             </div> 
             <div class="accord">
                 <button class="tab">Is the Privacy Policy Free to use?</button>
                 <div class="tab-content">
-                    <p>wordssssss</p>
+                    <p>Yes, the Free Privacy Policy Generator is free to use. We provide free policies for websites and apps. You can choose to get our premium & professional Privacy Policy that includes more provisions & clauses to better protect your business, website or app.</p>
                 </div>
                 
             </div> 
             <div class="accord">
                 <button class="tab">What does a good Terms and conditions contain?</button>
                 <div class="tab-content">
-                    <p>wordssssss</p>
+                    <p>Our handy Terms and Conditions Generator is the perfect solution for all your terms of agreement needs. Simply enter your email address, company information, and website URL into the required fields and you’re good to go. Remember, every website is different and as such no two terms and conditions should be the same. If your website simply copies its terms and conditions policies from another company, this could be seen as copyright infringement.</p>
                 </div>
                 
             </div> 
@@ -285,6 +287,94 @@
     
 
     <!-- End SignUp Section -->
+
+    <script>
+        function slide() {
+            if (mediaQuery.matches) {
+                const prev = document.querySelector('.arrow1');
+                const next = document.querySelector('.arrow2');
+                /*
+        
+                const slides = document.querySelectorAll('.feedback-boxes');
+        
+        
+                slides.forEach((slide, index) => {
+                slide.style.transform = `translateX(${index * 100}%)`;
+                });
+        
+                let currentSlide = 0;
+        
+                let maxSlide = slides.length -1;*/
+                const boxes = document.querySelectorAll('.feedback-box');
+        
+                const first = boxes[0];
+                const second = boxes[1];
+                const third = boxes[2];
+                let array = [first, second, third];
+                let currentSlide = 0;
+                let maxSlide = 2;
+        
+                for(let i = 1; i < array.length; i++) {
+                    array[i].style.display = 'none';
+        
+                }
+                next.addEventListener("click", function () {
+                    
+                    
+                    if(currentSlide === maxSlide) {
+                        currentSlide = 0;
+                    }
+                    else {
+                        currentSlide++;
+                    }
+                    for(let i = 0; i < array.length; i++) {
+                        array[i].style.display = 'none';
+                    
+                    }
+        
+                    array[currentSlide].style.display = 'flex';
+        
+        
+                    
+        
+                    /*array.forEach((array, index) => {
+                        array.style.transform = `translateX(${ 100 * (index - currentSlide )}%)`;
+                    });*/
+        
+                    
+                });
+        
+                prev.addEventListener("click", function () {
+                    console.log('click');
+                    if(currentSlide === 0 ) {
+                        currentSlide = maxSlide;
+                    }
+                    else {
+                        currentSlide--;
+                    }
+                    for(let i = 0; i < array.length; i++) {
+                        array[i].style.display = 'none';
+                    
+                    }
+                    array[currentSlide].style.display = 'flex';
+                    /*
+        
+                    slides.forEach((slide, index) => {
+                        slide.style.transform = `translateX(${ 100 * (index - currentSlide )}%)`;
+                    });*/
+        
+                    
+                });
+        
+            }
+        }
+        
+        const mediaQuery = window.matchMedia('(max-width: 960px)');
+        
+        slide(mediaQuery);
+        //mediaQuery.addListener(slide);
+        
+    </script>
 
     
 

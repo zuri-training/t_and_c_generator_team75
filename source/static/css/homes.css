@@ -69,6 +69,8 @@ header {
     padding-left: 5%;
     padding-right: 5%;
     line-height: 1.3;
+    padding-bottom: 0;
+    margin-bottom: 0;
    
 }
 h1 {
@@ -158,10 +160,10 @@ h1 {
 }
 
 .mobile-illus img {
-    width: 90%;
+    width: 100%;
     margin-top: 7%;
-   
-    
+    bottom: 0;
+    margin-bottom: 0;
    
 }
 .product-header {
@@ -262,7 +264,7 @@ h1 {
 }
 .img-space2 img{
     display: flex;
-    margin:7% auto;
+    margin:7% auto 0%;
     width: 55%;
     
     
@@ -397,7 +399,7 @@ h1 {
     
     width: 75%;
    
-    display: block;
+    
     margin-top: 8%;
 }
 
@@ -650,7 +652,7 @@ footer p {
         padding-bottom: 6%;
     }
     .signup-btn {
-        margin-bottom: 90px;
+        margin-bottom: 0px;
     }
     .line1, .line2 {
         display: none;
@@ -827,7 +829,7 @@ footer p {
         /*margin-bottom: 1.1rem;*/
     }
     .signup {
-        padding-bottom: 8%;
+        padding-block: 10%;
         margin-top: 7%;
        height: 150px;
        flex-direction: column;

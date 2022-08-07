@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block 'title' %}Policify{% endblock 'title' %}</title>
     <link rel="stylesheet" href="{% static 'css/homes.css' %}">
+    {% block extrahead %}{% endblock extrahead %}
     <script src="{% static 'js/base.js' %}" defer></script>
     <script src="https://kit.fontawesome.com/4111ca9f76.js" crossorigin="anonymous"></script>
 </head>
@@ -20,8 +21,8 @@
             <div class="desktop-navbar">
                 <nav class="desktop-navigation">
                     <a href="#products" class ="nav-item product-dropdown">Products</a>
-                    <a href="#usage" class ="nav-item">Templates</a>
-                    <a href="#feedbacks" class ="nav-item">Feedbacks</a>
+                    
+                    <a href="{% url 'feedback' %}" class ="nav-item">Feedbacks</a>
                     
                     <a href="#faq" class ="nav-item">About Us</a>
                     <a href="#footer" class ="nav-item">Contact us</a>
@@ -42,9 +43,8 @@
         <div class="navbar">
             <nav class="navigation">
                 <a href="#products" class ="nav-item product-dropdown">Products</a>
-                <a href="#usage" class ="nav-item">Templates</a>
-                <a href="#header" class ="nav-item">About Us</a>
-                <a href="#feedbacks" class ="nav-item">Feedbacks</a>
+               
+                <a href="{% url 'feedback' %}" class ="nav-item">Feedbacks</a>
                 <a href="#faq" class ="nav-item">About Us</a>
                 <a href="#footer" class ="nav-item">Contact us</a>
     
@@ -67,7 +67,7 @@
 
     {% block content %}{% endblock content %}
 
-    
+
     <!-- Start Footer-->
 <footer id="footer">
     <div class="line"></div>
@@ -78,7 +78,7 @@
                 <div class="first">
                     <a href="#" class="product-dropdown">Products</a>
                     <a href="#">Templates</a>
-                    <a href="#">Feedbacks</a>
+                    <a href="{% url 'feedback' %}">Feedbacks</a>
                     <a href="#">About Us</a>
                 </div>
                 <div class="second">
