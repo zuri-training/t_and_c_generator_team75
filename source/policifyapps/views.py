@@ -7,3 +7,6 @@ class HomePageView(TemplateView):
     
 class FeedbackPageView(TemplateView):
     template_name = "feedback.html"
+    
+class DashboardPageView(TemplateView):
+    template_name = "dashboard.html"

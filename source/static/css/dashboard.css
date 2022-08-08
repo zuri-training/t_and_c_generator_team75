@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background-color: #F9F9F9;
+}
+a {
+    text-decoration: none;
+    color: #F9F9F9;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 8px;
+    background-color: #fff;
+
+}
+.navs {
+    float: left;
+    height: 100vh;
+    color: #F9F9F9;
+    background-color: #251b2C;
+    width: 120px;
+    line-height: 4;
+    font-size: 0.85rem;
+
+}
+nav {
+    display: flex;
+    flex-direction: column;
+}
+.logo {
+    
+    width: 100px;
+    padding-top: 15%;
+}
+.image {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.image h2 {
+    font-size: 1.3rem;
+    
+    color: #130e16;
+    margin-bottom: 8px;
+}
+.image a {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #A535F1;
+    padding: 10px 17px;
+    border-radius: 35px;
+    transition: all 0.2s linear;
+}
+.image a:hover {
+    background-color: #6E23A1;
+}
+.image p {
+    font-size: 0.9;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: #49414F
+
+}
+.illustration {
+    width: 60%;
+    margin-top: 6%;
+    margin-right: 10px;
+    margin-bottom: 8%;
+    
+}
+button{
+    float: right;
+    margin-right: 19px;
+    background-color: #A535F1;
+    border-radius: 50%;
+    border: none;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13vmin;
+    width: 13vmin;
+   
+}
+
+button img {
+    width: 80%;
+}
+
+@media only screen and (min-width:860px) {
+
+    header {
+        font-size: 1.3rem;
+    }
+
+    .logo {
+        width: 150px;
+    }
+    .navs {
+        width: 15%;
+        padding-left: 2rem;
+        font-size: 1.1rem;
+    }
+
+    .illustration {
+        width: 23%;
+        margin-top: 2%;
+        margin-bottom: 3%;
+    }
+    .image h2 {
+        font-size: 1.7rem;
+    
+    }
+    .image p{
+        font-size: 1.2rem;
+        width: 50%;
+    }
+    button {
+        width: 8vmin;
+        height: 8vmin;
+    }
+
+
+}

@@ -202,7 +202,7 @@
             
         </div>
         <div class="more">
-            <p>See more</p>
+            <a class="more-feeds" href="{% url 'feedback' %}">See more</a>
             <div class="arrows">
                 <button class="arrow1"><i class="fa-solid fa-chevron-left"></i></button>
                 <button class="arrow2"><i class="fa-solid fa-chevron-right"></i></button>
@@ -369,7 +369,7 @@
             }
         }
         
-        const mediaQuery = window.matchMedia('(max-width: 960px)');
+        const mediaQuery = window.matchMedia('(max-width: 860px)');
         
         slide(mediaQuery);
         //mediaQuery.addListener(slide);

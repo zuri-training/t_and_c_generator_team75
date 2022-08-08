@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block 'title' %}Policify{% endblock 'title' %}</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+
+</head>
+<body>
+    <div class="navigation">
+
+        <div class="navs">
+            <img class="logo" src={% static 'images/dashboard/logo.svg' %}>
+            <nav>
+                <a href='#'>Dashboard</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policies</a>
+                <a href="#">Policies</a>
+            </nav>
+
+        </div>
+
+        
+
+
+    </div>
+    <header>
+        <p>Dashboard</p>
+        <p>Abby@gmail.com</p>
+        
+    </header>
+    <main>
+        <div class="image">
+            <img class="illustration" src={% static 'images/dashboard/illustration.svg' %}>
+            <h2>You have no generated policy</h2>
+            <p>Empower your business, create unique policies and terms of service with just a few clicks.</p>
+            <a href="#">Generate policy</a>
+            
+        </div>
+
+        <button class="messageicon"><img src={% static 'images/dashboard/messageicon.svg' %}></button>
+        
+    </main>
+
+    
+</body>
+
+</html>

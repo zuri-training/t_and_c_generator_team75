@@ -408,9 +408,13 @@ h1 {
     margin-top: 17%;
     justify-content: space-between;
 }
-.more p {
-    color: #F9F9F9;
+
+.more-feeds {
     margin-left: 25px;
+    color: #F9F9F9;
+}
+.more-feeds:hover {
+    transform: scale(1.2);
 }
 .arrows {
     
@@ -625,7 +629,7 @@ footer p {
     align-items: center;
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 860px) {
     h1 {
         font-size: 2rem;
         margin-top: 2rem;
@@ -897,8 +901,11 @@ footer p {
         margin-top: 20px;
     }
 }
-@media only screen and (min-width: 960px) and (max-width: 1024px){
+@media only screen and (min-width: 860px) and (max-width: 1024px){
     .desktop-navigation a {
         font-size: 0.9rem;
+    }
+    .signup h2 {
+       font-size: 1.2rem;
     }
 }
