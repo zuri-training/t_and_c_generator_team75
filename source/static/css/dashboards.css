@@ -7,28 +7,225 @@
 }
 html {
     background-color: #F9F9F9;
+    z-index: 999;
 }
 a {
     text-decoration: none;
     color: #F9F9F9;
 }
+.not-generated {
+    display: block;
+}
 header {
     display: flex;
-    justify-content: space-between;
-    padding: 25px 8px;
+    padding: 19px 8px;
     background-color: #fff;
+    
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.logo2 {
+    margin-left: 25%;
+  width: 45%;
+  display: block;
+    }
+.user {
+  padding-left: 12%;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+.user2 {
+    width: 7vmin;
+    height: 7vmin;
+    background-color: #130e16;
+    border-radius: 50%;
+    margin-right: 0.2rem;
 
+}
+.user-dropdown {
+    width: 15px;
+    margin-left: 0.4rem;
+    
+}
+.username {
+    display: none;
+}
+.clicks {
+  padding: 0px 5px;
+  margin-top: 0rem;
+  margin-right: 0.8rem;
+  border-radius: 6px;
+}
+.clicks-active {
+  background-color: #F9F9F9;
+    color: #A535F1;
+}
+.gen-buttons {
+  display: flex;
+  flex-direction: column;
+  
+}
+.policy-popup {
+  border: none;
+  padding: 5%;
+  border-radius: 15px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: popup .5s;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  }
+.popup-container {
+  display: none;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(21, 17, 17, 0.61);
+  position: absolute;
+  z-index: 999;
+ 
+}
+form {
+  width: 100%;
+  padding-top: 30%;
+  
+  }
+label {
+  padding-bottom: 2rem;
+  }
+  
+input {
+  padding: 8px;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+textarea {
+  width: 100%;
+    height: 100px;
+  padding-top: 5%;
+  padding-left: 5%;
+    }
+.form {
+  background-color: blue;
+  width: 60%;
+  padding: 4% 5%;
+ 
+  position: absolute;
+  border-radius: 6px;
+  display: none;
+  animation:  popup .5s;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+ 
+}
+
+.eks {
+ float: right;
+}
+.closed {
+  position: absolute;
+ right: 0;
+  padding: 0px 25px 25px;
+  
+  background: #fff;
+  margin-top: 25px;
+  z-index: 0;
+  animation: popup .5s;
+}
+.user-info {
+    display: none;
+}
+.user-info.open {
+    display: block;
+}
+.closed img {
+  margin-top: 10px;
+}
+
+#hamburger {
+    transition: opacity .3s;
+    z-index: 100;
+    float: left;
+   position: fixed;
+}
+#hamburger:hover {
+    cursor: pointer;
+    
+
+}
+#hamburger div {
+    transition: all 0.4s ease-in-out;
+    z-index: 100;
+    
+
+}
+#hamburger.isactive .line1 {
+    transform: translateY(4px) rotate(45deg);
+
+}
+#hamburger.isactive .line2 {
+    transform: translateY(-4px) rotate(-45deg);
+
+}
+#hamburger div.colorchange {
+    background-color: #F9F9F9;
+}
+.navs.active {
+    display: block;
+    animation: fadeout .5s;
+
+}
+@keyframes fadeout {
+    from{
+        transform: translateX(-200px); opacity: 0;
+    }
+    to{
+        transform: translateX(0px); opacity: 1;
+    }
+}
+@keyframes popup {
+    0% {
+        opacity: 0; 
+        }
+    
+       
+    100% {
+        opacity: 1;
+    }
+}
+.line1, .line2 {
+    width: 24px;
+    height: 2px;
+    margin: 6px;
+    background-color: #210B30;
+    
 }
 .navs {
+    display: none;
     float: left;
-    height: 100vh;
+    height: 100%;
     color: #F9F9F9;
     background-color: #251b2C;
-    width: 120px;
-    line-height: 4;
+    
+    width: 160px;
+    line-height: 3;
     font-size: 0.85rem;
+    position: fixed;
+    z-index: 1;
+    padding-left: 16px;
+    
 
 }
+
 nav {
     display: flex;
     flex-direction: column;
@@ -36,13 +233,17 @@ nav {
 .logo {
     
     width: 100px;
-    padding-top: 15%;
+    padding-top: 55px;
 }
+.dashboard {
+    display: none;
+  }
 .image {
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
+   
 }
 .image h2 {
     font-size: 1.3rem;
@@ -69,7 +270,7 @@ nav {
 
 }
 .illustration {
-    width: 60%;
+    width: 30%;
     margin-top: 6%;
     margin-right: 10px;
     margin-bottom: 8%;
@@ -98,19 +299,34 @@ button img {
 
     header {
         font-size: 1.3rem;
+        padding-block: 40px;
     }
 
     .logo {
         width: 150px;
     }
-    .navs {
-        width: 15%;
-        padding-left: 2rem;
-        font-size: 1.1rem;
+   .logo2{
+        display: none;
+        width: 10%;
     }
-
+    .user2 {
+        display: block;
+    }
+    .navs {
+        width:280px;
+        padding-left: 2rem;
+       padding-right: 1rem;
+        font-size: 1.3rem;
+        display: block;
+    }
+    .clicks {
+        padding-left: 15px;
+    }
+    #hamburger {
+        display: none;/**changes**/
+        }
     .illustration {
-        width: 23%;
+        width: 17%;
         margin-top: 2%;
         margin-bottom: 3%;
     }
@@ -118,13 +334,41 @@ button img {
         font-size: 1.7rem;
     
     }
+    
+    .policy-popup {
+        width: 30%;
+        height: 40%;
+        padding: 2% 7%;
+        text-align: center;
+    }
     .image p{
         font-size: 1.2rem;
-        width: 50%;
+        width: 40%;
+    }
+    .image {
+        margin-left: 70px;
     }
     button {
         width: 8vmin;
         height: 8vmin;
+    }
+    .user {
+        right: 50px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 15px;
+      }
+    .user > * {
+        margin-left: 20px;
+    }
+    .username {
+        display: block;
+        
+    }
+    .form {
+        width: 300px;
+        padding: 20px 15px;
     }
 
 
