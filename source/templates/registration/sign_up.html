@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Oi&family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,600;1,100&family=Raleway:wght@200&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Sign Up Page</title>
+</head>
+
+<body>
+    <main>
+        <div class="overall_div">
+            <div class="policify_logo">
+                <svg width="246" height="119" viewBox="0 0 246 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16 35.5C7.16344 35.5 0 42.6634 0 51.5V67.5C0 76.3366 7.16344 83.5 16 83.5H32C40.8366 83.5 48 76.3366 48 67.5V51.5C48 42.6634 40.8366 35.5 32 35.5H16ZM14 47.5H22V71.5H14V47.5ZM26 47.5H34V59.5H26V47.5Z"
+                        fill="#A535F1" />
+                    <path
+                        d="M60 69.6064V41.3085H70.3616C72.602 41.3085 74.4556 41.6858 75.9225 42.4404C77.3894 43.195 78.4829 44.2326 79.203 45.5532C79.9232 46.8738 80.2832 48.356 80.2832 50C80.2832 51.5631 79.9365 53.005 79.2431 54.3255C78.5496 55.6191 77.4694 56.6702 76.0025 57.4787C74.5356 58.2603 72.6553 58.6511 70.3616 58.6511H65.1208V69.6064H60ZM65.1208 54.4468H70.0416C71.8285 54.4468 73.1087 54.056 73.8822 53.2745C74.6823 52.466 75.0824 51.3745 75.0824 50C75.0824 48.5986 74.6823 47.5071 73.8822 46.7255C73.1087 45.917 71.8285 45.5128 70.0416 45.5128H65.1208V54.4468Z"
+                        fill="#251B2C" />
+                    <path
+                        d="M92.6864 70.0915C90.7661 70.0915 89.0325 69.6468 87.4856 68.7574C85.9654 67.8681 84.7518 66.6418 83.845 65.0787C82.9649 63.4887 82.5248 61.656 82.5248 59.5809C82.5248 57.5057 82.9782 55.6865 83.885 54.1234C84.7918 52.5333 86.0054 51.2936 87.5256 50.4043C89.0725 49.5149 90.8061 49.0702 92.7264 49.0702C94.6201 49.0702 96.327 49.5149 97.8473 50.4043C99.3942 51.2936 100.608 52.5333 101.488 54.1234C102.395 55.6865 102.848 57.5057 102.848 59.5809C102.848 61.656 102.395 63.4887 101.488 65.0787C100.608 66.6418 99.3942 67.8681 97.8473 68.7574C96.3003 69.6468 94.5801 70.0915 92.6864 70.0915ZM92.6864 65.6043C94.02 65.6043 95.1802 65.1057 96.167 64.1085C97.1538 63.0844 97.6472 61.5752 97.6472 59.5809C97.6472 57.5865 97.1538 56.0908 96.167 55.0936C95.1802 54.0695 94.0333 53.5574 92.7264 53.5574C91.3662 53.5574 90.1927 54.0695 89.2059 55.0936C88.2457 56.0908 87.7657 57.5865 87.7657 59.5809C87.7657 61.5752 88.2457 63.0844 89.2059 64.1085C90.1927 65.1057 91.3529 65.6043 92.6864 65.6043Z"
+                        fill="#251B2C" />
+                    <path d="M107.427 69.6064V40.5H112.547V69.6064H107.427Z" fill="#251B2C" />
+                    <path
+                        d="M120.54 46.4426C119.607 46.4426 118.833 46.1596 118.22 45.5936C117.633 45.0277 117.34 44.3135 117.34 43.4511C117.34 42.5887 117.633 41.8879 118.22 41.3489C118.833 40.783 119.607 40.5 120.54 40.5C121.474 40.5 122.234 40.783 122.821 41.3489C123.434 41.8879 123.741 42.5887 123.741 43.4511C123.741 44.3135 123.434 45.0277 122.821 45.5936C122.234 46.1596 121.474 46.4426 120.54 46.4426ZM117.98 69.6064V49.5553H123.101V69.6064H117.98Z"
+                        fill="#251B2C" />
+                    <path
+                        d="M138.167 70.0915C136.14 70.0915 134.353 69.6468 132.806 68.7574C131.259 67.8681 130.032 66.6284 129.126 65.0383C128.246 63.4482 127.805 61.6291 127.805 59.5809C127.805 57.5326 128.246 55.7135 129.126 54.1234C130.032 52.5333 131.259 51.2936 132.806 50.4043C134.353 49.5149 136.14 49.0702 138.167 49.0702C140.701 49.0702 142.834 49.744 144.568 51.0915C146.302 52.4121 147.409 54.2447 147.889 56.5894H142.488C142.221 55.6191 141.688 54.8645 140.888 54.3255C140.114 53.7596 139.194 53.4766 138.127 53.4766C136.714 53.4766 135.513 54.0156 134.527 55.0936C133.54 56.1716 133.046 57.6674 133.046 59.5809C133.046 61.4943 133.54 62.9901 134.527 64.0681C135.513 65.1461 136.714 65.6851 138.127 65.6851C139.194 65.6851 140.114 65.4156 140.888 64.8766C141.688 64.3376 142.221 63.5695 142.488 62.5723H147.889C147.409 64.8362 146.302 66.6553 144.568 68.0298C142.834 69.4043 140.701 70.0915 138.167 70.0915Z"
+                        fill="#251B2C" />
+                    <path
+                        d="M155.194 46.4426C154.261 46.4426 153.487 46.1596 152.874 45.5936C152.287 45.0277 151.994 44.3135 151.994 43.4511C151.994 42.5887 152.287 41.8879 152.874 41.3489C153.487 40.783 154.261 40.5 155.194 40.5C156.128 40.5 156.888 40.783 157.475 41.3489C158.088 41.8879 158.395 42.5887 158.395 43.4511C158.395 44.3135 158.088 45.0277 157.475 45.5936C156.888 46.1596 156.128 46.4426 155.194 46.4426ZM152.634 69.6064V49.5553H157.755V69.6064H152.634Z"
+                        fill="#251B2C" />
+                    <path
+                        d="M164.02 69.6064V53.8809H161.299V49.5553H164.02V47.2106C164.02 44.7851 164.62 43.0603 165.82 42.0362C167.047 41.0121 168.7 40.5 170.781 40.5H172.981V44.9064H171.581C170.701 44.9064 170.074 45.0816 169.701 45.4319C169.327 45.7823 169.14 46.3752 169.14 47.2106V49.5553H173.421V53.8809H169.14V69.6064H164.02Z"
+                        fill="#251B2C" />
+                    <path
+                        d="M179.957 78.5L184.558 68.2723H183.358L175.636 49.5553H181.197L186.758 63.6638L192.559 49.5553H198L185.398 78.5H179.957Z"
+                        fill="#251B2C" />
+                </svg>
+            </div>
+            <div class="body_text">
+                <h1 class="centre_aligned_texts">SIGN UP</h1>
+                <br>
+                <figcaption class="centre_aligned_texts">Sign up for free to access any of our products</p>
+                    <br>
+                    <form>
+                        <div>
+                            <div class="labels"><label for="Username">Full Name</label></div>
+                            <div><input type="text" class="Signup_Fields" name="username"
+                                    placeholder="Enter your full name" required /></div>
+                        </div>
+
+                        <div>
+                            <div class="labels"><label for="email">Email </label></div>
+                            <div><input type="email" class="Signup_Fields" name="email" placeholder="example@email.com"
+                                    required /></div>
+                        </div>
+
+                        <div>
+                            <div class="labels"><label for="password"> Password </label></div>
+                            <div><input type="password" id="password" class="Signup_Fields" name="password"
+                                    placeholder="Enter your password" minlength="8" required />
+                                <i class="far fa-eye" id="togglePassword"></i>
+                                <script>
+                                    const togglePassword = document.querySelector('#togglePassword');
+                                    const password = document.querySelector('#password');
+
+                                    togglePassword.addEventListener('click', function (e) {
+                                        // toggle the type attribute
+                                        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                                        password.setAttribute('type', type);
+                                        // toggle the eye slash icon
+                                        this.classList.toggle('fa-eye-slash');
+                                    });
+                                </script>
+
+                                <figcaption>
+                                    <small class="extra-paddings">Use 8 or more characters with a mix of letters,
+                                        numbers & symbols</small>
+                                </figcaption>
+                            </div>
+                        </div>
+                        <br>
+                        <p id="signup_clause" class="extra-paddings">
+                            By signing up, you agree to our
+                            <a href="#" class="purple_text">Terms of Service</a> and
+                            <a href="#" class="purple_text">Privacy Policy</a>.
+                        </p>
+                        <br>
+                        <div class="signup_button"><button type="submit" id="signup_button">Sign Up </button></div>
+
+                    </form>
+
+                    <p class="centre_aligned_texts">
+                        Already have an account?
+                        <a href="#" class="purple_text">Log in </a>.
+                    </p>
+                    <br>
+                    <div class="container">
+                        <div class="lines">
+                            <div class="circle">
+                                <p class="centre_aligned_texts"> OR</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="centre_aligned_texts" class="social_media">
+                        <a href="#" target="_blank" class="other_signup_options" id="google"><img src="google.jpeg"
+                                alt="Google" width="25px" style="border-radius: 50%"></a>
+                        <a href="#" target="_blank" class="other_signup_options" id="facebook"><img src="facebook.png"
+                                alt="Facebook" width="25px" style="border-radius: 50%"></a>
+                        <a href="#" target="_blank" class="other_signup_options" id="apple"><img src="apple.png"
+                                alt="iphone" width="25px" style="border-radius: 50%"></a>
+                    </div>
+                    <br>
+
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
