@@ -3,7 +3,7 @@ So far for team 75,
 
 These are my contributions 
 
-* Started the django project and hide our secret key as best practices in django.
+* Started the django project and hid our secret key as best practices in django.
 
 * My teammate and i joined in creating a demo website for our project before the friont end startedM
 I created the directory structure and created static files and templates and also linked them together
