@@ -1,1 +1,2 @@
-https://github.com/zuri-training/t_and_c_generator_team75/commit/9a7d47dec4d6c424d4d3a9e47d80869fea59b59c
+
+https://github.com/zuri-training/t_and_c_generator_team75/issues/60
