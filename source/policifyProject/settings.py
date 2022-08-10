@@ -83,8 +83,12 @@ WSGI_APPLICATION = 'policifyProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE':'django.db.backends.postgresql_psycopg2',
+        'NAME': 'policify',
+        'USER': 'postgres', 
+        'PASSWORD': 'nothingmore',
+        'HOST': '127.0.0.1', 
+        'PORT': '5432',
     }
 }
 
@@ -134,3 +138,6 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
