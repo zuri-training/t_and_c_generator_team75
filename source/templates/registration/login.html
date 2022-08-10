@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/95eef3000a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <!-- logo section starts -->
+        <div class="logo">
+          <img src="./images/Frame 18.png" alt="" />
+        </div>
+        <!-- logo section ends -->
+
+        <!-- header and sub header starts here -->
+        <div class="writeup">
+          <h2 id="header">LOGIN</h2>
+          <p id="sub-head">
+            Enter your information below to login for our services
+          </p>
+        </div>
+        <!-- header and sub header ends here -->
+
+        <!-- input starts here -->
+        <div class="registration">
+          <form action="get" method="get">
+            <div class="input">
+              <div class="label">
+                <label for="email">Email</label>
+              </div>
+              <div class="email">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="olescharlie@gmail.com"
+                  required
+                  autofocus
+                />
+              </div>
+            </div>
+            <div class="input">
+              <div class="label">
+                <label for="password">Password</label>
+              </div>
+              <div class="password">
+                <div class="input-icon">
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    maxlength="20"
+                    required
+                    autofocus
+                  />
+                  <i class="fa-solid fa-eye-slash" id="font-icon"></i>
+                </div>
+                <p id="password-hint">
+                  Use 8 or more characters with a mix of letters, numbers &
+                  symbols
+                </p>
+              </div>
+            </div>
+          </form>
+
+          <input type="submit" value="Login" class="btn" />
+          <div class="last-section">
+            <p id="forgot-pw">Forgot Password?</p>
+            <p id="acct">Don't have an account? <span>Sign Up</span></p>
+          </div>
+        </div>
+        <!-- input ends here -->
+
+        <!-- OR -->
+        <div class="line-through">
+          <div class="line-1"></div>
+          <p class="or">OR</p>
+          <div class="line-2"></div>
+        </div>
+        <!-- icons starts here -->
+        <div class="icons">
+          <div class="google">
+            <img
+              src="./images/7123025_logo_google_g_icon.svg"
+              alt="google icon"
+              class="google-icon"
+            />
+          </div>
+          <div class="facebook">
+            <img
+              src="./images/5296499_fb_facebook_facebook logo_icon.png"
+              alt="facebook logo"
+              class="facebook-icon"
+            />
+          </div>
+          <div class="apple">
+            <img
+              src="./images/104447_apple_logo_icon.svg"
+              alt="apple icon"
+              class="apple-icon"
+            />
+          </div>
+        </div>
+        <!-- icons ends here -->
+      </div>
+    </div>
+  </body>
+</html>

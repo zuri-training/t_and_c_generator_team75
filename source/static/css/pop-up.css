@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+.container {
+  padding: 0 2em;
+}
+.cancel-image {
+  text-align: right;
+  margin-bottom: 4vh;
+}
+.header {
+  font-weight: 900;
+  color: #251b2c;
+}
+.sub-head {
+  color: #251b2c;
+}

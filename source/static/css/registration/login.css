@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url(./images/and-machines.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.content {
+  background-color: #f9f9f9;
+  /* width: 70vw; */
+  border-radius: 8px;
+}
+.logo {
+  text-align: center;
+  margin-top: 3vh;
+}
+.logo img {
+  width: 140px;
+}
+.writeup {
+  text-align: center;
+  margin-top: 2vh;
+}
+#header {
+  font-size: 1.5em;
+}
+#sub-head {
+  font-size: 0.8em;
+  padding: 5px 20px;
+}
+.input label {
+  font-size: 0.7em;
+  font-weight: 600;
+  /* padding-bottom: 20px; */
+}
+.label {
+  margin-bottom: 2px;
+}
+.input {
+  margin-bottom: 10px;
+}
+.registration {
+  margin-top: 2vh;
+  padding: 0 20px;
+
+  /* width should be here */
+}
+.registration form input {
+  padding: 13px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  border: 2px solid #bdb8b8;
+  width: 100%;
+}
+input {
+  outline-color: #a535f1;
+}
+.password input {
+  padding-right: 50px;
+}
+.input-icon {
+  position: relative;
+}
+#font-icon {
+  position: absolute;
+  right: 0;
+  padding-right: 10px;
+  padding-top: 15px;
+}
+#password-hint {
+  font-size: 0.6em;
+}
+.btn {
+  margin: 4vh 0;
+  /* padding: 13px; */
+  height: 37px;
+  margin-bottom: 5px;
+  border-radius: 35px;
+  border: none;
+  width: 100%;
+  color: #ffffff;
+  background-color: #a535f1;
+  font-size: 0.9em;
+}
+.last-section {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7em;
+  margin-top: 7px;
+}
+#forgot-pw {
+  color: #a535f1;
+}
+span {
+  color: #a535f1;
+}
+.line-through {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4vh;
+}
+.line-1 {
+  height: 2px;
+  width: 40%;
+  border: 1px solid #bdb8b8;
+}
+.or {
+  margin: 5px 10px 15px 10px;
+  font-size: 0.8em;
+}
+.line-2 {
+  height: 2px;
+  width: 40%;
+  border: 1px solid #bdb8b8;
+}
+.icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2vh;
+  margin-bottom: 7vh;
+}
+.google-icon {
+  width: 30px;
+}
+
+.facebook-icon {
+  width: 23px;
+}
+.apple-icon {
+  width: 28px;
+}
+.google,
+.facebook,
+.apple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #bdb8b8;
+  border-radius: 20px;
+  height: 40px;
+  width: 80px;
+}
+@media screen and (min-width: 40em) {
+  .registration {
+    width: 640px;
+  }
+}
