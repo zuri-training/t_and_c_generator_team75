@@ -1,0 +1,230 @@
+{% extends 'dashboard/dashboardbase.html' %}
+
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/dashboard/privpolicydash.css' %}">
+
+{% endblock extrahead %}
+
+{% block title %}Privacy Policy Dashboard{% endblock title %}
+
+{% block content %}
+<div class="content">
+  <h2>Progress</h2>
+  <div class="progress">
+    <div class="progress-head">
+      <p class="first"><span class="step1">Step 1 - </span>User Information</p>
+      <p style="display: none;" class="second"><span class="step2">Step 2 - </span>Choose Clauses</p>
+      <p style="display: none;" class="third"><span class="step3">Step 3 - </span>Generate Document</p>
+    </div>
+    <div class="save-prev">
+      <button class="save">Save</button>
+      <button class="preview">Preview</button>
+    </div>
+  </div>
+
+  <form>
+      <section class="viewport">
+          <div class="unique">
+
+              <h3>Where do you want to use this document?</h3>
+              <div class="form-group type">
+                <label>
+                  <input type="checkbox" name="user" value="website" class="input-checkbox"/>Website
+                </label>
+                <label>
+                  <input type="checkbox" name="user" value="application" class="input-checkbox"/>Application
+                </label>
+              </div>
+
+          </div>
+
+          <div class="unique bus">
+
+              <h3>Business Details</h3>
+              <div class="form-group business column">
+                <label for="policyenterprise">Company/Website/Application name</label>
+                <input type="text" name="policyenterprise" placeholder="My Company name" required/>
+
+                <label for="policyurl">Company URL</label>
+                <input type="url" name="policyurl" placeholder="http://www.mycompanyname.com" required/>
+
+                <label for="policylocation">Location &#40;State/Country&#41; </label>
+                <input type="text" name="policylocation" placeholder="E.g Lagos/Nigeria" required/>
+
+                <label for="policydate">Policy Effective Date</label>
+                <input type="date" name="policydate" placeholder="E.g Lagos/Nigeria" required/>
+              </div>
+              <button class="progress-btn">Next:Choose clauses</button>
+
+          </div>
+
+          
+          
+      </section>
+      <section class="viewport">
+        <div class="unique">
+          <h3>Let's continue building your privacy policy</h3>
+          
+          <div class="form-group information column">
+
+              <h3>What kind of personal information do you collect from users?</h3>
+              <label>
+                  <input type="checkbox" name="info" value="email" class="input-checkbox"/>
+                  Email Address
+              </label>
+
+              <label>
+              <input type="checkbox" name="info" value="firstandlastname" class="input-checkbox"/>
+              First name and last name
+              </label>
+
+              <label>
+              <input type="checkbox" name="info" value="phone" class="input-checkbox"/>
+              Phone number
+              </label>
+
+              <label>
+              <input type="checkbox" name="info" value="address" class="input-checkbox"/>
+              Address, state, city, zip/postal code
+              </label>
+
+              <label>
+              <input type="checkbox" name="info" value="socials" class="input-checkbox"/>
+              Social medial profile information
+              </label>
+
+              <label>
+              <input type="checkbox" name="info" value="others" class="input-checkbox"/>
+              Others
+              </label>
+
+              <input type="text" name="add-other" placeholder="Add Your Own" />
+
+          </div>
+          
+          
+          <div class="form-group yesorno column">
+            <h3>Do you use tracking or analytics tool such as Google Analytics?</h3>
+            <label>
+              <input type="radio" name="trackinfo" value="tracking" class="input-radio"/>
+              Yes, we use tracking or analytics tools
+            </label>
+            <label>
+              <input type="radio" name="trackinfo" value="notracking" class="input-radio"/>
+              No
+            </label>
+
+          </div>
+
+          <div class="form-group yesorno column">
+            <h3>Do you send emails to your users?</h3>
+            <label>
+              <input type="radio" name="emailinfo" value="email" class="input-radio"/>
+              Yes, we send emails to our users if subscribed to
+            </label>
+            <label>
+              <input type="radio" name="emailinfo" value="noemail" class="input-radio"/>
+              No
+            </label>
+
+          </div>
+
+          <div class="form-group yesorno column">
+            <h3>Does your website display Ads?</h3>
+            <label>
+              <input type="radio" name="adinfo" value="ads" class="input-radio"/>
+              Yes, we show ads
+            </label>
+            <label>
+              <input type="radio" name="adinfo" value="noads" class="input-radio"/>
+              No
+            </label>
+
+          </div>
+
+          <div class="form-group yesorno column">
+            <h3>Can user pay for product and services on your website?</h3>
+            <label>
+              <input type="radio" name="payinfo" value="pay" class="input-radio"/>
+              Yes, users can pay for products and services on our website
+            </label>
+            <label>
+              <input type="radio" name="payinfo" value="nopay" class="input-radio"/>
+              No
+            </label>
+
+          </div>
+
+          <div class="form-group yesorno column">
+            <h3>Do you collect information from kids under the age of 13?</h3>
+            <label>
+              <input type="radio" name="kidinfo" value="kid" class="input-radio"/>
+              Yes, we collect information from kids under the age of 13.
+            </label>
+            <label>
+              <input type="radio" name="kidinfo" value="nokid" class="input-radio"/>
+              No
+            </label>
+
+          </div>
+
+          <div class="form-group user-contact column">
+            <h3>How can users contact you for any concerns regarding your privacy policy?</h3>
+              <label>
+                  <input type="checkbox" name="user-contact" value="mail" class="input-checkbox"/>
+                  Email Address
+              </label>
+
+              <label>
+              <input type="checkbox" name="user-contact" value="web" class="input-checkbox"/>
+              A page on our website
+              </label>
+
+              <label>
+              <input type="checkbox" name="user-contact" value="phonenum" class="input-checkbox"/>
+              Phone num
+              </label>
+              
+
+              <label>
+              <input type="checkbox" name="user-contact" value="postmail" class="input-checkbox"/>
+              Sending post mail
+              </label>
+
+              
+
+          </div>
+          <div class="navigate">
+            <p>Back</p>
+            <button class="next">Next:Generate document</button>
+          </div>
+        </div>  
+          
+      </section>
+      <section class="viewport">
+        <div class="unique">
+          <h3>Generate you Privacy Policy</h3>
+          <div class="form-group terms column">
+            <label>
+              <input type="checkbox" name="terminfo" value="agree" class="input-checkbox"/>
+              I agree to the Policify Terms and Conditions and Privacy Policy
+              </label>
+
+              <label>
+              <input type="checkbox" name="terminfo" value="notify" class="input-checkbox"/>
+              Notify me of Policify policy updates.
+              </label>
+          </div>
+          <div class="navigate">
+            <p>Back</p>
+            <button class="next">Next:Generate document</button>
+          </div>
+        </div>
+        
+          
+      </section>
+      
+  </form>
+</div>
+{% endblock content %}

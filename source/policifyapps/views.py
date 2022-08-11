@@ -9,7 +9,14 @@ class FeedbackPageView(TemplateView):
     template_name = "feedback.html"
     
 class DashboardPageView(TemplateView):
-    template_name = "dashboard.html"
+
+    template_name = "dashboard/dashboard.html"
+    
+    
+class PrivacyDashboardPageView(TemplateView):
+    template_name = "dashboard/privpolicydash.html"
+
+
 
 
 def signup(request):
@@ -22,3 +29,4 @@ def signup(request):
         "form": form
     }
     return render(request, 'registration/sign_up.html',context)
+

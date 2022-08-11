@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block 'title' %}Policify{% endblock 'title' %}</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard/dashboards.css' %}">
+    {% block extrahead %}{% endblock extrahead %}
+    <script src="{% static 'js/dashboard.js' %}" defer></script>
+
+</head>
+<body>
+    <div class="navigation">
+        
+       
+
+        <div class="navs">
+            <img class="logo" src="{% static 'images/dashboard/logo.svg' %}" alt="logo">
+            <nav>
+                <a class="clicks" href="{% url 'dashboard' %}">Dashboard</a>
+                <a class= "clicks" href="#">Terms & Conditions</a>
+                <a class="clicks" href="{% url 'privacypolicydashboard' %}">Privacy Policies</a>
+                <a class="clicks" href="#">Policies</a> 
+            </nav>
+
+        </div>
+
+        
+
+
+    </div>
+    <header>
+        <div id="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        <img class="logo2" src="{% static 'images/dashboard/logo2.svg' %}" alt="logo">
+      <!-- new -->
+    
+        <p class="dashboard">Dashboard</p>
+      
+        <div class="user">
+            <div class="user2"></div>
+            <p class="username">Abby@gmail.com</p>
+            <img class="user-dropdown" src="{% static 'images/dashboard/dropdownicon.svg' %}" alt="dropdown">
+        </div>
+        
+        <div class="user-info">
+            <div class="closed">
+                <p><img src="{% static 'images/dashboard/account.svg' %}" alt="account"></p>
+                <div class="user-account"></div>
+                <a style="color: black" href="#"><img src="{% static 'images/dashboard/logout.svg' %}" alt="logout"></a>
+            </div>
+
+        </div>
+        
+    </header>
+    {% block content %}{% endblock content %}
+
+    <button id="button" class="messageicon"><img src="{% static 'images/dashboard/messageicon.svg' %}" alt="cion"></button>
+        <div class="popup-form">
+          <div class="form">
+        
+            <span class="eks">X</span>
+            <form id="#form">
+              <label class="label" for="name" name="name">Name</label>
+              <input class="input" type="text" name="name" placeholder="Sarah Connor">
+              <label class="label" for="email" name="email">Email</label>
+              <input class="input" type="email" name="email" placeholder="example@email.com">
+              <label class="label" for="message" name="message">Message</label>
+              <textarea name="message" placeholder="Type your message"></textarea>
+            </form>
+          </div>
+       </div>
+</body>
+
+</html>
