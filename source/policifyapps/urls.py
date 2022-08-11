@@ -5,6 +5,6 @@ urlpatterns = [
     path("", HomePageView.as_view(), name="home"),
     path("feedback/", FeedbackPageView.as_view(), name="feedback"),
     path("dashboard/", DashboardPageView.as_view(), name="dashboard"),
-    path("privacypolicydashboard/", PrivacyDashboardPageView.as_view(), name="privacypolicydashboard"),
+    path("dashboard/privacypolicydashboard/", PrivacyDashboardPageView.as_view(), name="privacypolicydashboard"),
     
 ]
