@@ -41,8 +41,11 @@ class PrivacyDashboardPageView(TemplateView):
 class TermsDashboardPageView(TemplateView):
     login_required = True
     template_name = "dashboard/termscondash.html"
+    
+class PolicyPreviewPage(TemplateView):
+    template_name = "policypreview.html"
 
-@login_required(login_url="/login")
+#@login_required(login_url="/login")
 def create_policiy_post(request):
     if request.method == 'POST':
         form = PoliciesForm(request.POST)

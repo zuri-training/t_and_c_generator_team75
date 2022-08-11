@@ -30,11 +30,9 @@
 
   <form method="post">
     {% csrf_token %}
-<<<<<<< HEAD
+
       <section class="viewport default-open">
-=======
-      <section class="viewport">
->>>>>>> main
+
           <div class="unique">
 
               <h3>Where do you want to use this document?</h3>
@@ -300,7 +298,7 @@ for(let i = 0; i < next.length;  i++) {
   for(let i= 0; i < viewport.length; i++) {
     viewport[i].style.display = "none";
   }
-  viewport[currentSlide].style.display = "block";
+  viewport[currentSlide].style.display = "flex";
     
     
   
@@ -338,7 +336,7 @@ for( let i=0; i < prev.length; i++) {
     for(let i= 0; i < viewport.length; i++) {
     viewport[i].style.display = "none";
   }
-  viewport[currentSlide].style.display = "block";
+  viewport[currentSlide].style.display = "flex";
     
     for(let i= 0; i < progress.length; i++) {
     progress[i].style.display = "none";

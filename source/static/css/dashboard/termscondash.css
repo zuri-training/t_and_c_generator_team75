@@ -159,7 +159,7 @@ input[type="checkbox"]:checked{
         flex-direction: column;
         
        align-items: center; 
-       margin-left: 90px;
+       margin-left: 0px;
         
     }
     h2 {
@@ -178,7 +178,7 @@ input[type="checkbox"]:checked{
 
     }
     .progress-head {
-        padding-left: 250px;
+        padding-left: 3px;
     }
     .form-group {
         width: 450px;
@@ -194,8 +194,11 @@ input[type="checkbox"]:checked{
     .progress-head, h2 {
         margin-top: 0.6rem;
     } 
+    #progress {
+        margin-top: 1.6rem;
+        padding-left: 230px;
+      }
 }
-
 .steps.open-tab {
     display: block;
     color: purple;
@@ -215,7 +218,7 @@ input[type="checkbox"]:checked{
     width:240px;
   }
   .viewport {
-    display: block;
+    /*display: block;*/
     animation : view .5s;
   }
   #progress > h2{
@@ -226,3 +229,10 @@ input[type="checkbox"]:checked{
     margin-top: 1.6rem;
     padding-left: 1.3rem;
   }
+/*.steps.open-tab {
+    display: block;
+    color: purple;
+  }
+  .tab.open-tab {
+    display: block;
+  }*/
