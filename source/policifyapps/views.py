@@ -1,6 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
-from .forms import SignUpForm
 
 # Create your views here.
 class HomePageView(TemplateView):
@@ -19,6 +18,7 @@ class PrivacyDashboardPageView(TemplateView):
 
 
 
+
 def signup(request):
     form = SignUpForm(request.POST)
     if form.is_valid:
@@ -29,5 +29,4 @@ def signup(request):
         "form": form
     }
     return render(request, 'registration/sign_up.html',context)
-
 

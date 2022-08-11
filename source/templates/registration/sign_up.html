@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{%static 'css/registration/sign_up.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,8 +15,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <title>Sign Up Page</title>
 </head>
-
+    <style>
+        body {
+            width: 100%;
+            overflow-x: hidden;
+            height: 100vh;
+            margin: 0;
+            background: url({%static '/images/registration/sign_up/and-machines-vqTWfa4DjEk-unsplash 1.png' %});
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+    </style>
 <body>
+
     <main>
         <div class="overall_div">
             <div class="policify_logo">
@@ -52,23 +67,30 @@
                 <br>
                 <figcaption class="centre_aligned_texts">Sign up for free to access any of our products</p>
                     <br>
-                    <form>
+                    <form method="POST">
+                        {% csrf_token %}
                         <div>
                             <div class="labels"><label for="Username">Full Name</label></div>
-                            <div><input type="text" class="Signup_Fields" name="username"
-                                    placeholder="Enter your full name" required /></div>
+                            <div>
+                                {% comment %} <input type="text" class="Signup_Fields" name="username"
+                                    placeholder="Enter your full name" required /> {% endcomment %}
+                                {{form.first_name}}</div>
                         </div>
 
                         <div>
                             <div class="labels"><label for="email">Email </label></div>
-                            <div><input type="email" class="Signup_Fields" name="email" placeholder="example@email.com"
-                                    required /></div>
+                            <div>
+                                {% comment %} <input type="email" class="Signup_Fields" name="email" placeholder="example@email.com"
+                                    required /> {% endcomment %}
+                                {{form.email}}</div>
                         </div>
 
                         <div>
                             <div class="labels"><label for="password"> Password </label></div>
-                            <div><input type="password" id="password" class="Signup_Fields" name="password"
-                                    placeholder="Enter your password" minlength="8" required />
+                            <div>
+                                {% comment %} <input type="password" id="password" class="Signup_Fields" name="password"
+                                    placeholder="Enter your password" minlength="8" required /> {% endcomment %}
+                                {{form.password}}
                                 <i class="far fa-eye" id="togglePassword"></i>
                                 <script>
                                     const togglePassword = document.querySelector('#togglePassword');
@@ -86,14 +108,16 @@
                                 <figcaption>
                                     <small class="extra-paddings">Use 8 or more characters with a mix of letters,
                                         numbers & symbols</small>
+                                           {{ form.password.errors }}
                                 </figcaption>
                             </div>
                         </div>
+                        
                         <br>
                         <p id="signup_clause" class="extra-paddings">
                             By signing up, you agree to our
-                            <a href="#" class="purple_text">Terms of Service</a> and
-                            <a href="#" class="purple_text">Privacy Policy</a>.
+                            <a href="/terms-of-service" class="purple_text">Terms of Service</a> and
+                            <a href="/privacy-policy" class="purple_text">Privacy Policy</a>.
                         </p>
                         <br>
                         <div class="signup_button"><button type="submit" id="signup_button">Sign Up </button></div>
@@ -102,7 +126,7 @@
 
                     <p class="centre_aligned_texts">
                         Already have an account?
-                        <a href="#" class="purple_text">Log in </a>.
+                        <a href="/login" class="purple_text">Log in </a>.
                     </p>
                     <br>
                     <div class="container">
@@ -115,15 +139,15 @@
 
                     <br>
                     <div class="centre_aligned_texts" class="social_media">
-                        <a href="#" target="_blank" class="other_signup_options" id="google"><img src="google.jpeg"
+                        <a href="#" target="_blank" class="other_signup_options" id="google"><img src="{%static '/images/registration/sign_up/google.jpeg' %}"
                                 alt="Google" width="25px" style="border-radius: 50%"></a>
-                        <a href="#" target="_blank" class="other_signup_options" id="facebook"><img src="facebook.png"
+                        <a href="#" target="_blank" class="other_signup_options" id="facebook"><img  src="{%static '/images/registration/sign_up/facebook.png' %}"
                                 alt="Facebook" width="25px" style="border-radius: 50%"></a>
-                        <a href="#" target="_blank" class="other_signup_options" id="apple"><img src="apple.png"
+                        <a href="#" target="_blank" class="other_signup_options" id="apple"><img src="{%static '/images/registration/sign_up/apple.png' %}"
                                 alt="iphone" width="25px" style="border-radius: 50%"></a>
                     </div>
                     <br>
-
+                   
             </div>
 
         </div>

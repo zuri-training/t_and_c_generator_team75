@@ -5,10 +5,11 @@ from django.utils.translation import gettext as _
 from .managers import CustomUserManager
 
 class CustomUser(AbstractUser):
+    username = None
     email = models.EmailField(_('email address'), unique=True)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ('username',)
+    REQUIRED_FIELDS = []
 
     objects = CustomUserManager()
 

@@ -1,34 +1,34 @@
 from django import forms
+from accounts.models import CustomUser
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.forms import AuthenticationForm, UsernameField
-from django.contrib.auth.models import User
 
-
-class UserLoginForm(AuthenticationForm):
-    def __init__(self, *args, **kwargs):
-        super(UserLoginForm, self).__init__(*args, **kwargs)
-
-    email = forms.EmailField(widget=forms.TextInput(
-        attrs={ 'type':"email",'name':"email",'id':"email",'placeholder':"olescharlie@gmail.com",'required':'','autofocus':''}))
-    password = forms.CharField(widget=forms.PasswordInput(
-        attrs={
-            'type':"password",
-                    'name':"password",
-                    'id':"password",
-                    'placeholder':"Password",
-                    'maxlength':"20",
-                    'required':'',
-                    'autofocus':''
-        }
-))
-
-class SignUpForm(UserCreationForm):
-     def __init__(self, *args, **kwargs):
-       super().__init__(*args, **kwargs)
-       self.fields["username"].widget.attrs.update({
+class RegistrationForm(UserCreationForm):
+    def __init__(self, *args, **kwargs) :
+        super().__init__(*args, **kwargs)
+        self.fields['first_name'].widget.attrs.update({
+         'type':"text",
+         'class':"Signup_Fields",
+          'name':"username",
+            'placeholder':"Enter your full name",
+            'required' :'',
+        })
+        self.fields['email'].widget.attrs.update({
+         'type':"email",
+          'class':"Signup_Fields",
+           'name':"email",
+            'placeholder':"example@email.com",
+          'required':''
+        })
+        self.fields['password'].widget.attrs.update({
+        'type':"password", 'id':"password",
+        'class':"Signup_Fields",
+         'name':"password",
+        'placeholder':"Enter your password",
+         'minlength':"8",
+          'required':''
+        })
         
-       })
 
-     class Meta:
-        model = User
-        fields = ['username' ,'email', 'password1', 'password2' ]
+    class Meta:
+        model = CustomUser
+        fields = ['first_name','email','password']
