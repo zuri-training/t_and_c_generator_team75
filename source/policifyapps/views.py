@@ -21,7 +21,6 @@ def sign_up(request):
     
 
 
-# Create your views here.
 class HomePageView(TemplateView):
     template_name ="home.html"
     
@@ -37,6 +36,11 @@ class DashboardPageView(TemplateView):
 class PrivacyDashboardPageView(TemplateView):
     login_required = True
     template_name = "dashboard/privpolicydash.html"
+
+
+class TermsDashboardPageView(TemplateView):
+    login_required = True
+    template_name = "dashboard/termscondash.html"
 
 @login_required(login_url="/login")
 def create_policiy_post(request):
@@ -54,3 +58,21 @@ def create_policiy_post(request):
     return render(request, 'dashboard/privpolicydash.html',{"form" : form})
 
 
+
+
+
+#delete this if you are not using anymore it keeps giving me issues
+    #
+      #def signup(request):
+    #form = SignUpForm(request.POST)
+    #if form.is_valid:
+        #pass
+    #else:
+        #form = SignUpForm()
+    #context  = {
+        #"form": form
+    #}
+    #return render(request, 'registration/sign_up.html',context)
+
+  
+   

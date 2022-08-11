@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block 'title' %}Policify{% endblock 'title' %}</title>
-    <link rel="stylesheet" href="{% static 'css/dashboard/dashboards.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard/dashboard.css' %}">
     {% block extrahead %}{% endblock extrahead %}
     <script src="{% static 'js/dashboard.js' %}" defer></script>
 
@@ -21,7 +21,7 @@
             <img class="logo" src="{% static 'images/dashboard/logo.svg' %}" alt="logo">
             <nav>
                 <a class="clicks" href="{% url 'dashboard' %}">Dashboard</a>
-                <a class= "clicks" href="#">Terms & Conditions</a>
+                <a class= "clicks" href="{% url 'termsdashboard' %}">Terms & Conditions</a>
                 <a class="clicks" href="{% url 'privacypolicydashboard' %}">Privacy Policies</a>
                 <a class="clicks" href="#">Policies</a> 
             </nav>

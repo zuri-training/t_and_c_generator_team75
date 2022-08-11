@@ -292,8 +292,8 @@ nav {
     
 }
 #button{
-    float: right;
-    margin-right: 19px;
+    right: 13px;
+    top: 70vh;
     background-color: #A535F1;
     border-radius: 50%;
     border: none;
@@ -303,6 +303,7 @@ nav {
     align-items: center;
     height: 13vmin;
     width: 13vmin;
+    position: fixed;
     
    
    

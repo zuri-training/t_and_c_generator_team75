@@ -83,12 +83,17 @@ WSGI_APPLICATION = 'policifyProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE':'django.db.backends.postgresql_psycopg2',
-        'NAME': 'policify_v2',
-        'USER': 'postgres', 
-        'PASSWORD': 'nothingmore',
-        'HOST': '127.0.0.1', 
-        'PORT': '5432',
+        #'ENGINE':'django.db.backends.postgresql_psycopg2',
+        #'NAME': 'policify_v2',
+        #'USER': 'postgres', 
+        #'PASSWORD': 'nothingmore',
+        #'HOST': '127.0.0.1', 
+        #'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        
+        #comment my own when you want to start
+
     }
 }
 
