@@ -42,11 +42,3 @@ class UserLoginForm(AuthenticationForm):
             }
         )
    
-
-
-# class RegistrationForm(UserCreationForm):
-#     email  = forms.EmailField(required=True)
-
-#     class Meta:
-#         model = CustomUser
-#         fields = ['first_name','email','password1','password2']

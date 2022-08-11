@@ -85,24 +85,28 @@ header {
   
   }
 .popup-container {
-  display: none;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(21, 17, 17, 0.61);
-  position: absolute;
-  z-index: 999;
+    display: none;
+    /*height: 100%;*/
+    width: 100%;
+    background-color: rgba(21, 17, 17, 0.61);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
  
 }
-form {
+#form {
   width: 100%;
   padding-top: 30%;
   
   }
-label {
+.label {
   padding-bottom: 2rem;
   }
   
-input {
+.input {
   padding: 8px;
   margin-bottom: 0.5rem;
   width: 100%;
@@ -120,14 +124,25 @@ textarea {
  
   position: absolute;
   border-radius: 6px;
-  display: none;
+  
   animation:  popup .5s;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
  
 }
-
+.popup-form {
+    display: none;
+  /*height: 100%;*/
+  width: 100%;
+  background-color: rgba(21, 17, 17, 0.61);
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 .eks {
  float: right;
 }
@@ -276,7 +291,7 @@ nav {
     margin-bottom: 8%;
     
 }
-button{
+#button{
     float: right;
     margin-right: 19px;
     background-color: #A535F1;
@@ -288,10 +303,12 @@ button{
     align-items: center;
     height: 13vmin;
     width: 13vmin;
+    
+   
    
 }
 
-button img {
+#button img {
     width: 80%;
 }
 
@@ -299,7 +316,7 @@ button img {
 
     header {
         font-size: 1.3rem;
-        padding-block: 40px;
+        padding-block: 35px;
     }
 
     .logo {
@@ -313,10 +330,10 @@ button img {
         display: block;
     }
     .navs {
-        width:280px;
+        width:241px;
         padding-left: 2rem;
        padding-right: 1rem;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         display: block;
     }
     .clicks {
@@ -348,7 +365,7 @@ button img {
     .image {
         margin-left: 70px;
     }
-    button {
+    #button {
         width: 8vmin;
         height: 8vmin;
     }

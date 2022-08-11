@@ -26,5 +26,11 @@ class FeedbackPageView(TemplateView):
     template_name = "feedback.html"
     
 class DashboardPageView(TemplateView):
-    template_name = "dashboard.html"
+
+    template_name = "dashboard/dashboard.html"
+    
+    
+class PrivacyDashboardPageView(TemplateView):
+    template_name = "dashboard/privpolicydash.html"
+
 
