@@ -23,17 +23,23 @@
     </div>
   </div>
 
-  <form>
+  <form method="post">
+    {% csrf_token %}
       <section class="viewport">
           <div class="unique">
 
               <h3>Where do you want to use this document?</h3>
               <div class="form-group type">
                 <label>
-                  <input type="checkbox" name="user" value="website" class="input-checkbox"/>Website
+                  {% comment %} <input 
+                  type="checkbox" name="user" value="website" class="input-checkbox"/> {% endcomment %}
+                  {{form.is_website}}
+                  Website
                 </label>
                 <label>
-                  <input type="checkbox" name="user" value="application" class="input-checkbox"/>Application
+                  {% comment %} <input type="checkbox" name="user" value="application" class="input-checkbox"/> {% endcomment %}
+                  {{form.is_application}}
+                  Application
                 </label>
               </div>
 
@@ -44,16 +50,17 @@
               <h3>Business Details</h3>
               <div class="form-group business column">
                 <label for="policyenterprise">Company/Website/Application name</label>
-                <input type="text" name="policyenterprise" placeholder="My Company name" required/>
-
+                {% comment %} <input type="text" name="policyenterprise" placeholder="My Company name" required/> {% endcomment %}
+                  {{form.app_name}}
                 <label for="policyurl">Company URL</label>
-                <input type="url" name="policyurl" placeholder="http://www.mycompanyname.com" required/>
-
+                {% comment %} <input type="url" name="policyurl" placeholder="http://www.mycompanyname.com" required/> {% endcomment %}
+                  {{form.companyURL}}
                 <label for="policylocation">Location &#40;State/Country&#41; </label>
-                <input type="text" name="policylocation" placeholder="E.g Lagos/Nigeria" required/>
-
+                {% comment %} <input type="text" name="policylocation" placeholder="E.g Lagos/Nigeria" required/> {% endcomment %}
+                  {{form.location}}
                 <label for="policydate">Policy Effective Date</label>
-                <input type="date" name="policydate" placeholder="E.g Lagos/Nigeria" required/>
+                {% comment %} <input type="date" name="policydate" placeholder="E.g Lagos/Nigeria" required/> {% endcomment %}
+                {{form.policy_date}}
               </div>
               <button class="progress-btn">Next:Choose clauses</button>
 
@@ -70,49 +77,56 @@
 
               <h3>What kind of personal information do you collect from users?</h3>
               <label>
-                  <input type="checkbox" name="info" value="email" class="input-checkbox"/>
+                  {% comment %} <input type="checkbox" name="info" value="email" class="input-checkbox"/> {% endcomment %}
+                  {{form.is_email_collected}}
                   Email Address
               </label>
 
               <label>
-              <input type="checkbox" name="info" value="firstandlastname" class="input-checkbox"/>
+              {% comment %} <input type="checkbox" name="info" value="firstandlastname" class="input-checkbox"/> {% endcomment %}
+              {{form.is_first_name_collected}}
               First name and last name
               </label>
 
               <label>
-              <input type="checkbox" name="info" value="phone" class="input-checkbox"/>
+              {% comment %} <input type="checkbox" name="info" value="phone" class="input-checkbox"/> {% endcomment %}
+              {{form.is_phonenumber_collected}}
               Phone number
               </label>
 
               <label>
-              <input type="checkbox" name="info" value="address" class="input-checkbox"/>
+              {% comment %} <input type="checkbox" name="info" value="address" class="input-checkbox"/> {% endcomment %}
+              {{form.is_address_collected}}
               Address, state, city, zip/postal code
               </label>
 
               <label>
-              <input type="checkbox" name="info" value="socials" class="input-checkbox"/>
+              {% comment %} <input type="checkbox" name="info" value="socials" class="input-checkbox"/> {% endcomment %}
+              {{form.is_social_collected}}
               Social medial profile information
               </label>
 
               <label>
-              <input type="checkbox" name="info" value="others" class="input-checkbox"/>
+              {% comment %} <input type="checkbox" name="info" value="others" class="input-checkbox"/> {% endcomment %}
+              {{form.is_others_collected}}
               Others
               </label>
 
-              <input type="text" name="add-other" placeholder="Add Your Own" />
-
+              {% comment %} <input type="text" name="add-other" placeholder="Add Your Own" /> {% endcomment %}
+                {{form.your_other_collected}}
           </div>
           
           
           <div class="form-group yesorno column">
             <h3>Do you use tracking or analytics tool such as Google Analytics?</h3>
             <label>
-              <input type="radio" name="trackinfo" value="tracking" class="input-radio"/>
+              {{form.analytic}}
+              {% comment %} <input type="radio" name="trackinfo" value="tracking" class="input-radio"/>
               Yes, we use tracking or analytics tools
             </label>
             <label>
               <input type="radio" name="trackinfo" value="notracking" class="input-radio"/>
-              No
+              No {% endcomment %}
             </label>
 
           </div>
@@ -120,12 +134,13 @@
           <div class="form-group yesorno column">
             <h3>Do you send emails to your users?</h3>
             <label>
-              <input type="radio" name="emailinfo" value="email" class="input-radio"/>
+              {{form.email_to_user}}
+              {% comment %} <input type="radio" name="emailinfo" value="email" class="input-radio"/>
               Yes, we send emails to our users if subscribed to
             </label>
             <label>
               <input type="radio" name="emailinfo" value="noemail" class="input-radio"/>
-              No
+              No {% endcomment %}
             </label>
 
           </div>
@@ -133,12 +148,13 @@
           <div class="form-group yesorno column">
             <h3>Does your website display Ads?</h3>
             <label>
-              <input type="radio" name="adinfo" value="ads" class="input-radio"/>
+              {{form.display_ads}}
+              {% comment %} <input type="radio" name="adinfo" value="ads" class="input-radio"/>
               Yes, we show ads
             </label>
             <label>
               <input type="radio" name="adinfo" value="noads" class="input-radio"/>
-              No
+              No {% endcomment %}
             </label>
 
           </div>
@@ -146,12 +162,13 @@
           <div class="form-group yesorno column">
             <h3>Can user pay for product and services on your website?</h3>
             <label>
-              <input type="radio" name="payinfo" value="pay" class="input-radio"/>
+              {{form.pay_for_service}}
+              {% comment %} <input type="radio" name="payinfo" value="pay" class="input-radio"/>
               Yes, users can pay for products and services on our website
             </label>
             <label>
               <input type="radio" name="payinfo" value="nopay" class="input-radio"/>
-              No
+              No {% endcomment %}
             </label>
 
           </div>
@@ -159,12 +176,13 @@
           <div class="form-group yesorno column">
             <h3>Do you collect information from kids under the age of 13?</h3>
             <label>
-              <input type="radio" name="kidinfo" value="kid" class="input-radio"/>
+              {{form.collect_information_from_kids}}
+              {% comment %} <input type="radio" name="kidinfo" value="kid" class="input-radio"/>
               Yes, we collect information from kids under the age of 13.
             </label>
             <label>
               <input type="radio" name="kidinfo" value="nokid" class="input-radio"/>
-              No
+              No {% endcomment %}
             </label>
 
           </div>
@@ -172,23 +190,27 @@
           <div class="form-group user-contact column">
             <h3>How can users contact you for any concerns regarding your privacy policy?</h3>
               <label>
-                  <input type="checkbox" name="user-contact" value="mail" class="input-checkbox"/>
+                  {% comment %} <input type="checkbox" name="user-contact" value="mail" class="input-checkbox"/> {% endcomment %}
+                  {{form.is_email_contacted}}
                   Email Address
               </label>
 
               <label>
-              <input type="checkbox" name="user-contact" value="web" class="input-checkbox"/>
+                {{form.is_website_contacted}}
+              {% comment %} <input type="checkbox" name="user-contact" value="web" class="input-checkbox"/> {% endcomment %}
               A page on our website
               </label>
 
               <label>
-              <input type="checkbox" name="user-contact" value="phonenum" class="input-checkbox"/>
+                {{form.is_phone_contacted}}
+              {% comment %} <input type="checkbox" name="user-contact" value="phonenum" class="input-checkbox"/> {% endcomment %}
               Phone num
               </label>
               
 
               <label>
-              <input type="checkbox" name="user-contact" value="postmail" class="input-checkbox"/>
+              {% comment %} <input type="checkbox" name="user-contact" value="postmail" class="input-checkbox"/> {% endcomment %}
+              {{form.is_post_mail_contected}}
               Sending post mail
               </label>
 
@@ -207,12 +229,14 @@
           <h3>Generate your Privacy Policy</h3>
           <div class="form-group terms column">
             <label>
-              <input type="checkbox" name="terminfo" value="agree" class="input-checkbox"/>
+              {% comment %} <input type="checkbox" name="terminfo" value="agree" class="input-checkbox"/> {% endcomment %}
+              {{form.is_i_agree}}
               I agree to the Policify Terms and Conditions and Privacy Policy
               </label>
 
               <label>
-              <input type="checkbox" name="terminfo" value="notify" class="input-checkbox"/>
+              {% comment %} <input type="checkbox" name="terminfo" value="notify" class="input-checkbox"/> {% endcomment %}
+              {{form.is_notify_me}}
               Notify me of Policify policy updates.
               </label>
           </div>
