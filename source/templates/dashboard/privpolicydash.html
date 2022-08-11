@@ -2,7 +2,7 @@
 
 {% load static %}
 {% block extrahead %}
-<link rel="stylesheet" href="{% static 'css/dashboard/privpolicydash.css' %}">
+<link rel="stylesheet" href="{% static 'css/dashboard/privpolicydashs.css' %}">
 
 {% endblock extrahead %}
 
@@ -10,12 +10,17 @@
 
 {% block content %}
 <div class="content">
-  <h2>Progress</h2>
+  <div id="progress"><!-- changes -->
+    <h2 class="directory">Terms and conditions/User Information</h2>
+    <h2 class="directory">Terms and Conditions/Choose Clauses</h2>
+    <h2 class="directory">Terms and conditions/Generate Document</h2>
+  <div>
+  <h2 class="prog">Progress</h2>
   <div class="progress">
     <div class="progress-head">
-      <p class="first"><span class="step1">Step 1 - </span>User Information</p>
-      <p style="display: none;" class="second"><span class="step2">Step 2 - </span>Choose Clauses</p>
-      <p style="display: none;" class="third"><span class="step3">Step 3 - </span>Generate Document</p>
+      <p class="step-head opened-tab"><span class="step1 steps opened-step">Step 1 of 3 - </span>User Information</p>
+      <p class="step-head "><span class="step2 steps" >Step 2 of 3 - </span>Choose Clauses</p>
+      <p class="step-head "><span class="step3 steps">Step 3 of 3 - </span>Generate Document</p>
     </div>
     <div class="save-prev">
       <button class="save">Save</button>
@@ -25,7 +30,7 @@
 
   <form method="post">
     {% csrf_token %}
-      <section class="viewport">
+      <section class="viewport default-open">
           <div class="unique">
 
               <h3>Where do you want to use this document?</h3>
@@ -62,7 +67,7 @@
                 {% comment %} <input type="date" name="policydate" placeholder="E.g Lagos/Nigeria" required/> {% endcomment %}
                 {{form.policy_date}}
               </div>
-              <button class="progress-btn">Next:Choose clauses</button>
+              <button class="progress-btn move-tab">Next:Choose clauses</button>
 
           </div>
 
@@ -218,8 +223,8 @@
 
           </div>
           <div class="navigate">
-            <p>Back</p>
-            <button class="next">Next:Generate document</button>
+            <p class="back">Back</p>
+            <button class="next move-tab">Next:Generate document</button>
           </div>
         </div>  
           
@@ -241,7 +246,7 @@
               </label>
           </div>
           <div class="navigate">
-            <p>Back</p>
+            <p class="back">Back</p>
             <button type="submit" class="next">Next:Generate document</button>
           </div>
         </div>
@@ -251,4 +256,98 @@
       
   </form>
 </div>
+<script>
+  const viewport = document.querySelectorAll('.viewport');
+
+for (let i = 1; i < viewport.length; i++) {
+   viewport[i].style.display = "none";
+ }
+const moveButton  = document.querySelectorAll(".move-button");
+
+const next = document.querySelectorAll(".move-tab");
+const progressStep = document.querySelector(".progress-head");
+let currentSlide = 0;
+let maxSlide = viewport.length;
+
+const prev = document.querySelectorAll(".back"); 
+
+const progress = document.querySelectorAll(".step-head");
+
+const directories = document.querySelectorAll(".directory");
+
+for (let i = 1; i < directories.length; i++) {
+  directories[i].style.display = "none";
+    }
+
+  for (let i = 1; i < progress.length; i++) {
+  progress[i].style.display = "none";
+    }
+ 
+
+
+
+
+for(let i = 0; i < next.length;  i++) {
+  next[i].addEventListener('click', function (e) {
+    
+  e.preventDefault();
+  currentSlide++;
+  
+  for(let i= 0; i < viewport.length; i++) {
+    viewport[i].style.display = "none";
+  }
+  viewport[currentSlide].style.display = "block";
+    
+    
+  
+  for(let i= 0; i < progress.length; i++) {
+    progress[i].style.display = "none";
+  }
+  progress[currentSlide].style.display = "block";
+    
+    for(let i= 0; i < directories.length; i++) {
+    directories[i].style.display = "none";
+  }
+  directories[currentSlide].style.display = "block";
+    
+    
+    
+    });
+  
+  
+
+  
+  
+   
+  
+  
+
+  
+}
+
+for( let i=0; i < prev.length; i++) {
+  prev[i].addEventListener("click", function (e) {
+  e.preventDefault();
+  
+   currentSlide--;
+    console.log(maxSlide);
+    for(let i= 0; i < viewport.length; i++) {
+    viewport[i].style.display = "none";
+  }
+  viewport[currentSlide].style.display = "block";
+    
+    for(let i= 0; i < progress.length; i++) {
+    progress[i].style.display = "none";
+  }
+  progress[currentSlide].style.display = "block";
+    
+    for(let i= 0; i < directories.length; i++) {
+    directories[i].style.display = "none";
+  }
+  directories[currentSlide].style.display = "block";
+    
+    });
+  
+}
+</script>
 {% endblock content %}

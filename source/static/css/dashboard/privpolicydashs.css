@@ -143,6 +143,15 @@ input[type="checkbox"]:checked{
     border-radius: 25px;
     border: none;
 }
+@keyframes view {
+    from {
+      opacity: 0;
+      
+    }
+    to {
+      opacity: 1;
+    }
+}
 @media only screen and (min-width: 860px) {
 
     section {
@@ -186,3 +195,34 @@ input[type="checkbox"]:checked{
         margin-top: 0.6rem;
     } 
 }
+
+.steps.open-tab {
+    display: block;
+    color: purple;
+  }
+  .tab.open-tab {
+    display: block;
+  }
+  
+  .step-head{
+    color: purple;
+    border-bottom: 3px solid purple;
+    width: 220px;
+    padding-bottom: 5px;
+      display: block;
+  }
+  .step-head:nth-child(3) {
+    width:240px;
+  }
+  .viewport {
+    display: block;
+    animation : view .5s;
+  }
+  #progress > h2{
+    margin-top: 1.6rem;
+    padding-left: 1.3rem;
+  }
+  .prog {
+    margin-top: 1.6rem;
+    padding-left: 1.3rem;
+  }
