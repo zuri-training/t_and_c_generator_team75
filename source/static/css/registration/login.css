@@ -90,12 +90,18 @@ input {
   /* padding: 13px; */
   height: 37px;
   margin-bottom: 5px;
-  border-radius: 35px;
+  border-radius: 100px;
   border: none;
   width: 100%;
   color: #ffffff;
   background-color: #a535f1;
   font-size: 0.9em;
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 32px;
+cursor: pointer;
 }
 .last-section {
   display: flex;
@@ -156,6 +162,10 @@ span {
   border-radius: 20px;
   height: 40px;
   width: 80px;
+}
+
+a{
+  text-decoration: none;
 }
 @media screen and (min-width: 40em) {
   .registration {

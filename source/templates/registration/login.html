@@ -17,16 +17,30 @@
       rel="stylesheet"
     />
   </head>
+  <style>
+    body {
+      background: url({%static '/images/registration/sign_up/and-machines-vqTWfa4DjEk-unsplash 1.png' %});
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: "Inter", sans-serif;
+      scroll-behavior: smooth;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      overflow: hidden;
+    }
+  </style>
   <body>
     <div class="container">
       <div class="content">
         <!-- logo section starts -->
         <div class="logo">
-          <img src="./images/Frame 18.png" alt="" />
+          <img src="{%static 'images/product/Frame 18.svg' %} "alt="logo" />
         </div>
         <!-- logo section ends -->
 
         <!-- header and sub header starts here -->
+        <div class="form-class">
         <div class="writeup">
           <h2 id="header">LOGIN</h2>
           <p id="sub-head">
@@ -37,20 +51,14 @@
 
         <!-- input starts here -->
         <div class="registration">
-          <form action="get" method="get">
+          <form method="post" >
+            {% csrf_token %}
             <div class="input">
               <div class="label">
                 <label for="email">Email</label>
               </div>
               <div class="email">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="olescharlie@gmail.com"
-                  required
-                  autofocus
-                />
+               {{form.email}}
               </div>
             </div>
             <div class="input">
@@ -59,15 +67,7 @@
               </div>
               <div class="password">
                 <div class="input-icon">
-                  <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    placeholder="Password"
-                    maxlength="20"
-                    required
-                    autofocus
-                  />
+                 {{form.password}}
                   <i class="fa-solid fa-eye-slash" id="font-icon"></i>
                 </div>
                 <p id="password-hint">
@@ -76,12 +76,10 @@
                 </p>
               </div>
             </div>
-          </form>
-
-          <input type="submit" value="Login" class="btn" />
+             <button type="submit" value="Login" class="btn">Login </button>
           <div class="last-section">
-            <p id="forgot-pw">Forgot Password?</p>
-            <p id="acct">Don't have an account? <span>Sign Up</span></p>
+            <a href="/password-reset"> <p id="forgot-pw">Forgot Password?</p> </a>
+            <p id="acct">Don't have an account? <a href="/sign-up">Sign Up</a></p>
           </div>
         </div>
         <!-- input ends here -->
@@ -96,26 +94,29 @@
         <div class="icons">
           <div class="google">
             <img
-              src="./images/7123025_logo_google_g_icon.svg"
+              src="{%static '/images/registration/sign_up/google.jpeg' %}"
               alt="google icon"
               class="google-icon"
             />
           </div>
           <div class="facebook">
             <img
-              src="./images/5296499_fb_facebook_facebook logo_icon.png"
+              src="{%static '/images/registration/sign_up/facebook.png' %}"
               alt="facebook logo"
               class="facebook-icon"
             />
           </div>
           <div class="apple">
             <img
-              src="./images/104447_apple_logo_icon.svg"
+              src="{%static '/images/registration/sign_up/apple.png' %}"
               alt="apple icon"
               class="apple-icon"
             />
           </div>
         </div>
+          </form>
+        </div>
+         
         <!-- icons ends here -->
       </div>
     </div>
