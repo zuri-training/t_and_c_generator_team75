@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'policifyProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.postgresql_psycopg2',
-        'NAME': 'team 75',
+        'NAME': 'policify_v2',
         'USER': 'postgres', 
         'PASSWORD': 'nothingmore',
         'HOST': '127.0.0.1', 
@@ -139,5 +139,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
-LOGIN_REDIRECT_URL = "/home"
-LOGOUT_REDIRECT_URL = "/login"
+LOGIN_REDIRECT_URL = "/dashboard"
+LOGOUT_REDIRECT_URL = "/home"
