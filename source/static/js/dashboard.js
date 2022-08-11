@@ -10,20 +10,7 @@ const lines =document.querySelectorAll('#hamburger div')
         });
 
         const clicks = document.querySelectorAll('.clicks');
-        const policyBtn = document.querySelector(".policy-button"); 
-        const policyPopup = document.querySelector(".popup-container");
-        const close = document.querySelector(".close");
         
-        close.addEventListener('click', function() {
-          policyPopup.style.display = "none";
-          header.style.backgroundColor = '#fff';
-        });
-        
-        policyBtn.addEventListener("click", function(event) {
-          event.preventDefault();
-          policyPopup.style.display = "block";
-          header.style.backgroundColor = 'rgba(21, 17, 17, 0.61)';
-        });
         
         for(let i = 0; i < clicks.length; i++) {
          
@@ -31,7 +18,7 @@ const lines =document.querySelectorAll('#hamburger div')
           
           clicks[i].addEventListener('click', function(e) {
             
-            e.preventDefault();
+            
             for(let i =0;  i < clicks.length; i++) {
               clicks[i].style.color = "#F9F9F9";
               clicks[i].style.backgroundColor = "#251B2C";
@@ -46,7 +33,7 @@ const lines =document.querySelectorAll('#hamburger div')
         }
         /***form *****/
         const messageicon = document.querySelector(".messageicon");
-        const form = document.querySelector(".form");
+        const form = document.querySelector(".popup-form");
         const eks = document.querySelector(".eks");
         const header = document.querySelector('header');
      
