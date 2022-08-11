@@ -2,6 +2,7 @@ from django.urls import path
 from .views import HomePageView, FeedbackPageView, DashboardPageView
 from django.contrib.auth import views
 from .views import sign_up , create_policiy_post
+
 from .views import HomePageView, FeedbackPageView, DashboardPageView, PrivacyDashboardPageView, TermsDashboardPageView
 
 urlpatterns = [

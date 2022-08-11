@@ -27,7 +27,6 @@ class HomePageView(TemplateView):
 class FeedbackPageView(TemplateView):
     template_name = "feedback.html"
 
-
  
 class DashboardPageView(TemplateView):
     login_required = True
@@ -37,6 +36,7 @@ class DashboardPageView(TemplateView):
 class PrivacyDashboardPageView(TemplateView):
     login_required = True
     template_name = "dashboard/privpolicydash.html"
+
 
 class TermsDashboardPageView(TemplateView):
     login_required = True
@@ -56,6 +56,8 @@ def create_policiy_post(request):
         form = PoliciesForm()
 
     return render(request, 'dashboard/privpolicydash.html',{"form" : form})
+
+
 
 
 
