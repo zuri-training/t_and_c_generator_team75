@@ -42,12 +42,17 @@
     
         <p class="dashboard">Dashboard</p>
       
+        {% if user.is_authenticated%}
         <div class="user">
             <div class="user2"></div>
-            <p class="username">Abby@gmail.com</p>
+            <p class="username">{{user.email}}</p>
             <img class="user-dropdown" src="{% static 'images/dashboard/dropdownicon.svg' %}" alt="dropdown">
         </div>
-        
+        {%else%}
+        <div class="user">
+            <img class="user-dropdown" src="{% static 'images/dashboard/dropdownicon.svg' %}" alt="dropdown">
+        </div>
+        {%endif%}
         <div class="user-info">
             <div class="closed">
                 <p><img src="{% static 'images/dashboard/account.svg' %}" alt="account"></p>

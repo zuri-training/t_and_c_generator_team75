@@ -175,6 +175,22 @@ figcaption {
     padding-left: 5%;
 }
 
+.errorlist .helptext ul  li{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+text-decoration: none;
+letter-spacing: 0.02em;
+
+/* Error/600 */
+
+color: #DA1E28;
+
+}
+
 .purple_text {
     color: blueviolet;
 }

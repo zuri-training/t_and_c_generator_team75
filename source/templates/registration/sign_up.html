@@ -68,29 +68,33 @@
                 <figcaption class="centre_aligned_texts">Sign up for free to access any of our products</p>
                     <br>
                     <form method="POST">
-                        {% csrf_token %}
+                        {% csrf_token %}       
                         <div>
                             <div class="labels"><label for="Username">Full Name</label></div>
                             <div>
                                 {% comment %} <input type="text" class="Signup_Fields" name="username"
                                     placeholder="Enter your full name" required /> {% endcomment %}
                                 {{form.first_name}}</div>
+                                <figcaption>
+                                    <small class="extra-paddings"> </small>
+                                </figcaption>
                         </div>
-
                         <div>
                             <div class="labels"><label for="email">Email </label></div>
                             <div>
                                 {% comment %} <input type="email" class="Signup_Fields" name="email" placeholder="example@email.com"
                                     required /> {% endcomment %}
                                 {{form.email}}</div>
+                                <figcaption>
+                                    <small class="extra-paddings"> {{form.email.errors}} </small>
+                                </figcaption>
                         </div>
-
                         <div>
                             <div class="labels"><label for="password"> Password </label></div>
                             <div>
                                 {% comment %} <input type="password" id="password" class="Signup_Fields" name="password"
                                     placeholder="Enter your password" minlength="8" required /> {% endcomment %}
-                                {{form.password}}
+                                {{form.password1}}                 
                                 <i class="far fa-eye" id="togglePassword"></i>
                                 <script>
                                     const togglePassword = document.querySelector('#togglePassword');
@@ -105,12 +109,42 @@
                                     });
                                 </script>
 
-                                <figcaption>
-                                    <small class="extra-paddings">Use 8 or more characters with a mix of letters,
-                                        numbers & symbols</small>
-                                           {{ form.password.errors }}
-                                </figcaption>
+                                
                             </div>
+                            <figcaption>
+                                <small class="extra-paddings"> {{forms.password.errors}}
+                                    {{forms.password1.errors}} </small>
+                            </figcaption>
+
+                        </div>
+                        <div>
+                            <div class="labels"><label for="password"> Confirm Password </label></div>
+                            <div>
+                                {% comment %} <input type="password" id="password" class="Signup_Fields" name="password"
+                                    placeholder="Enter your password" minlength="8" required /> {% endcomment %}
+                                {{form.password2}}                 
+                                <i class="far fa-eye" id="togglePassword"></i>
+                                <script>
+                                    const togglePassword = document.querySelector('#togglePassword');
+                                    const password = document.querySelector('#password');
+
+                                    togglePassword.addEventListener('click', function (e) {
+                                        // toggle the type attribute
+                                        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                                        password.setAttribute('type', type);
+                                        // toggle the eye slash icon
+                                        this.classList.toggle('fa-eye-slash');
+                                    });
+                                </script>
+
+                                
+                            </div>
+                            <figcaption>
+                                <small class="extra-paddings">{{forms.password2.errors}}
+                                    {{forms.non_field_errors}}
+                                    {{form.errors}}
+                                    {{forms.errors}} </small>
+                            </figcaption>
                         </div>
                         
                         <br>

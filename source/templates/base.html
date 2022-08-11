@@ -28,10 +28,17 @@
                     <a href="#footer" class ="nav-item">Contact us</a>
         
                 </nav>
+                {% if user.is_authenticated%}
+                <div class="desktop-register-and-login">
+                    <a class="login-link" href ="#">{{user.email}}</a>
+                    <a class="signup-link" href="/logout"> Log out</a>
+                </div>
+                {%else%}
                 <div class="desktop-register-and-login">
                     <a class="login-link" href ="/login">Login</a>
                     <a class="signup-link" href="/sign-up">Sign Up</a>
                 </div>
+                {% endif %}
     
             </div>
             <div id="hamburger">

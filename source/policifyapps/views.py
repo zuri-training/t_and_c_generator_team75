@@ -1,7 +1,10 @@
+from urllib import request
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from django.contrib.auth import authenticate, login
-from . forms import RegistrationForm
+from . forms import RegistrationForm , PoliciesForm
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 def sign_up(request):
@@ -24,13 +27,30 @@ class HomePageView(TemplateView):
     
 class FeedbackPageView(TemplateView):
     template_name = "feedback.html"
-    
-class DashboardPageView(TemplateView):
 
+ 
+class DashboardPageView(TemplateView):
+    login_required = True
     template_name = "dashboard/dashboard.html"
     
     
 class PrivacyDashboardPageView(TemplateView):
+    login_required = True
     template_name = "dashboard/privpolicydash.html"
+
+@login_required(login_url="/login")
+def create_policiy_post(request):
+    if request.method == 'POST':
+        form = PoliciesForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit= False)
+            post.author = request.user
+            print(post.author)
+            post.save()
+            return redirect('/home')
+    else:
+        form = PoliciesForm()
+
+    return render(request, 'dashboard/privpolicydash.html',{"form" : form})
 
 
