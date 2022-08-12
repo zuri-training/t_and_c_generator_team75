@@ -30,7 +30,9 @@
 
   <form method="post">
     {% csrf_token %}
-
+    {{forms.non_field_errors}}
+      {{form.errors}}
+       {{forms.errors}}
       <section class="viewport default-open">
 
           <div class="unique">
