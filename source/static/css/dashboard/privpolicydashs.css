@@ -143,6 +143,15 @@ input[type="checkbox"]:checked{
     border-radius: 25px;
     border: none;
 }
+@keyframes view {
+    from {
+      opacity: 0;
+      
+    }
+    to {
+      opacity: 1;
+    }
+}
 @media only screen and (min-width: 860px) {
 
     section {
@@ -150,7 +159,7 @@ input[type="checkbox"]:checked{
         flex-direction: column;
         
        align-items: center; 
-       margin-left: 90px;
+       margin-left: 0px;
         
     }
     h2 {
@@ -163,13 +172,14 @@ input[type="checkbox"]:checked{
         padding-bottom: 2%;
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
+        
        
 
     }
     .progress-head {
-        padding-left: 250px;
+        padding-left: 3px;
     }
     .form-group {
         width: 450px;
@@ -185,4 +195,40 @@ input[type="checkbox"]:checked{
     .progress-head, h2 {
         margin-top: 0.6rem;
     } 
+    #progress {
+    margin-top: 1.6rem;
+    padding-left: 230px;
+  }
+  
 }
+
+.steps.open-tab {
+    display: block;
+    color: purple;
+  }
+  .tab.open-tab {
+    display: block;
+  }
+  
+  .step-head{
+    color: purple;
+    border-bottom: 3px solid purple;
+    width: 220px;
+    padding-bottom: 5px;
+      display: block;
+  }
+  .step-head:nth-child(3) {
+    width:240px;
+  }
+  .viewport {
+    /*display: block;*/
+    animation : view .5s;
+  }
+  #progress > h2{
+    margin-top: 1.6rem;
+    padding-left: 1.3rem;
+  }
+  .prog {
+    margin-top: 1.6rem;
+    padding-left: 1.3rem;
+  }
