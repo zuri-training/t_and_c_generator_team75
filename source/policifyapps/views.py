@@ -59,6 +59,13 @@ class ProductPageView(TemplateView):
 
 class ContactPageView(TemplateView):
     template_name = "contact.html"
+
+class TCPreviewPageView(TemplateView):
+    template_name = "tcp.html"
+    
+class PPPreviewPageView(TemplateView):
+    template_name = "ppp.html"   
+
    
 #@login_required(login_url="/login")
 def create_policiy_post(request):
