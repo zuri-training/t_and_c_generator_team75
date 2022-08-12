@@ -8,6 +8,9 @@ from django.db import models
 
 class PolicyPost(models.Model):
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    type_form = models.CharField(max_length = 10,default='Policies')
 
     is_website = models.BooleanField("Website",default=False)
     is_application = models.BooleanField("Application",default=False)
@@ -39,14 +42,19 @@ class PolicyPost(models.Model):
     is_i_agree = models.BooleanField("I agree to the Policify Terms and Conditions and Privacy Policy",default=False,blank=False)
     is_notify_me = models.BooleanField("Notify me of Policify policy updates.",default=False)
 
+    def __str__(self):
+        return self.app_name + "\n" + self.companyURL
+    
+
 
 
 class TermPost(models.Model):
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-
+    type_form = models.CharField(max_length = 10, default='Terms')
     is_website = models.BooleanField("Website",default=False, null=False)
     is_application = models.BooleanField("Application",default=False, null=False)
-
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     app_name = models.CharField(max_length=200)
     companyURL = models.CharField(max_length=200)
     location =  models.CharField(max_length=200)
@@ -67,4 +75,9 @@ class TermPost(models.Model):
 
     is_i_agree = models.BooleanField("I agree to the Policify Terms and Conditions and Privacy Policy",default=False,blank=False, null=False)
     is_notify_me = models.BooleanField("Notify me of Policify policy updates.",default=False, null=False)
+    
+
+    def __str__(self):
+        return self.app_name + "\n" + self.companyURL
+    
     
