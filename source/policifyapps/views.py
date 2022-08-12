@@ -149,6 +149,8 @@ def doc_view(request,post_type,my_id):
 
 
 
+def policies(request):
+    return render(request,"dashboard/policies.html",{})
 
 def edit_post(request,post_type ,my_id):
      if post_type == 1:
