@@ -325,7 +325,7 @@ nav {
 }
 .overflow {
     overflow-x: scroll;
-    width: 700px;
+    width: 800px;
     
   }
   .circle {
@@ -405,15 +405,21 @@ nav {
   }
   tr {
     border: 0.2px solid #c9c6c6;
-    padding: 1.05rem;
+    
   }
   tr:nth-child(even) {
     background-color: #E0E0E0;
   }
+  td {
+    padding: 0.6rem 1.2rem;
+    border: 0.2px solid #c9c6c6;
+  }
    
 
 @media only screen and (min-width:860px) {
-
+    .overflow {
+      width: 1300px;
+    }
     header {
         font-size: 1.3rem;
         padding-block: 35px;
@@ -509,5 +515,47 @@ nav {
         display: none;
     }
 
+}
 
+.crud-popup a {
+  color: #251b2C;
+  margin-top: 1rem;
+  
+}
+.crud-popup a:hover {
+  color: #A535F1;
+}
+.crud-popup, .close-crud {
+  
+  display: flex;
+  flex-direction: column;
+  
+}
+.close-crud {
+  align-items: center;
+}
+.crud-popup {
+  
+  height: 140px;
+  width: 100px;
+  background-color: #f9f9f9;
+  text-align: left;
+  display:none;
+  border: 1.3px solid #c9c6c6;
+}
+.closing {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.crud {
+  display: flex;
+  width: 100%;
+}
+.kebab {
+  cursor: pointer;
+
+}
+.kebab:hover {
+  transform: scale(1.4);
 }

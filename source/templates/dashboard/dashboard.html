@@ -43,7 +43,38 @@
                 </button>
               </div>
             </div>
-            {% for post in posts %}
+            <div class="crud">
+            <table>
+              <tr>
+                <th>Company name</th>
+                <th>Type</th>
+                <th>URL/Application</th>
+                <th>Location</th>
+                <th>Date modified</th>
+                <th>icon</th>
+                <th><img class="kebab" src={% static 'images/dashboard/kebab.svg' %}/></th>
+              </tr>
+              <tr>
+                <td>blaaa</td>
+                <td>balll</td>
+                <td>bj</td>
+                <td>ghgj</td>
+                <td>b nb</td>
+                <td>lovf</td>
+                <td><img class="kebab" src={% static 'images/dashboard/kebab.svg' %}/></td>
+              </tr>
+            </table>
+            <div class="crud-popup">
+              <p class="closing">X</p>
+              <div class="close-crud">
+                
+                <a href="#">View</a>
+                <a href="#">Delete</a>
+                <a href="#">Edit</a>
+              </div>
+            </div>
+          </div>
+            {% comment "" %}{% for post in posts %}
             {% for term in terms %}
             {%if user.username == post.author.username %} 
               <div class="policies">
@@ -82,7 +113,7 @@
         </div>
         {%endif%}
         {%endfor%}
-        {%endfor%}
+        {%endfor%}{% endcomment %}
 
     </main>
     <script>
@@ -103,8 +134,24 @@
             //header.style.backgroundColor = 'rgba(21, 17, 17, 0.61)';
           });
     
-        
-        
+        /* kebab */
+
+        const kebab = document.querySelectorAll(".kebab");
+        const crud = document.querySelector(".crud");
+        const crudpopup = document.querySelector(".crud-popup");
+        const closing = document.querySelector(".closing");
+
+        for(let i = 0; i < kebab.length; i++) {
+          kebab[i].addEventListener("click", function() {
+            crudpopup.style.display="block";
+            
+          });
+        }
+
+        closing.addEventListener("click", function(e) {
+          
+          crudpopup.style.display="none";
+        })
 
 
     </script>

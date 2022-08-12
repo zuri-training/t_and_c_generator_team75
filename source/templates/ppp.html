@@ -1,25 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Privacy Policy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/ppps.css' %}">
+
+{% endblock extrahead %}
+
+{% block content %}
     <div class="container">
       <!-- first section starts here -->
       <div class="section-one">
         <div class="top-section">
-          <div class="illustration">
-            <img src="./images/amico.svg" alt="illustration" />
+          <div class="illustration2">
+            <img src="{% static 'images/ppp/amico.svg'%}" alt="illustration" />
           </div>
           <div class="private-policy">
             <div class="top-section-writeup">
@@ -56,8 +50,8 @@
         <div class="platforms">
           <div class="choice-platforms">
             <div class="platform-one">
-              <div class="icon">
-                <img src="./images/website.svg" alt="" width="40" />
+              <div class="icons">
+                <img src="{% static 'images/ppp/website.svg'%}" alt="" width="40" />
               </div>
               <div class="platform-writeup">
                 <h5 class="platform-header">Website</h5>
@@ -68,8 +62,8 @@
               </div>
             </div>
             <div class="platform-two">
-              <div class="icon">
-                <img src="./images/e-commerce.svg" alt="" width="40" />
+              <div class="icons">
+                <img src="{% static 'images/ppp/e-commerce.svg'%}" alt="" width="40" />
               </div>
               <div class="platform-writeup">
                 <h5 class="platform-header">E-commerce</h5>
@@ -80,8 +74,8 @@
               </div>
             </div>
             <div class="platform-three">
-              <div class="icon">
-                <img src="./images/mobile.svg" alt="" width="40" />
+              <div class="icons">
+                <img src="{% static 'images/ppp/mobile.svg'%}" alt="" width="40" />
               </div>
               <div class="platform-writeup">
                 <h5 class="platform-header">Mobile App</h5>
@@ -100,5 +94,5 @@
 
       <!-- second section ends here -->
     </div>
-  </body>
-</html>
+  
+{% endblock content %}
