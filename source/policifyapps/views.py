@@ -45,6 +45,12 @@ class TermsDashboardPageView(TemplateView):
 class PolicyPreviewPage(TemplateView):
     template_name = "dashboard/policypreview.html"
 
+class ProductPageView(TemplateView):
+    template_name = "product.html"
+
+class ContactPageView(TemplateView):
+    template_name = "contact.html"
+   
 #@login_required(login_url="/login")
 def create_policiy_post(request):
     if request.method == 'POST':
