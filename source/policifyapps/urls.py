@@ -24,6 +24,8 @@ urlpatterns = [
     path('policypreview/<int:post_type>/<int:my_id>',preview_post,name='preview_post'),
      path('edit-post/<int:my_id>',edit_post,name='edit_post'),
      path('pdf/<int:post_type>/<int:my_id>', GeneratePdf.as_view()),
+     path('dashboard/termsdashboard/',create_terms_post, name="termsdashboard"),
+     path("dashboard/privacypolicydashboard/", create_policiy_post, name="privacypolicydashboard"),
 
 
 ]

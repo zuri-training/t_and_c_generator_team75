@@ -14,8 +14,8 @@
           <div class="popup-container">
             <div class="policy-popup">
               <div class="gen-buttons">
-                <a href="#">Terms and Conditions</a>
-                <a href="#">Privacy Policy</a>
+                <a href="termsdashboard/">Terms and Conditions</a>
+                <a href="privacypolicydashboard/">Privacy Policy</a>
               </div>
               <p class="close">Close</p>
             </div>
@@ -55,7 +55,7 @@
                     <th>URL/Application</th>
                     <th>Location</th>
                     <th>Date modified</th>
-                    <th>icon</th>
+                    
                   </tr>
                   <tr>
                     <td>{{post.app_name}}</td>
@@ -63,7 +63,7 @@
                     <td>{{post.companyURL}}</td>
                     <td>{{post.location}}</td>
                     <td>{{post.created_at}}</td>
-                    <td></td>
+                  
                   </tr>
                   {%endif%}
                   {%if user.username == term.author.username %} 
@@ -73,7 +73,7 @@
                     <td>{{term.companyURL}}</td>
                     <td>{{term.location}}</td>
                     <td>{{term.created_at}}</td>
-                    <td></td>
+                   
                   </tr>
                   
                 </table>
