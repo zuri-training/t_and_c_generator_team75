@@ -13,6 +13,7 @@ from email.policy import default
 from decouple import config
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -83,14 +84,14 @@ WSGI_APPLICATION = 'policifyProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        #'ENGINE':'django.db.backends.postgresql_psycopg2',
-        #'NAME': 'policify_v2',
-        #'USER': 'postgres', 
-        #'PASSWORD': 'nothingmore',
-        #'HOST': '127.0.0.1', 
-        #'PORT': '5432',
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE':'django.db.backends.postgresql_psycopg2',
+        'NAME': 'policify_v2',
+        'USER': 'postgres', 
+        'PASSWORD': 'nothingmore',
+        'HOST': '127.0.0.1', 
+        'PORT': '5432',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
         
         #comment my own when you want to start
 
@@ -146,3 +147,13 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 LOGIN_REDIRECT_URL = "/dashboard"
 LOGOUT_REDIRECT_URL = "/home"
+
+#SMTP Configuration
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = '*********'
+EMAIL_HOST_PASSWORD = '*********'
+

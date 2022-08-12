@@ -38,4 +38,33 @@ class PolicyPost(models.Model):
 
     is_i_agree = models.BooleanField("I agree to the Policify Terms and Conditions and Privacy Policy",default=False,blank=False)
     is_notify_me = models.BooleanField("Notify me of Policify policy updates.",default=False)
+
+
+
+class TermPost(models.Model):
+    author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+
+    is_website = models.BooleanField("Website",default=False, null=False)
+    is_application = models.BooleanField("Application",default=False, null=False)
+
+    app_name = models.CharField(max_length=200)
+    companyURL = models.CharField(max_length=200)
+    location =  models.CharField(max_length=200)
+    policy_date = models.DateField()
+
+    create_account = models.CharField(max_length=100)
+    upload_content = models.CharField(max_length=100)
+    in_app_purchases = models.CharField(max_length=100)
+    display_ads = models.CharField(max_length=100)
+    buy_goods= models.CharField(max_length=100)
+    subscription_plans = models.CharField(max_length=100)
+    exclusive = models.CharField(max_length=100)
+
+    is_email_contacted = models.BooleanField("Email Address",default=False, null=False)
+    is_website_contacted = models.BooleanField("A page on our website",default=False, null=False)
+    is_phone_contacted = models.BooleanField(" Phone num",default=False, null=False)
+    is_post_mail_contected = models.BooleanField("Sending post mail",default=False, null=False)
+
+    is_i_agree = models.BooleanField("I agree to the Policify Terms and Conditions and Privacy Policy",default=False,blank=False, null=False)
+    is_notify_me = models.BooleanField("Notify me of Policify policy updates.",default=False, null=False)
     
