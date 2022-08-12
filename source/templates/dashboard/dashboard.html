@@ -8,7 +8,7 @@
       <div class= "not-generated"> <!-----when user has not generated-->
         <div class="image">
           <img class="illustration" src="{% static 'images/dashboard/illustration.svg' %}" alt="Logo">
-          <h2>You have no generated policy</h2>
+          {% comment %} <h2>You have no generated policy</h2> {% endcomment %}
           <p>Empower your business, create unique policies and terms of service with just a few clicks.</p>
           <a href="#" class="policy-button">Generate policy</a>
           <div class="popup-container">
@@ -24,7 +24,7 @@
             
         </div>
       </div>
-        
+     
         <div class="generated"><!---When user has generated-->
           <div class="overflow">
             <div class="boxes">
@@ -43,6 +43,9 @@
                 </button>
               </div>
             </div>
+            {% for post in posts %}
+            {% for term in terms %}
+            {%if user.username == post.author.username %} 
               <div class="policies">
                 <h2>My Policies</h2>
                 <table>
@@ -50,13 +53,26 @@
                     <th>Company name</th>
                     <th>Type</th>
                     <th>URL/Application</th>
-                    <th>Status</th>
+                    <th>Location</th>
                     <th>Date modified</th>
                     <th>icon</th>
-
                   </tr>
                   <tr>
+                    <td>{{post.app_name}}</td>
+                    <td>{{post.type_form}}</td>
+                    <td>{{post.companyURL}}</td>
+                    <td>{{post.location}}</td>
+                    <td>{{post.created_at}}</td>
                     <td></td>
+                  </tr>
+                  {%endif%}
+                  {%if user.username == term.author.username %} 
+                  <tr>
+                    <td>{{term.app_name}}</td>
+                    <td>{{term.type_form}}</td>
+                    <td>{{term.companyURL}}</td>
+                    <td>{{term.location}}</td>
+                    <td>{{term.created_at}}</td>
                     <td></td>
                   </tr>
                   
@@ -64,8 +80,9 @@
               </div>
               </div>
         </div>
-
-        
+        {%endif%}
+        {%endfor%}
+        {%endfor%}
 
     </main>
     <script>

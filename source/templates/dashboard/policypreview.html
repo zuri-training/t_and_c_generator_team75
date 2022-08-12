@@ -14,8 +14,12 @@
     <div class="kebab"></div>
 </div>
 <div id ="header2">
-    <a href="#"> <img src="{% static 'images/policypreview/download.svg' %}" alt=""></a>
-    <a href="#"> <img src="{% static 'images/policypreview/export.svg' %}" alt=""></a>
+    <a href="/pdf/1/{{posts.id}}"> <img src="{% static 'images/policypreview/download.svg' %}" alt=""></a>
+    <a href="#"> <img src="{% static 'images/policypreview/export.svg' %}" alt="">
+        <form method="post" >
+            {%csrf_token%}
+        <button type="submit" name="download-id" value="{{posts.id}}"></button>
+    </a>
 </div>
 
 
@@ -23,12 +27,12 @@
     <h2> Your free Privacy policy</h2>
     <p>Your policy is valid for use on one domain; feel free to edit it as you like. Please review your policies before adding to your website/Application. Policify.io is not liable for use. Do not redistribute.</p>
     <div class="start">
-    <p class="date">Last Updated on ..........</p>
+    <p class="date">Last Updated on {% if posts %}{{posts.created_at}}{% else %}..........  {%endif%}</p>
     
     <h2>Consent</h2>
     <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.
-        This Privacy notice for &#40;.....name of company....&#41; describes how and why we might collect, store, use and/share (process) your information when you use our services.
-        Reading this privacy notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our services. If you still have any questions or concerns, please contact us at ....... 
+        This Privacy notice for &#40;{% if posts %}{{posts.app_name}}{% else %}.....name of company....{%endif%}&#41; describes how and why we might collect, store, use and/share (process) your information when you use our services.
+        Reading this privacy notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our services. If you still have any questions or concerns, please contact us at{%if posts%} {{posts.companyURL}}{%else %}....... {%endif%}
     </p>
 
     <h2>Terminologies</h2>
@@ -41,7 +45,7 @@
     <h2>The Data We Collect About You?
     </h2>
 
-    <p>We collect your personal data in order to provide and continually improve our products and services. We may collect, use, store and transfer the following different kinds of personal data about you for marketing and personal data optimization purposes. (name of company) also uses Google Digital Marketing to propose targeted offers.
+    <p>We collect your personal data in order to provide and continually improve our products and services. We may collect, use, store and transfer the following different kinds of personal data about you for marketing and personal data optimization purposes.{{posts.app_name}} also uses Google Digital Marketing to propose targeted offers.
     <p>
     <p>To find out more:</p>
 
@@ -52,7 +56,7 @@
         </li>
         <li>
             Information on your use of our website and/or mobile applications:
-            We automatically collect and store certain types of information regarding your use of the (name of company) website/app including information about your searches, views, downloads and purchases.
+            We automatically collect and store certain types of information regarding your use of the{% if posts %}{{posts.app_name}}{% else %}.....name of company....{%endif%} website/app including information about your searches, views, downloads and purchases.
 
         </li>
         <li>
@@ -109,7 +113,7 @@
         We release account and other personal data to other companies and organizations for fraud protection and credit risk reduction, and to comply with the law.</li>
         </ul>
 
-        <p>When we share your personal data with third parties we:<>
+        <p>When we share your personal data with third parties we:
         
         <ul>
             <li>require them to agree to use your data in accordance with the terms of this Privacy and Cookie Notice, our Privacy Policy and in accordance with the law; and</li>
@@ -186,7 +190,7 @@
         <div class="more-deets">
             <h2>Further Details</h2>
 
-            <p>If you are looking for more information on how we process your personal data, or you wish to exercise your legal rights in respect of your personal data, please contact .......&#40;email address&#41;......</p>
+            <p>If you are looking for more information on how we process your personal data, or you wish to exercise your legal rights in respect of your personal data, please contact{%if posts%} {{posts.author}}{%else%}.......&#40;email address&#41;......</p>{%endif%}
         </div>
     </div>
 </div>
