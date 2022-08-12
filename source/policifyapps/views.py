@@ -11,6 +11,9 @@ from django.http import HttpResponse
 from django.views.generic import View
 from .process import html_to_pdf 
 from django.template.loader import render_to_string
+
+from htmldocx import HtmlToDocx
+import os
 # Create your views here.
 
 def sign_up(request):
@@ -117,11 +120,44 @@ def all_post(request):
 def preview_post(request, post_type,my_id):
      if post_type == 1:
          posts = PolicyPost.objects.get(id= my_id)
+         return render(request,"dashboard/policypreview.html",{"posts":posts})
      if post_type == 2:
           posts = TermPost.objects.get(id= my_id)
-     if request == "POST":
-             print(request)
+          return render(request,"dashboard/termspreview.html",{"posts":posts})
      return render(request,"dashboard/policypreview.html",{"posts":posts})
+
+def doc_view(request,post_type,my_id):
+        print(request) 
+        if post_type == 1:
+            data = PolicyPost.objects.filter(id=my_id).first()
+            open('templates/temp.html', "w").write(render_to_string('pdf.html', {'posts': data}))
+        if post_type == 2:
+            data = TermPost.objects.filter(id=my_id).first()
+            open('templates/temp.html', "w").write(render_to_string('pdf2.html', {'posts': data}))
+        new_parser = HtmlToDocx()
+        new_parser.parse_html_file('templates/temp.html',"html-word")
+        file_path = os.path.abspath("html-word.docx")
+        print('SLA FILE' ,file_path)
+        if os.path.exists(file_path):
+          print("it exist!")
+          with open(file_path,'rb') as worddoc: # read as binary
+               content = worddoc.read() # read the file
+               print("reading the file...")
+               response = HttpResponse(
+                    content,
+                    content_type = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+               )
+               response['Content-Disposition'] = 'attachment; filename=download_filename.docx'
+               response['Content-Length'] = len(content) #calculate the length of content
+               return response
+        else:
+          print("path doesnt' exist")
+          return HttpResponse("Failed to Download SLA")
+
+
+
+def policies(request):
+    return render(request,"dashboard/policies.html",{})
 
 def edit_post(request,post_type ,my_id):
      if post_type == 1:
@@ -141,14 +177,20 @@ class GeneratePdf(View):
         if post_type == 1:
             print(request)
             data = PolicyPost.objects.filter(id=my_id).first()
+            open('templates/temp.html', "w").write(render_to_string('pdf.html', {'posts': data}))
+            # Converting the HTML template into a PDF file
+            pdf = html_to_pdf('temp.html')
+            # rendering the template
+            # return FileResponse(pdf,as_attachment=True, filename='venue.pdf')
+            return HttpResponse(pdf, content_type='application/pdf')
+
         if post_type == 2:
             data = TermPost.objects.filter(id=my_id).first()
-        print(data)
-        if open('templates/temp.html', "w").write(render_to_string('pdf.html', {'posts': data})):
-            print('opened')
-        print(4)
-        # Converting the HTML template into a PDF file
-        pdf = html_to_pdf('pdf.html')
-         # rendering the template
-       # return FileResponse(pdf,as_attachment=True, filename='venue.pdf')
-        return HttpResponse(pdf, content_type='application/pdf')
+            open('templates/temp.html', "w").write(render_to_string('pdf2.html', {'posts': data}))
+            # Converting the HTML template into a PDF file
+            pdf = html_to_pdf('temp.html')
+            # rendering the template
+            # return FileResponse(pdf,as_attachment=True, filename='venue.pdf')
+            return HttpResponse(pdf, content_type='application/pdf')
+        
+        

@@ -80,4 +80,6 @@ class TermPost(models.Model):
     def __str__(self):
         return self.app_name + "\n" + self.companyURL
     
-    
+
+
+
