@@ -17,7 +17,7 @@ input{
     padding-left: 3%;
     outline-color: #A535F1;
 }
-.first{
+.firstn{
     margin-top: 4%;
 }
 label,button{
@@ -42,10 +42,11 @@ p{
     font-weight: 400;
     margin-top: 0.75rem;
 }
-.main-cont{
+.main-cont {
     width: 100%;
     height: 100%;
     background-color: rgb(244, 244, 244);
+    padding-block: 50px;
 }
 .cont{
     display: flex;
@@ -54,6 +55,7 @@ p{
     align-items: center;
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 1rem;
 }
 .header{
     padding-top: 1%;
@@ -66,14 +68,14 @@ p{
     padding-bottom: 10%;
 }
 .box{
-    height: 100%;
+    height: 68%;
     width: 32%;
     background-color: #ffffff;
     padding-top: 2%;
     border-radius: 4px;
     padding-bottom: 2%;
 }
-.btn{
+.box .btn{
     height: 45%;
     width: 40%;
     background-color: #A535F1;
@@ -82,6 +84,7 @@ p{
     border-color: transparent;
     margin-top: 2%;
     font-size: small;
+    padding: 0.6rem;
 }
 .btn:hover{
     background-color: #A535F1;
@@ -111,9 +114,10 @@ p{
     .box{
         margin-top: 20%;
         padding-top: 6%;
-        height: 88vh;
+        height: 100vh;
         width: 100%;
         margin-bottom: 6%;
+        padding-bottom: 2rem;
         
     }
     .header{
@@ -142,13 +146,14 @@ p{
         height: 55vh;
         width: 75%;
     }
-    .btn{
+    .box .btn{
         height: 8vh;
         width: 50%;
         border-radius: 35px;
         margin-top: 8%;
         margin-bottom: 2%;
         font-size: large;
+        padding: 0.5rem;
     }
     .btn:hover{
         background-color: #A535F1;
