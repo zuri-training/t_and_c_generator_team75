@@ -51,6 +51,10 @@ a {
    
     
 }
+#header img {
+    cursor: pointer;
+}
+
 header {
     position: fixed;
     background-color: #F9F9F9;

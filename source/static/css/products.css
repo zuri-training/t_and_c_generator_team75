@@ -34,6 +34,7 @@ main {
     /* align-items: flex-start; */
 }
 #top-body h3 {
+    margin-top: 80px;
     margin-bottom: 3%;
     font-family: 'Inter';
     font-style: normal;
@@ -71,7 +72,7 @@ main {
     flex-direction: row;
     padding: 0px;
     gap: 24px;
-    margin: 0 auto;
+    margin: 0 auto 80px;
     width: 60%;
 
 }
