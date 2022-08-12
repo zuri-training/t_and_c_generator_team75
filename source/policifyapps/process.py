@@ -3,16 +3,13 @@ from io import BytesIO
 from django.http import HttpResponse
 from django.template.loader import get_template
 from xhtml2pdf import pisa  
+
 # defining the function to convert an HTML file to a PDF file
 def html_to_pdf(template_src, context_dict={}):
      template = get_template(template_src)
-     print(1)
      html  = template.render(context_dict)
-     print(1)
      result = BytesIO()
-     print(1)
      pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
-     print(1)
      if not pdf.err:
          return HttpResponse(result.getvalue(), content_type='application/pdf')
      return None
