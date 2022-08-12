@@ -2,7 +2,7 @@ from urllib import request
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from django.contrib.auth import authenticate, login
-from . forms import RegistrationForm , PoliciesForm
+from . forms import RegistrationForm , PoliciesForm , TermsForm
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -60,22 +60,21 @@ def create_policiy_post(request):
 
     return render(request, 'dashboard/privpolicydash.html',{"form" : form})
 
+def create_terms_post(request):
+    if request.method == 'POST':
+        form = TermsForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit= False)
+            post.author = request.user
+            print(post.author)
+            post.save()
+            return redirect('/home')
+    else:
+        form = TermsForm()
+
+    return render(request, 'dashboard/termscondash.html',{"form" : form})
 
 
-
-
-#delete this if you are not using anymore it keeps giving me issues
-    #
-      #def signup(request):
-    #form = SignUpForm(request.POST)
-    #if form.is_valid:
-        #pass
-    #else:
-        #form = SignUpForm()
-    #context  = {
-        #"form": form
-    #}
-    #return render(request, 'registration/sign_up.html',context)
 
   
    

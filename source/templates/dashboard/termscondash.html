@@ -29,17 +29,25 @@
       </div>
     </div>
   
-    <form>
+    <form method="post">
+      {% csrf_token %}  
+      {{forms.non_field_errors}}
+      {{form.errors}}
+       {{forms.errors}}
         <section class="viewport default-open">
             <div class="unique">
   
                 <h3>Where do you want to use this document?</h3>
                 <div class="form-group type">
                   <label>
-                    <input type="checkbox" name="user" value="website" class="input-checkbox"/>Website
+                    {% comment %} <input type="checkbox" name="user" value="website" class="input-checkbox"/> {% endcomment %}
+                    Website
+                    {{form.is_website}}
                   </label>
                   <label>
-                    <input type="checkbox" name="user" value="application" class="input-checkbox"/>Application
+                    {% comment %} <input type="checkbox" name="user" value="application" class="input-checkbox"/> {% endcomment %}
+                    Application
+                    {{form.is_application}}
                   </label>
                 </div>
   
@@ -50,16 +58,20 @@
                 <h3>Business Details</h3>
                 <div class="form-group business column">
                   <label for="policyenterprise">Company/Website/Application name</label>
-                  <input type="text" name="policyenterprise" placeholder="My Company name" required/>
+                  {{form.app_name}}
+                  {% comment %} <input type="text" name="policyenterprise" placeholder="My Company name" required/> {% endcomment %}
   
                   <label for="policyurl">Company URL</label>
-                  <input type="url" name="policyurl" placeholder="http://www.mycompanyname.com" required/>
+                  {{form.companyURL}}
+                  {% comment %} <input type="url" name="policyurl" placeholder="http://www.mycompanyname.com" required/> {% endcomment %}
   
                   <label for="policylocation">Location &#40;State/Country&#41; </label>
-                  <input type="text" name="policylocation" placeholder="E.g Lagos/Nigeria" required/>
+                  {{form.location}}
+                  {% comment %} <input type="text" name="policylocation" placeholder="E.g Lagos/Nigeria" required/> {% endcomment %}
   
                   <label for="policydate">Policy Effective Date</label>
-                  <input type="date" name="policydate" placeholder="E.g Lagos/Nigeria" required/>
+                  {{form.policy_date}}
+                  {% comment %} <input type="date" name="policydate" placeholder="E.g Lagos/Nigeria" required/> {% endcomment %}
                 </div>
                 <button class="progress-btn move-tab">Next:Choose clauses</button> <!--changes-->
   
@@ -78,12 +90,13 @@
             <div class="form-group yesorno column">
               <h3>Can users create account?</h3>
               <label>
-                <input type="radio" name="user-account" value="account" class="input-radio"/>
+                {{form.create_account}}
+                {% comment %} <input type="radio" name="user-account" value="account" class="input-radio"/>
                 Yes, users can create account
               </label>
               <label>
                 <input type="radio" name="user-account" value="noaccount" class="input-radio"/>
-                No
+                No {% endcomment %}
               </label>
   
             </div>
@@ -91,12 +104,13 @@
             <div class="form-group yesorno column">
               <h3>Can users create and/or upload content, that is text or images?</h3>
               <label>
-                <input type="radio" name="user-content" value="content" class="input-radio"/>
+                {{form.upload_content}}
+                {% comment %} <input type="radio" name="user-content" value="content" class="input-radio"/>
                 Yes, users can create and/or upload content
               </label>
               <label>
                 <input type="radio" name="user-content" value="nocontent" class="input-radio"/>
-                No
+                No {% endcomment %}
               </label>
   
             </div>
@@ -104,12 +118,13 @@
             <div class="form-group yesorno column">
               <h3>Do you offer on website/in-app purchases?</h3>
               <label>
-                <input type="radio" name="user-purchase" value="purchase" class="input-radio"/>
+                {{form.in_app_purchases}}
+                {% comment %} <input type="radio" name="user-purchase" value="purchase" class="input-radio"/>
                 Yes, we offer website/in-app purchases?
               </label>
               <label>
                 <input type="radio" name="user-purchase" value="nopurchase" class="input-radio"/>
-                No
+                No {% endcomment %}
               </label>
   
             </div>
@@ -117,12 +132,13 @@
             <div class="form-group yesorno column">
               <h3>Does your website/app display Ads?</h3>
               <label>
-                <input type="radio" name="ads" value="ad" class="input-radio"/>
+                {{form.display_ads}}
+                {% comment %} <input type="radio" name="ads" value="ad" class="input-radio"/>
                 Yes, we show ads
               </label>
               <label>
                 <input type="radio" name="ads" value="noad" class="input-radio"/>
-                No, we offer free services
+                No, we offer free services {% endcomment %}
               </label>
   
             </div>
@@ -130,12 +146,13 @@
             <div class="form-group yesorno column">
               <h3>Can user buy goods&#40;products or items&#41;?</h3>
               <label>
-                <input type="radio" name="user-buy" value="buy" class="input-radio"/>
+                {{form.buy_goods}}
+                {% comment %} <input type="radio" name="user-buy" value="buy" class="input-radio"/>
                 Yes, user can buy goods
               </label>
               <label>
                 <input type="radio" name="user-buy" value="nobuy" class="input-radio"/>
-                No
+                No {% endcomment %}
               </label>
   
             </div>
@@ -143,12 +160,13 @@
             <div class="form-group yesorno column">
               <h3>Do you offer subscription plans?</h3>
               <label>
-                <input type="radio" name="user-sub" value="sub" class="input-radio"/>
+                {{form.subscription_plans}}
+                {% comment %} <input type="radio" name="user-sub" value="sub" class="input-radio"/>
                 Yes, user can buy goods
               </label>
               <label>
                 <input type="radio" name="user-sub" value="nosub" class="input-radio"/>
-                No
+                No {% endcomment %}
               </label>
   
             </div>
@@ -156,12 +174,13 @@
             <div class="form-group yesorno column">
               <h3>Do you want to make it clear that your own content is your exclusive property?</h3>
               <label>
-                <input type="radio" name="trademark" value="clarity" class="input-radio"/>
+                {{form.exclusive}}
+                {% comment %} <input type="radio" name="trademark" value="clarity" class="input-radio"/>
                 Yes, our content &#40;logo and trademarks&#41; is our exclusive property
               </label>
               <label>
                 <input type="radio" name="trademark" value="noclarity" class="input-radio"/>
-                No
+                No {% endcomment %}
               </label>
   
             </div>

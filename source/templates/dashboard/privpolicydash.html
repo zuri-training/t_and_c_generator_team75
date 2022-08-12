@@ -30,12 +30,13 @@
 
   <form method="post">
     {% csrf_token %}
-
+    {{forms.non_field_errors}}
+      {{form.errors}}
+       {{forms.errors}}
       <section class="viewport default-open">
 
           <div class="unique">
 
-              <h3>Where do you want to use this document?</h3>
               <div class="form-group type">
                 <label>
                   {% comment %} <input 
