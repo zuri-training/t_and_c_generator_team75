@@ -141,7 +141,7 @@ class GeneratePdf(View):
             print('opened')
         print(4)
         # Converting the HTML template into a PDF file
-        pdf = html_to_pdf('temp.html')
+        pdf = html_to_pdf('pdf.html')
          # rendering the template
        # return FileResponse(pdf,as_attachment=True, filename='venue.pdf')
         return HttpResponse(pdf, content_type='application/pdf')
