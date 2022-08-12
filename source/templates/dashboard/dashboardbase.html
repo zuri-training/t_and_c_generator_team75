@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block 'title' %}Policify{% endblock 'title' %}</title>
-    <link rel="stylesheet" href="{% static 'css/dashboard/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard/dashboards.css' %}">
     {% block extrahead %}{% endblock extrahead %}
     <script src="{% static 'js/dashboard.js' %}" defer></script>
 
@@ -50,6 +50,7 @@
         </div>
         {%else%}
         <div class="user">
+            <div class="user2"></div>
             <img class="user-dropdown" src="{% static 'images/dashboard/dropdownicon.svg' %}" alt="dropdown">
         </div>
         {%endif%}

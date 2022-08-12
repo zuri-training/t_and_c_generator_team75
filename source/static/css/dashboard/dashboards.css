@@ -20,7 +20,15 @@ header {
     display: flex;
     padding: 19px 8px;
     background-color: #fff;
+    width: 100%;
     
+}
+.dashboard-head {
+    display: flex;
+    padding: 19px 8px;
+    background-color: #fff;
+    width: 100%;
+    border-top: 0.3px solid #ECE8EC;
 }
 .header {
   display: flex;
@@ -36,6 +44,7 @@ header {
   display: flex;
   align-items: center;
   z-index: 100;
+  cursor: pointer;
 }
 .user2 {
     width: 7vmin;
@@ -58,6 +67,7 @@ header {
   margin-top: 0rem;
   margin-right: 0.8rem;
   border-radius: 6px;
+  cursor: pointer;
 }
 .clicks-active {
   background-color: #F9F9F9;
@@ -294,6 +304,7 @@ nav {
 #button{
     right: 13px;
     top: 70vh;
+    width: 60%;
     background-color: #A535F1;
     border-radius: 50%;
     border: none;
@@ -312,6 +323,94 @@ nav {
 #button img {
     width: 80%;
 }
+.overflow {
+    overflow-x: scroll;
+    width: 700px;
+    
+  }
+  .circle {
+    width: 11vmin;
+    height: 11vmin;
+    background-color: #210B30;
+    border-radius: 50%;
+    display: block;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle img {
+    width: 20px;
+  }
+  .boxes {
+    display: flex;
+    /*justify-content: center;
+    align-items: center;*/
+
+    overflow-x: scroll;
+    margin-top: 2rem;
+  }
+  .box {
+    border: 1px solid #E0E0E0;
+    margin: 0.65rem;
+    height: 190px;
+    width: 220px;
+    padding: 0.4rem 0rem;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    text-align: center;
+  }
+  .box h2 {
+    margin-top: 1.2rem;
+    padding-bottom: 1%;
+    font-size: 1.3rem;
+  }
+  .box p {
+    padding-bottom: 1.7rem;
+    margin-top: 0.8rem;
+    width: 100%;
+  }
+  .gen-btn {
+    padding: 0.7rem 1.7rem;
+    background-color: #A535F1;
+    border: none;
+    color: #F9F9F9;
+    border-radius: 19px;
+    margin-top: 0.8rem;
+    cursor: pointer;
+    
+  }
+  .gen-btn:hover {
+    background-color: #6E23A1;
+  }
+
+  .policies h2 {
+    margin-top: 1.6rem;
+    margin-left: 1.3rem;
+  }
+  table {
+    margin-top: 1.2rem;
+    border: 0.2px solid #E0E0E0;
+    border-collapse: collapse;
+    margin-left: 1.3rem;
+  }
+  th {
+    border: 0.2px solid #c9c6c6;
+    padding: 1.2rem;
+    font-size: 1rem;
+  }
+  tr {
+    border: 0.2px solid #c9c6c6;
+    padding: 1.05rem;
+  }
+  tr:nth-child(even) {
+    background-color: #E0E0E0;
+  }
+   
 
 @media only screen and (min-width:860px) {
 
@@ -369,6 +468,7 @@ nav {
     #button {
         width: 8vmin;
         height: 8vmin;
+        cursor: pointer;
     }
     .user {
         right: 50px;
@@ -387,6 +487,26 @@ nav {
     .form {
         width: 300px;
         padding: 20px 15px;
+    }
+    .boxes {
+       padding-left: 500px;
+       width: 1200px;
+    }
+    .box {
+        height: 250px;
+        width: 250px;
+    }
+    table {
+        width: 1000px;
+        margin-left: 260px;
+        margin-top: 0rem;
+    }
+    .overflow {
+        overflow-x: visible;
+       
+    }
+    .dashboard-head {
+        display: none;
     }
 
 
