@@ -4,7 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+
 }
+
 html {
     background-color: #F9F9F9;
     z-index: 999;
@@ -12,6 +15,7 @@ html {
 a {
     text-decoration: none;
     color: #F9F9F9;
+    font-family: 'Inter', sans-serif;
 }
 .not-generated {
     display: block;
@@ -21,8 +25,10 @@ header {
     padding: 19px 8px;
     background-color: #fff;
     width: 100%;
+    font-family: 'Inter', sans-serif;
     
 }
+
 .dashboard-head {
     display: flex;
     padding: 19px 8px;

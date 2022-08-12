@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import HomePageView, FeedbackPageView, DashboardPageView
 from django.contrib.auth import views
-from .views import sign_up , create_policiy_post , create_terms_post , all_post , preview_post , edit_post ,GeneratePdf
+from .views import sign_up , create_policiy_post , create_terms_post , all_post , preview_post , edit_post ,GeneratePdf ,doc_view
 
 from .views import HomePageView, FeedbackPageView, DashboardPageView, PrivacyDashboardPageView, TermsDashboardPageView, PolicyPreviewPageView, ProductPageView, ContactPageView, TermsPreviewPageView
 
@@ -26,6 +26,7 @@ urlpatterns = [
      path('pdf/<int:post_type>/<int:my_id>', GeneratePdf.as_view()),
      path('dashboard/termsdashboard/',create_terms_post, name="termsdashboard"),
      path("dashboard/privacypolicydashboard/", create_policiy_post, name="privacypolicydashboard"),
+     path('word-post/<int:post_type>/<int:my_id>',doc_view,name='word_post'),
 
 
 ]
