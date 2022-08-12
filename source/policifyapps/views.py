@@ -42,8 +42,11 @@ class TermsDashboardPageView(TemplateView):
     login_required = True
     template_name = "dashboard/termscondash.html"
     
-class PolicyPreviewPage(TemplateView):
+class PolicyPreviewPageView(TemplateView):
     template_name = "dashboard/policypreview.html"
+    
+class TermsPreviewPageView(TemplateView):
+    template_name = "dashboard/termspreview.html"
 
 class ProductPageView(TemplateView):
     template_name = "product.html"
