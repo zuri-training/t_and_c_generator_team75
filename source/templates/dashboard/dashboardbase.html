@@ -7,23 +7,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block 'title' %}Policify{% endblock 'title' %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/dashboard/dashboards.css' %}">
     {% block extrahead %}{% endblock extrahead %}
     <script src="{% static 'js/dashboard.js' %}" defer></script>
 
 </head>
+<style>
+    *,
+*::before,
+*::after {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    width :100%%
+}
+
+table {border: none;
+    border-collapse:collapse;
+    border-style: hidden;
+
+
+}
+    th, td {
+        padding: 15px;
+      }
+
+
+
+</style>
 <body>
     <div class="navigation">
         
        
 
         <div class="navs">
-            <img class="logo" src="{% static 'images/dashboard/logo.svg' %}" alt="logo">
+           <a href="/home"> <img class="logo" src="{% static 'images/dashboard/logo.svg' %}" alt="logo"></a>
             <nav>
                 <a class="clicks" href="{% url 'dashboard' %}">Dashboard</a>
                 <a class= "clicks" href="{% url 'termsdashboard' %}">Terms & Conditions</a>
                 <a class="clicks" href="{% url 'privacypolicydashboard' %}">Privacy Policies</a>
-                <a class="clicks" href="#">Policies</a> 
+                <a class="clicks" href="/policies">Policies</a> 
             </nav>
 
         </div>
