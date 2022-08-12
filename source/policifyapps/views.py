@@ -43,7 +43,7 @@ class TermsDashboardPageView(TemplateView):
     template_name = "dashboard/termscondash.html"
     
 class PolicyPreviewPage(TemplateView):
-    template_name = "policypreview.html"
+    template_name = "dashboard/policypreview.html"
 
 #@login_required(login_url="/login")
 def create_policiy_post(request):

@@ -171,7 +171,7 @@ input[type="checkbox"]:checked{
     .progress {
         padding-bottom: 2%;
         display: flex;
-        flex-direction: row;
+        flex-direction: flex-start;
         align-items: center;
         justify-content: space-between;
        
