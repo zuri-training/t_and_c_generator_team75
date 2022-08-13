@@ -242,7 +242,7 @@ textarea {
     display: none;
 }
 .user-info a {
-  margin-left: 1.5rem;
+ /* margin-left: 1.5rem;*/
   margin-bottom: 5px;
 }
 .user-info.open {
