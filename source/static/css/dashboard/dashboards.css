@@ -632,8 +632,8 @@ nav {
   height: 140px;
   width: 100px;
   background-color: #f9f9f9;
-  text-align: left;
-  display:none;
+  text-align: center;
+  display:flex;
   border: 1.3px solid #c9c6c6;
 }
 .closing {

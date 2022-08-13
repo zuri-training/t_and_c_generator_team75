@@ -1,0 +1,356 @@
+{% extends 'dashboard/dashboardbase.html' %}
+
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/dashboard/privpolicydashs.css' %}">
+
+{% endblock extrahead %}
+
+{% block title %}Edit Your Privacy Policy Dashboard{% endblock title %}
+
+{% block content %}
+<div class="content">
+  <div id="progress"><!-- changes -->
+    <h2 class="directory">Privacy Policy/User Information</h2>
+    <h2 class="directory">Privacy Policy/Choose Clauses</h2>
+    <h2 class="directory">Privacy Policy/Generate Document</h2>
+  <div>
+  <h2 class="prog">Progress</h2>
+  <div class="progress">
+    <div class="progress-head">
+      <p class="step-head opened-tab"><span class="step1 steps opened-step">Step 1 of 3 - </span>User Information</p>
+      <p class="step-head "><span class="step2 steps" >Step 2 of 3 - </span>Choose Clauses</p>
+      <p class="step-head "><span class="step3 steps">Step 3 of 3 - </span>Generate Document</p>
+    </div>
+    <div class="save-prev">
+      <button class="save">Save</button>
+      <button class="preview">Preview</button>
+    </div>
+  </div>
+
+  <form method="post">
+    {% csrf_token %}
+    {{forms.non_field_errors}}
+      {{form.errors}}
+       {{forms.errors}}
+      <section class="viewport default-open">
+
+          <div class="unique">
+
+              <div class="form-group type">
+                <label>
+                  {% comment %} <input 
+                  type="checkbox" name="user" value="website" class="input-checkbox"/> {% endcomment %}
+                  {{form.is_website}}
+                  Website
+                </label>
+                <label>
+                  {% comment %} <input type="checkbox" name="user" value="application" class="input-checkbox"/> {% endcomment %}
+                  {{form.is_application}}
+                  Application
+                </label>
+              </div>
+
+          </div>
+
+          <div class="unique bus">
+
+              <h3>Business Details</h3>
+              <div class="form-group business column">
+                <label for="policyenterprise">Company/Website/Application name</label>
+                {% comment %} <input type="text" name="policyenterprise" placeholder="My Company name" required/> {% endcomment %}
+                  {{form.app_name}}
+                <label for="policyurl">Company URL</label>
+                {% comment %} <input type="url" name="policyurl" placeholder="http://www.mycompanyname.com" required/> {% endcomment %}
+                  {{form.companyURL}}
+                <label for="policylocation">Location &#40;State/Country&#41; </label>
+                {% comment %} <input type="text" name="policylocation" placeholder="E.g Lagos/Nigeria" required/> {% endcomment %}
+                  {{form.location}}
+                <label for="policydate">Policy Effective Date</label>
+                {% comment %} <input type="date" name="policydate" placeholder="E.g Lagos/Nigeria" required/> {% endcomment %}
+                {{form.policy_date}}
+              </div>
+              <button class="progress-btn move-tab">Next:Choose clauses</button>
+
+          </div>
+
+          
+          
+      </section>
+      <section class="viewport">
+        <div class="unique">
+          <h3>Let's continue building your privacy policy</h3>
+          
+          <div class="form-group information column">
+
+              <h3>What kind of personal information do you collect from users?</h3>
+              <label>
+                  {% comment %} <input type="checkbox" name="info" value="email" class="input-checkbox"/> {% endcomment %}
+                  {{form.is_email_collected}}
+                  Email Address
+              </label>
+
+              <label>
+              {% comment %} <input type="checkbox" name="info" value="firstandlastname" class="input-checkbox"/> {% endcomment %}
+              {{form.is_first_name_collected}}
+              First name and last name
+              </label>
+
+              <label>
+              {% comment %} <input type="checkbox" name="info" value="phone" class="input-checkbox"/> {% endcomment %}
+              {{form.is_phonenumber_collected}}
+              Phone number
+              </label>
+
+              <label>
+              {% comment %} <input type="checkbox" name="info" value="address" class="input-checkbox"/> {% endcomment %}
+              {{form.is_address_collected}}
+              Address, state, city, zip/postal code
+              </label>
+
+              <label>
+              {% comment %} <input type="checkbox" name="info" value="socials" class="input-checkbox"/> {% endcomment %}
+              {{form.is_social_collected}}
+              Social medial profile information
+              </label>
+
+              <label>
+              {% comment %} <input type="checkbox" name="info" value="others" class="input-checkbox"/> {% endcomment %}
+              {{form.is_others_collected}}
+              Others
+              </label>
+
+              {% comment %} <input type="text" name="add-other" placeholder="Add Your Own" /> {% endcomment %}
+                {{form.your_other_collected}}
+          </div>
+          
+          
+          <div class="form-group yesorno column">
+            <h3>Do you use tracking or analytics tool such as Google Analytics?</h3>
+            <label>
+              {{form.analytic}}
+              {% comment %} <input type="radio" name="trackinfo" value="tracking" class="input-radio"/>
+              Yes, we use tracking or analytics tools
+            </label>
+            <label>
+              <input type="radio" name="trackinfo" value="notracking" class="input-radio"/>
+              No {% endcomment %}
+            </label>
+
+          </div>
+
+          <div class="form-group yesorno column">
+            <h3>Do you send emails to your users?</h3>
+            <label>
+              {{form.email_to_user}}
+              {% comment %} <input type="radio" name="emailinfo" value="email" class="input-radio"/>
+              Yes, we send emails to our users if subscribed to
+            </label>
+            <label>
+              <input type="radio" name="emailinfo" value="noemail" class="input-radio"/>
+              No {% endcomment %}
+            </label>
+
+          </div>
+
+          <div class="form-group yesorno column">
+            <h3>Does your website display Ads?</h3>
+            <label>
+              {{form.display_ads}}
+              {% comment %} <input type="radio" name="adinfo" value="ads" class="input-radio"/>
+              Yes, we show ads
+            </label>
+            <label>
+              <input type="radio" name="adinfo" value="noads" class="input-radio"/>
+              No {% endcomment %}
+            </label>
+
+          </div>
+
+          <div class="form-group yesorno column">
+            <h3>Can user pay for product and services on your website?</h3>
+            <label>
+              {{form.pay_for_service}}
+              {% comment %} <input type="radio" name="payinfo" value="pay" class="input-radio"/>
+              Yes, users can pay for products and services on our website
+            </label>
+            <label>
+              <input type="radio" name="payinfo" value="nopay" class="input-radio"/>
+              No {% endcomment %}
+            </label>
+
+          </div>
+
+          <div class="form-group yesorno column">
+            <h3>Do you collect information from kids under the age of 13?</h3>
+            <label>
+              {{form.collect_information_from_kids}}
+              {% comment %} <input type="radio" name="kidinfo" value="kid" class="input-radio"/>
+              Yes, we collect information from kids under the age of 13.
+            </label>
+            <label>
+              <input type="radio" name="kidinfo" value="nokid" class="input-radio"/>
+              No {% endcomment %}
+            </label>
+
+          </div>
+
+          <div class="form-group user-contact column">
+            <h3>How can users contact you for any concerns regarding your privacy policy?</h3>
+              <label>
+                  {% comment %} <input type="checkbox" name="user-contact" value="mail" class="input-checkbox"/> {% endcomment %}
+                  {{form.is_email_contacted}}
+                  Email Address
+              </label>
+
+              <label>
+                {{form.is_website_contacted}}
+              {% comment %} <input type="checkbox" name="user-contact" value="web" class="input-checkbox"/> {% endcomment %}
+              A page on our website
+              </label>
+
+              <label>
+                {{form.is_phone_contacted}}
+              {% comment %} <input type="checkbox" name="user-contact" value="phonenum" class="input-checkbox"/> {% endcomment %}
+              Phone num
+              </label>
+              
+
+              <label>
+              {% comment %} <input type="checkbox" name="user-contact" value="postmail" class="input-checkbox"/> {% endcomment %}
+              {{form.is_post_mail_contected}}
+              Sending post mail
+              </label>
+
+              
+
+          </div>
+          <div class="navigate">
+            <p class="back">Back</p>
+            <button class="next move-tab">Next:Generate document</button>
+          </div>
+        </div>  
+          
+      </section>
+      <section class="viewport">
+        <div class="unique">
+          <h3>Generate your Privacy Policy</h3>
+          <div class="form-group terms column">
+            <label>
+              {% comment %} <input type="checkbox" name="terminfo" value="agree" class="input-checkbox"/> {% endcomment %}
+              {{form.is_i_agree}}
+              I agree to the Policify Terms and Conditions and Privacy Policy
+              </label>
+
+              <label>
+              {% comment %} <input type="checkbox" name="terminfo" value="notify" class="input-checkbox"/> {% endcomment %}
+              {{form.is_notify_me}}
+              Notify me of Policify policy updates.
+              </label>
+          </div>
+          <div class="navigate">
+            <p class="back">Back</p>
+            <button type="submit" class="next">Next:Generate document</button>
+          </div>
+        </div>
+        
+          
+      </section>
+      
+  </form>
+</div>
+<script>
+  const viewport = document.querySelectorAll('.viewport');
+
+for (let i = 1; i < viewport.length; i++) {
+   viewport[i].style.display = "none";
+ }
+const moveButton  = document.querySelectorAll(".move-button");
+
+const next = document.querySelectorAll(".move-tab");
+const progressStep = document.querySelector(".progress-head");
+let currentSlide = 0;
+let maxSlide = viewport.length;
+
+const prev = document.querySelectorAll(".back"); 
+
+const progress = document.querySelectorAll(".step-head");
+
+const directories = document.querySelectorAll(".directory");
+
+for (let i = 1; i < directories.length; i++) {
+  directories[i].style.display = "none";
+    }
+
+  for (let i = 1; i < progress.length; i++) {
+  progress[i].style.display = "none";
+    }
+ 
+
+
+
+
+for(let i = 0; i < next.length;  i++) {
+  next[i].addEventListener('click', function (e) {
+    
+  e.preventDefault();
+  currentSlide++;
+  
+  for(let i= 0; i < viewport.length; i++) {
+    viewport[i].style.display = "none";
+  }
+  viewport[currentSlide].style.display = "flex";
+    
+    
+  
+  for(let i= 0; i < progress.length; i++) {
+    progress[i].style.display = "none";
+  }
+  progress[currentSlide].style.display = "block";
+    
+    for(let i= 0; i < directories.length; i++) {
+    directories[i].style.display = "none";
+  }
+  directories[currentSlide].style.display = "block";
+    
+    
+    
+    });
+  
+  
+
+  
+  
+   
+  
+  
+
+  
+}
+
+for( let i=0; i < prev.length; i++) {
+  prev[i].addEventListener("click", function (e) {
+  e.preventDefault();
+  
+   currentSlide--;
+    console.log(maxSlide);
+    for(let i= 0; i < viewport.length; i++) {
+    viewport[i].style.display = "none";
+  }
+  viewport[currentSlide].style.display = "flex";
+    
+    for(let i= 0; i < progress.length; i++) {
+    progress[i].style.display = "none";
+  }
+  progress[currentSlide].style.display = "block";
+    
+    for(let i= 0; i < directories.length; i++) {
+    directories[i].style.display = "none";
+  }
+  directories[currentSlide].style.display = "block";
+    
+    });
+  
+}
+</script>
+{% endblock content %}

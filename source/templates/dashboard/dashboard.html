@@ -54,66 +54,54 @@
                 <th>icon</th>
                 <th><img class="kebab" src={% static 'images/dashboard/kebab.svg' %}/></th>
               </tr>
-              <tr>
-                <td>blaaa</td>
-                <td>balll</td>
-                <td>bj</td>
-                <td>ghgj</td>
-                <td>b nb</td>
-                <td>lovf</td>
-                <td><img class="kebab" src={% static 'images/dashboard/kebab.svg' %}/></td>
-              </tr>
-            </table>
-            <div class="crud-popup">
-              <p class="closing">X</p>
-              <div class="close-crud">
-                
-                <a href="#">View</a>
-                <a href="#">Delete</a>
-                <a href="#">Edit</a>
-              </div>
-            </div>
-          </div>
-            {% comment "" %}{% for post in posts %}
-            {% for term in terms %}
+              {% for post in posts %}
+            
             {%if user.username == post.author.username %} 
-              <div class="policies">
-                <h2>My Policies</h2>
-                <table>
-                  <tr>
-                    <th>Company name</th>
-                    <th>Type</th>
-                    <th>URL/Application</th>
-                    <th>Location</th>
-                    <th>Date modified</th>
-                    
-                  </tr>
-                  <tr>
-                    <td>{{post.app_name}}</td>
-                    <td>{{post.type_form}}</td>
-                    <td>{{post.companyURL}}</td>
-                    <td>{{post.location}}</td>
-                    <td>{{post.created_at}}</td>
-                  
-                  </tr>
-                  {%endif%}
-                  {%if user.username == term.author.username %} 
-                  <tr>
-                    <td>{{term.app_name}}</td>
-                    <td>{{term.type_form}}</td>
-                    <td>{{term.companyURL}}</td>
-                    <td>{{term.location}}</td>
-                    <td>{{term.created_at}}</td>
+              <tr>
+                <td>{{post.app_name}}</td>
+                <td>{{post.type_form}}</td>
+                <td>{{post.companyURL}}</td>
+                <td>{{post.location}}</td>
+                <td>{{post.created_at}}</td>
+                <td>policy</td>
+                <td><div class="crud-popup">
+                 
                    
-                  </tr>
+                    <a href="/policypreview/1/{{post.id}}">View</a>
+                    <a href="/delete-post/1/{{post.id}}">Delete</a>
+                    <a href="/edit-post/1/{{post.id}}">Edit</a>
+                 
+                </div></td>
+              </tr>
+              {%endif%}
+              {%endfor%}
+               {% for term in terms %}
+             
+              {%if user.username == term.author.username %} 
+              <tr>
+                <td>{{term.app_name}}</td>
+                <td>{{term.type_form}}</td>
+                <td>{{term.companyURL}}</td>
+                <td>{{term.location}}</td>
+                <td>{{term.created_at}}</td>
+                <td>term</td>
+                <td><div class="crud-popup">
                   
-                </table>
-              </div>
-              </div>
-        </div>
-        {%endif%}
-        {%endfor%}
-        {%endfor%}{% endcomment %}
+                  
+                   
+                    <a href="/policypreview/2/{{term.id}}">View</a>
+                    <a href="/delete-post/2/{{term.id}}">Delete</a>
+                    <a href="/edit-post/2/{{term.id}}">Edit</a>
+                  </div>
+                </div></td>
+              </tr>
+              {%endif%}
+              {%endfor%} 
+            </table>
+            
+           
+          </div>
+            
 
     </main>
     <script>
@@ -136,7 +124,7 @@
     
         /* kebab */
 
-        const kebab = document.querySelectorAll(".kebab");
+      {% comment %} const kebab = document.querySelectorAll(".kebab");
         const crud = document.querySelector(".crud");
         const crudpopup = document.querySelector(".crud-popup");
         const closing = document.querySelector(".closing");
@@ -151,8 +139,12 @@
         closing.addEventListener("click", function(e) {
           
           crudpopup.style.display="none";
-        })
-
+        })  {% endcomment %}
+        {% comment %} const crudpopup = document.querySelector(".crud-popup");
+        function showMsg()
+        {
+          crudpopup.style.display="block";
+        } {% endcomment %}
 
     </script>
 
