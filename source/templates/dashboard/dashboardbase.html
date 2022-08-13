@@ -14,9 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
     {% block extrahead %}{% endblock extrahead %}
-    <script src="{% static 'js/dashboard.js' %}" defer></script>
+    <script src="{% static 'js/dashboards.js' %}" defer></script>
 
 </head>
+{% comment "" %}
 <style>
     *,
 *::before,
@@ -28,7 +29,7 @@
     width :100%%
 }
 
-table {border: none;
+ table {border: none;
     border-collapse:collapse;
     border-style: hidden;
 
@@ -37,10 +38,10 @@ table {border: none;
     th, td {
         padding: 15px;
       }
-
-
-
 </style>
+{% endcomment %}
+
+
 <body>
     <div class="navigation">
         
@@ -99,16 +100,25 @@ table {border: none;
         <div class="popup-form">
           <div class="form">
         
-            <span class="eks">X</span>
-            <form id="#form">
+            <span class="eks"><img src="{% static 'images/dashboard/eks.svg' %}"/></span>
+            <form id="form">
               <label class="label" for="name" name="name">Name</label>
               <input class="input" type="text" name="name" placeholder="Sarah Connor">
               <label class="label" for="email" name="email">Email</label>
               <input class="input" type="email" name="email" placeholder="example@email.com">
               <label class="label" for="message" name="message">Message</label>
               <textarea name="message" placeholder="Type your message"></textarea>
+              <button class="submit">Submit</button>
             </form>
           </div>
+          <div class="close2">
+            <div class="eks2"><img src="{% static 'images/dashboard/eks.svg' %}"/></div>
+          <div class="form-submit">
+        
+            <p>Your message was successfully sent!</p>
+            <button class="again">Send again</button>
+          </div>
+        </div>
        </div>
 </body>
 

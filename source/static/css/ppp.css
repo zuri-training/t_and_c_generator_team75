@@ -14,21 +14,32 @@ body {
   margin-bottom: 0%;
   height: 100%;
   
+  
+}
+
+  
+  
+  
+
+
+.preview:hover {
+  color: #6e23a1;
+  cursor: pointer;
 }
 /* section one starts here */
 .top-section {
   display: flex;
-  flex-direction: row;
-  padding-top: 100px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  padding-left: 150px;
   
 }
-.illustration2 {
-  width: 280px;
-}
+
 .illustration2 img {
   display: block;
-  margin: 0 auto;
-  /* width: 350; */
+  /*margin: 0 auto;*/
+  width: 340px;
 }
 .private-policy {
   width: 100%;
@@ -39,7 +50,7 @@ body {
 .top-section-writeup {
   display: block;
   margin: 0 auto;
-  width: 70%;
+  width: 60%;
   text-align: center;
 }
 .header-one {
@@ -49,17 +60,17 @@ body {
 }
 .paragraph-one {
   font-size: 1.3em;
-  color: #7f7d80;
+  color: #49414f;
 }
 p
 .wrap {
   white-space: nowrap;
 }
-.links {
+.linkse {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3em;
+  margin-top: 2em;
   color: #111827;
 
   /* margin-bottom: 4em; */
@@ -107,8 +118,13 @@ p
 
 .second-section-writeup {
   /* margin-top: 2em; */
-
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+}
+.second-section-writeup p {
+  margin-top: 0.2rem;
 }
 .header-two {
   padding-top: 1em;
@@ -117,7 +133,7 @@ p
   color: #111827;
 }
 .paragraph-two {
-  color:  #7f7d80;
+  color:  #49414f;
   font-size: 1.3em;
   padding-top: 0.3em;
   text-align: center;
@@ -130,21 +146,23 @@ p
 .platform-one,
 .platform-two,
 .platform-three {
-  height: 280px;
-  width: 100%;
+  height: 290px;
+  width: 320px;
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(161, 151, 151, 0.1),
     -5px -5px 5px rgba(161, 151, 151, 0.1);
   margin-bottom: 3vh;
   color: #111827;
   background-color: #ffffff;
-  margin-left: 2%;
+  margin-left: 1.5rem;
   padding-bottom: 4vh;
 }
 .choice-platforms {
   display: flex;
-  justify-content: space-around;
+  justify-content:center;
   align-items: center;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 .icons {
@@ -152,6 +170,9 @@ p
   justify-content: center;
   align-items: center;
   margin-top: 4vh;
+}
+.icons img {
+  width: 60px;
 }
 .platform-header {
   font-size: 1.4em;
@@ -164,22 +185,51 @@ p
   font-size: 1.2em;
   text-align: center;
   padding: 0 8px;
-  color: #7f7d80;
+  color: #49414f;
 }
-p {
-  color: #7f7d80;
+.container p {
+  color: #49414f;
+}
+
+.popup-container p {
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.popup-container {
+  position: absolute;
+  top: 70px;
+  display: none;
+  animation: fade .7s;
+}
+
+.eks-btn {
+  width: 30px;
+  float: right;
+  margin-right: 10px;
+  padding-bottom: 150px;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 50em) {
   /* .container {
     margin: 0.7rem 1rem;
   } */
   .section-one {
-    height: 87vh;
+    height: 100%;
     margin-bottom: 0;
   }
   .top-section {
     display: flex;
     flex-direction: column-reverse;
+    padding-top: 50px;
+    padding-left: 0;
   }
   .top-section-writeup {
     width: 100%;
@@ -187,9 +237,10 @@ p {
   .illustration2 img {
     display: block;
     margin: 0 auto;
-    width: 100%;
+    width: 60%;
   }
   .private-policy {
+    
     margin-top: 3vh;
     font-size: 1.2em;
   }
@@ -200,7 +251,10 @@ p {
   .paragraph-one,
   .paragraph-two,
   .platform-subhead {
-    color: #7f7d80;
+    color: #49414f;
+  }
+  .second-section-writeup {
+    width: 100%;
   }
   .platform-header,
   .preview {
@@ -209,8 +263,8 @@ p {
   .header-one {
     color: #1f1725;
   }
-  .links {
-    margin-top: 2em;
+  .linkse {
+    margin-top: 1em;
   }
   .choice-platforms {
     display: block;
@@ -230,6 +284,7 @@ p {
   .platform-three {
     padding-top: 3vh;
     margin-left: 0;
+    width: 100%;
   }
   .paragraph-one {
     font-size: 0.92em;
@@ -252,4 +307,34 @@ p {
   .template {
     font-size: 1em;
   }
+  
+  .eks {
+    width: 50px;
+  }
+}
+
+
+.popup-container {
+  display: none;
+}
+/*popup-here */
+
+body {
+  font-family: "Inter", sans-serif;
+}
+.popup-container {
+  padding: 0 2em;
+  background-color: #ffffff;
+}
+.cancel-image {
+  text-align: right;
+  margin-bottom: 4vh;
+}
+.header {
+  font-weight: 900;
+  color: #251b2c;
+  margin-top: 1.5rem;
+}
+.sub-head {
+  color: #251b2c;
 }

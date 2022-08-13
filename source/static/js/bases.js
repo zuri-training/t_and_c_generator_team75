@@ -27,9 +27,17 @@ for( let i = 0; i < tab.length; i++ ) {
         var tabcontent = this.nextElementSibling;
         if (tabcontent.style.maxHeight){
             tabcontent.style.maxHeight = null;
+            tabcontent.style.border ="none";
+            
+
         }
         else {
             tabcontent.style.maxHeight = tabcontent.scrollHeight + "px";
+            tabcontent.style.border = "0.3px solid #A535F1";
+            tabcontent.style.borderTop = "none";
+
+            
+    
         }
 
 

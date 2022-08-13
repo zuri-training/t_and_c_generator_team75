@@ -36,6 +36,29 @@ const lines =document.querySelectorAll('#hamburger div')
         const form = document.querySelector(".popup-form");
         const eks = document.querySelector(".eks");
         const header = document.querySelector('header');
+        const submit = document.querySelector(".submit");
+        const response = document.querySelector(".close2");
+        const acform = document.querySelector(".form");
+        const eks2 = document.querySelector(".eks2");
+        const sendAgain = document.querySelector(".again");
+
+        sendAgain.addEventListener('click', function () {
+          acform.style.display = 'block';
+          response.style.display = "none";
+        });
+
+
+        submit.addEventListener('click', function(e){
+          e.preventDefault()
+          acform.style.display = "none";
+          response.style.display ="block";
+          
+        });
+
+        eks2.addEventListener('click', function () {
+          form.style.display = 'none';
+        });
+
      
         eks.addEventListener('click', function () {
           form.style.display = 'none';

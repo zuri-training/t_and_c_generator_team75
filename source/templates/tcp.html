@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block extrahead %}
-<link rel="stylesheet" href="{% static 'css/tcp.css' %}" />
+<link rel="stylesheet" href="{% static 'css/tcps.css' %}" />
 {% endblock extrahead %}
 
 
@@ -25,18 +25,18 @@
         </div>
       </div>
       <div id="butt">
-        <button id="gen">Generate</button>
+        <a href="{% url 'dashboard' %}" id="gen">Generate</a>
         <a href="preview.html"
           ><button id="pre"><strong>Preview template</strong></button></a
         >
       </div>
-    </div>
+    
     <br /><br /><br /><br />
     <!-- First section ends here -->
 
     <!-- Second section starts here -->
     <div>
-      <div>
+      <div class="second-head">
         <h2>Select your platform to get started</h2>
         <p>
           Select your platform to generate an industry standard and business
