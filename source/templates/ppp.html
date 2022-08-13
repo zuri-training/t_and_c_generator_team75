@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block extrahead %}
-<link rel="stylesheet" href="{% static 'css/ppps.css' %}">
+<link rel="stylesheet" href="{% static 'css/ppp.css' %}">
 
 {% endblock extrahead %}
 
@@ -26,9 +26,9 @@
             </div>
           </div>
         </div>
-        <div class="links">
+        <div class="linkse">
           <div class="button">
-            <a href="#">Generate</a>
+            <a href="{% url 'dashboard' %}">Generate</a>
           </div>
           <div class="template">
             <p class="preview">Preview template</p>
@@ -88,11 +88,71 @@
           </div>
         </div>
       </div>
-      <a href="./popup.html"
-        >Click me to view create your Terms and Custom Policies</a
-      >
+      
 
       <!-- second section ends here -->
     </div>
+    <div class="popup-background">
+      <div class="popup-container">
+        <div class="cancel-image">
+          <img src="./images/close-circle.png" alt="" />
+        </div>
+        <div class="custom-writeup">
+          <img class="eks-btn" src="{% static 'images/dashboard/eks.svg' %}"/>
+          <div class="update">
+            <p class="update-text">Last Updated on …………………</p>
+          </div>
+          <div class="consent">
+            <p class="header">Consent.</p>
+            <p class="sub-head">
+              By using our website, you hereby consent to our Privacy Policy and
+              agree to its terms. This Privacy notice for (name of company)
+              describes how and why we might collect, store, use and/share
+              (process) your information when you use our services. <br />
+              Reading this privacy notice will help you understand your privacy
+              rights and choices. If you do not agree with our policies and
+              practices, please do not use our services. If you still have any
+              questions or concerns, please contact us at ………………
+            </p>
+          </div>
+          <div class="consent">
+            <p class="header">Terminologies.</p>
+            <p class="sub-head">
+              The following terminology applies to these Terms and Conditions,
+              Privacy Statement and Disclaimer Notice and all Agreements:
+              “Client”, “You” and “Your” refers to you, the person log on this
+              website and compliant to the Company's terms and conditions. “The
+              Company”, “Ourselves”, “We”, “Our” and “Us”, refers to our Company.
+              “Party”, “Parties”, or “Us”, refers to both the Client and
+              ourselves. All terms refer to the offer, acceptance and
+              consideration of payment necessary to undertake the process of our
+              assistance to the Client in the most appropriate manner for the
+              express purpose of meeting the Client's needs in respect of
+              provision of the Company's stated services, in accordance with and
+              subject to, prevailing laws in Nigeria. Any use of the above
+              terminology or other words in the singular, plural, capitalization
+              and/or he/she or they, are taken as interchangeable and therefore as
+              referring to same.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+  </p>
+
+  <script>
+    const preview = document.querySelector(".preview");
+    const eks = document.querySelector(".eks-btn");
+    const popup = document.querySelector(".popup-container");
+
+    preview.addEventListener("click", function(){
+        popup.style.display ="block";
+    });
+
+    eks.addEventListener("click", function(){
+      popup.style.display ="none";
+    });
+
+  </script>
   
 {% endblock content %}

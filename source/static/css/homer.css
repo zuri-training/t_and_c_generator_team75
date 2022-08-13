@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 *,
 *::before,
 *::after {
@@ -11,23 +12,12 @@ html{
     
     
     scroll-behavior: smooth;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
-/*@media (max-width: 75em) {
-    html {
-        font-size: 60%;
-    }
+a, button {
+    cursor: pointer;
 }
-@media (max-width: 61.25em) {
-    html {
-        font-size: 58%;
-    }
-}
-@media (max-width: 28.75em) {
-    html {
-        font-size: 55%;
-    }
-}*/
+
 .signup-btn:hover, .signup-link:hover, .generate-btn:hover {
     background-color: #6E23A1;
 }
@@ -366,32 +356,7 @@ h1 {
     
     align-items: center;
 }
-/****
-.feedback-boxes {
-    display: flex;
-    width: 100%;
-}
-.feedback-boxes {
-    width: 100%;
-    
-    position: relative;
 
-    width: 100%;
-    
-    display: flex;
-}
-.feedback-box {
-    position: absolute;
-    width: 100%;
-    
-    
-
-}
-/*
-.feedback-boxes:nth-child(1) {
-    display: block;
-}
-/****/
 .stars {
     padding-bottom: 10%;
     color: #251B2C;
@@ -547,6 +512,7 @@ footer p {
     overflow: hidden;
     max-height: 0;
     border-radius: 0 0 10px 10px;
+   
     font-size: 0.9rem;
     padding: 0 15px;
     width: 100%;
@@ -556,6 +522,7 @@ footer p {
 }
 .tab-content.active {
     display: block;
+    
     
 }
 .tab {
@@ -587,6 +554,8 @@ footer p {
 }
 .active.tab {
     border-radius: 10px 10px 0 0;
+    border: 0.3px solid #A535F1;
+    border-bottom: none;
 }
 .tab::after{
     content: "\00276F";
@@ -714,7 +683,7 @@ footer p {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-bottom: 4%;
+        padding-bottom: 2%;
 
     }
     .product-box h3 {
@@ -725,8 +694,8 @@ footer p {
         font-size: 0.9rem;
     }
     .circle {
-        width: 9vmin;
-        height: 8.5vmin;
+        width: 8vmin;
+        height: 8vmin;
     }
     .step-words {
         width: 40%;
@@ -807,9 +776,9 @@ footer p {
     }
     .feedback-box {
         width: 280px;
-        height: 280px;
+        height: 290px;
         font-size: 0.85rem;
-        padding:2%;
+        padding: 2%;
     }
     #feedbacks {
         padding-bottom: 6%;
@@ -874,7 +843,7 @@ footer p {
         margin-bottom: 2%;
     }
     .product-dropdown::after {
-        content: '\00276F';
+        
         transform: translateX(90deg);
         margin-left: 5px;
         transition: all 0.5s;

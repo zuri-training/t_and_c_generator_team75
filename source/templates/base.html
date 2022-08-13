@@ -10,10 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/homes.css' %}">
+    <link rel="stylesheet" href="{% static 'css/homer.css' %}">
 
     {% block extrahead %}{% endblock extrahead %}
-    <script src="{% static 'js/base.js' %}" defer></script>
+    <script src="{% static 'js/bases.js' %}" defer></script>
     <script src="https://kit.fontawesome.com/4111ca9f76.js" crossorigin="anonymous"></script>
 
 </head>
@@ -25,7 +25,7 @@
             <img src="{% static 'images/headerlogo.svg' %}" alt="headerlogo">
             <div class="desktop-navbar">
                 <nav class="desktop-navigation">
-                    <a href="#products" class ="nav-item product-dropdown">Products</a>
+                    <a href="{% url 'product' %}" class ="nav-item product-dropdown">Products</a>
                     
                     <a href="{% url 'feedback' %}" class ="nav-item">Feedbacks</a>
                     
@@ -58,7 +58,7 @@
                
                 <a href="{% url 'feedback' %}" class ="nav-item">Feedbacks</a>
                 <a href="#faq" class ="nav-item">About Us</a>
-                <a href="#footer" class ="nav-item">Contact us</a>
+                <a href="#{% url 'contact' %}" class ="nav-item">Contact us</a>
     
             </nav>
             <div class="register-and-login">
@@ -95,8 +95,8 @@
                 </div>
                 <div class="second">
                     <a href="#">Contact Us</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Privacy Policy</a>
+                    <!--<a href="#">Terms</a>
+                    <a href="#">Privacy Policy</a>-->
                 </div>
             </nav>
             
