@@ -124,7 +124,7 @@
     
         /* kebab */
 
-        {% comment %} const kebab = document.querySelectorAll(".kebab");
+      {% comment %} const kebab = document.querySelectorAll(".kebab");
         const crud = document.querySelector(".crud");
         const crudpopup = document.querySelector(".crud-popup");
         const closing = document.querySelector(".closing");
@@ -139,8 +139,12 @@
         closing.addEventListener("click", function(e) {
           
           crudpopup.style.display="none";
-        }) {% endcomment %}
-
+        })  {% endcomment %}
+        {% comment %} const crudpopup = document.querySelector(".crud-popup");
+        function showMsg()
+        {
+          crudpopup.style.display="block";
+        } {% endcomment %}
 
     </script>
 

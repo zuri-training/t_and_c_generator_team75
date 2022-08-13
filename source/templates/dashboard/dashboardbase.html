@@ -38,19 +38,18 @@ table {border: none;
     th, td {
         padding: 15px;
       }
-.crud-popup {
+      .crud-popup {
   
-    height:100%;
-  width: 100%;
-  background-color: #f9f9f9;
-  text-align: center;
-  display:flex;
-  border: 1.3px solid #c9c6c6;
-}
-.crud-popup > a{
-    margin:0;
-}
-
+        height:100%;
+      width: 100%;
+      background-color: #f9f9f9;
+      text-align: center;
+      display:flex;
+      border: 1.3px solid #c9c6c6;
+    }
+    .crud-popup > a{
+        margin:0;
+    }
 
 </style>
 <body>
@@ -99,7 +98,7 @@ table {border: none;
             <div class="closed">
                 <p><img src="{% static 'images/dashboard/account.svg' %}" alt="account"></p>
                 <div class="user-account"></div>
-                <a style="color: black" href="#"><img src="{% static 'images/dashboard/logout.svg' %}" alt="logout"></a>
+                <a style="color: black" href="{% url 'logout' %}"><img src="{% static 'images/dashboard/logout.svg' %}" alt="logout"></a>
             </div>
 
         </div>
