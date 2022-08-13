@@ -124,7 +124,7 @@ def preview_post(request, post_type,my_id):
      if post_type == 2:
           posts = TermPost.objects.get(id= my_id)
           return render(request,"dashboard/termspreview.html",{"posts":posts})
-     return render(request,"dashboard/policypreview.html",{"posts":posts})
+    
 
 def doc_view(request,post_type,my_id):
         print(request) 
@@ -163,13 +163,29 @@ def edit_post(request,post_type ,my_id):
      if post_type == 1:
         obj = get_object_or_404(PolicyPost,id=my_id)
         form = PoliciesForm(request.POST or None, instance=obj)
+        if form.is_valid():
+          form.save()
+          return redirect("/dashboard")
+        return render(request, "dashboard/edit_policy_post.html",{'form': form})
      if post_type == 2:
         obj = get_object_or_404(TermPost,id=my_id)
         form = TermsForm(request.POST or None, instance=obj)
-     if form.is_valid():
+        if form.is_valid():
           form.save()
           return redirect("/dashboard")
-     return render(request, "dashboard/edit_post.html",{'form': form})
+        return render(request, "dashboard/edit_term_post.html",{'form': form})
+     
+def delete_post(request,post_type,my_id):
+      if post_type == 1:
+        post = PolicyPost.objects.filter(id=my_id).first()
+        if post and post.author == request.user:
+             post.delete()
+             return redirect("/dashboard")
+      if post_type == 2:
+         post = PolicyPost.objects.filter(id=my_id).first()
+         if post and post.author == request.user:
+             post.delete()
+             return redirect("/dashboard")
 
 #Creating a class based view
 class GeneratePdf(View):
