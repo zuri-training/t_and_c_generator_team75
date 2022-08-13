@@ -12,6 +12,7 @@ a website that enables users to create terms and conditions and privacy policies
 * [Objectives](#objectives-of-policify)
 * [Features](#features)
 * [Technology](#technology)
+* [Deployment](#details-on-deployment)
 * [Product Specification](#product-specification)
 * [Contributors](#contributors)
 * [Project Status](#project-status)
@@ -82,6 +83,19 @@ Policify aims at reducing the hassles of individuals and Companies of  having to
 
 * __Database__<br/>
       Postgres sql
+
+##Details on deployment
+
+* Git clone
+* create a virtual env
+* Install all dependencies in requirements.txt
+* Make a Postgresql database and give it the information found in settings.py file in the policifyproject directory on the database section.
+* if your Postgresql database has different information from the settings. Then update the settings 
+* cd into the source folder 
+* run python manage.py makemigrations
+* run Python manage.py migrate
+* run python mange.py runserver
+
 ## Product Specification
 * Mobile Phones
 * Tablets
