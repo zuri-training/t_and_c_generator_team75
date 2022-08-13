@@ -84,7 +84,7 @@ Policify aims at reducing the hassles of individuals and Companies of  having to
 * __Database__<br/>
       Postgres sql
 
-##Details on deployment
+## Details on deployment
 
 * Git clone
 * create a virtual env
