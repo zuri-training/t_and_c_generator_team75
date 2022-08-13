@@ -80,6 +80,8 @@ Policify aims at reducing the hassles of individuals and Companies of  having to
 * __Version Control System__<br/>
         ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
+* __Database__<br/>
+      Postgres sql
 ## Product Specification
 * Mobile Phones
 * Tablets
