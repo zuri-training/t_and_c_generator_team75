@@ -89,9 +89,11 @@
 
         </li>
     </ul>
+    {%if posts.analytic == "Yes, we use tracking or analytics tools"%}
     <div class="cookies">
         <h2>
             Cookies and How We Use Them
+           
         </h2>
         
         <p>
@@ -119,6 +121,9 @@
         Our approved third parties may also set cookies when you use our marketplace. Third parties include search engines, providers of measurement and analytics services, social media networks and advertising companies.
 
     </p>
+    {%endif%}
+   {%if posts.is_email_collected or posts.is_first_name_collected or posts.is_phonenumber_collected or posts.is_address_collected or posts.is_social_collected or posts.is_others_collected or posts.your_other_collected %}
+   
     <div class="personal-data">
         <h2>How We Share Your Personal Data</h2>
 
@@ -144,7 +149,7 @@
             <li>only permit them to process your personal data for specified purposes and in accordance with our instructions. We do not allow our third-party service providers to use your personal data for their own purposes.</li>
         </ul>
     </div>
-        
+      
         <div class="transfer">
             <h2>Offshore Transfers</h2>
 
@@ -155,9 +160,11 @@
             <h2>Embedded contents from unrelated websites</h2>
 
             <p>on this website may include embedded content such as videos, images, or articles. Embedded content from other websites behaves in exactly the same way as if the visitor had visited the other website.</p>
-
+          
         
         </div>
+        {%endif%}
+        {%if posts.pay_for_service%}
         <div class="earning">
             <h2>Affiliate Earnings Disclosure</h2>
 
@@ -170,14 +177,16 @@
             <p>These other websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including analyzing your interaction with the embedded content if you have an account and are logged into that site.</p>
 
         </div>
-
+        {%endif%}
+        {%if posts.display_ads%}
 
         <h2>Advertising Partners Privacy Policies</h2>
 
         <p>Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on our website, which are sent directly to users’ browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
 
         <p>Note that we have no access to or control over these cookies that are used by third-party advertisers.</p>
-
+        {%endif%}
+        {%if posts.is_email_collected or posts.is_first_name_collected or posts.is_phonenumber_collected or posts.is_address_collected or posts.is_social_collected or posts.is_others_collected or posts.your_other_collected %}
         <div class="website-embed">
             <h2>Embedded contents from unrelated websites</h2>
 
@@ -186,13 +195,16 @@
             <p>These other websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including analyzing your interaction with the embedded content if you have an account and are logged into that site.</p>
 
         </div>
+        {%endif%}
+        {%if posts.collect_information_from_kids%}
         <div class="children-info">
             <h2>Children's Information</h2>
 
             <p>One of our core priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online act. We do not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
 
         </div>
-
+        {%endif%}
+        {%if posts.is_i_agree%}
         <div class="data-security">
             <h2>Data Security</h2>
 
@@ -203,6 +215,7 @@
             <p>We have put in place procedures to deal with any suspected personal data breach and will notify you and any applicable regulator of a breach where we are legally required to do so.</p>
 
         </div>
+        {%endif%}
         <div class="legal-rights">
             <h2>Your Legal Rights</h2>
 
