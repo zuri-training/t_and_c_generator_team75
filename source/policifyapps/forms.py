@@ -32,7 +32,7 @@ class RegistrationForm(UserCreationForm):
         'type':"password", 'id':"password",
         'class':"Signup_Fields",
          'name':"password",
-        'placeholder':"Enter your password",
+        'placeholder':"Enter your password again",
          'minlength':"8",
           'required':''
         })
