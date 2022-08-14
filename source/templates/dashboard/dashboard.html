@@ -5,6 +5,9 @@
 {% block content %}
     <main>
       <div class="dashboard-head"><h2>Dashboard</h2></div>
+      {% for post in posts %}
+            
+      {%if user.username != post.author.username %} 
       <div class= "not-generated"> <!-----when user has not generated-->
         <div class="image">
           <img class="illustration" src="{% static 'images/dashboard/illustration.svg' %}" alt="Logo">
@@ -14,8 +17,8 @@
           <div class="popup-container">
             <div class="policy-popup">
               <div class="gen-buttons">
-                <a href="termsdashboard/">Terms and Conditions</a>
-                <a href="privacypolicydashboard/">Privacy Policy</a>
+                <a href= "{% url 'termsdashboard' %}">Terms and Conditions</a>
+                <a href="{%url 'privacypolicydashboard' %}">Privacy Policy</a>
               </div>
               <p class="close">Close</p>
             </div>
@@ -24,7 +27,8 @@
             
         </div>
       </div>
-     
+     {%endif%}
+     {%endfor%}
         <div class="generated"><!---When user has generated-->
           <div class="overflow">
             <div class="boxes">
