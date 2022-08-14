@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import HomePageView, FeedbackPageView, DashboardPageView
 from django.contrib.auth import views
-from .views import sign_up , create_policiy_post , create_terms_post , all_post , preview_post , edit_post ,GeneratePdf ,doc_view , policies,delete_post
+from .views import sign_up , create_policiy_post , create_terms_post , all_post , preview_post , edit_post ,GeneratePdf ,doc_view , policies,delete_post,text_view
 
 from .views import HomePageView, FeedbackPageView, DashboardPageView, PrivacyDashboardPageView, TermsDashboardPageView, PolicyPreviewPageView, ProductPageView, ContactPageView, TermsPreviewPageView, PPPreviewPageView, TCPreviewPageView
 
@@ -35,7 +35,10 @@ urlpatterns = [
         path('dashboard/policies',policies,name='policies'),
      path('delete-post/<int:post_type>/<int:my_id>',delete_post,name='delete_post'),
        path('dashboard/delete-post/<int:post_type>/<int:my_id>',delete_post,name='delete_post'),
-
-
+path('text-post/<int:post_type>/<int:my_id>',text_view,name='text_post'),
 
 ]
+handler404 = 'policifyapps.views.my_custom_page_not_found_view'
+handler500 = 'policifyapps.views.my_custom_error_view'
+handler403 = 'policifyapps.views.my_custom_permission_denied_view'
+handler400 = 'policifyapps.views.my_custom_bad_request_view'
