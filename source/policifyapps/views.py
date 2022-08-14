@@ -34,7 +34,7 @@ def sign_up(request):
 
 
 class HomePageView(TemplateView):
-    template_name ="home.html"
+    template_name ="index.html"
     
 class FeedbackPageView(TemplateView):
     template_name = "feedback.html"
