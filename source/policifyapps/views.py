@@ -14,6 +14,9 @@ from django.template.loader import render_to_string
 
 from htmldocx import HtmlToDocx
 import os
+
+import re
+from django.utils.html import strip_tags
 # Create your views here.
 
 def sign_up(request):
@@ -155,6 +158,30 @@ def doc_view(request,post_type,my_id):
           return HttpResponse("Failed to Download SLA")
 
 
+def textify(html):
+    # Remove html tags and continuous whitespaces 
+    text_only = re.sub('[ \t]+', ' ', strip_tags(html))
+    # Strip single spaces in the beginning of each line
+    return text_only.replace('\n ', '\n').strip()
+
+def text_view(request,post_type,my_id):
+        print(request) 
+        if post_type == 1:
+            data = PolicyPost.objects.filter(id=my_id).first()
+            open('templates/temp.html', "w").write(render_to_string('pdf.html', {'posts': data}))
+        if post_type == 2:
+            data = TermPost.objects.filter(id=my_id).first()
+            open('templates/temp.html', "w").write(render_to_string('pdf2.html', {'posts': data}))
+        html = render_to_string('temp.html')
+        text = textify(html)
+        print(text)
+        response = HttpResponse(
+                    text,
+                    content_type = 'text/plain'
+               )
+        response['Content-Disposition'] = 'attachment; filename=download_filename.txt'
+        response['Content-Length'] = len(text) #calculate the length of content
+        return response
 
 def policies(request):
     return render(request,"dashboard/policies.html",{})
@@ -208,5 +235,16 @@ class GeneratePdf(View):
             # rendering the template
             # return FileResponse(pdf,as_attachment=True, filename='venue.pdf')
             return HttpResponse(pdf, content_type='application/pdf')
-        
+
+def my_custom_page_not_found_view(request,exception):
+    return render(request, '404.html',{})
+
+def my_custom_error_view(request,exception=None):
+    return render(request, '500.html',{})
+
+def my_custom_permission_denied_view(request,exception=None):
+    return render(request, '403.html',{})
+
+def my_custom_bad_request_view(request,exception=None):
+    return render(request, '400.html',{})        
         

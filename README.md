@@ -94,7 +94,7 @@ Policify aims at reducing the hassles of individuals and Companies of  having to
 * cd into the source folder 
 * run python manage.py makemigrations
 * run Python manage.py migrate
-* run python mange.py runserver
+* run python mange.py runserver --insecure or switch the DEBUG= False in policifyProject to True and run python manage.py runserver
 
 ## Product Specification
 * Mobile Phones
