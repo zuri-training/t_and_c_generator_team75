@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+p {
+  color: #666666;
+}
 body {
   background: url(./images/and-machines.png);
   background-size: cover;
@@ -19,15 +22,21 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+ 
+ 
 }
 .content {
+  width: 440px;
   background-color: #f9f9f9;
   /* width: 70vw; */
   border-radius: 8px;
+  padding-bottom: 1rem;
+ 
 }
 .logo {
   text-align: center;
   margin-top: 3vh;
+  margin-bottom: 2rem;
 }
 .logo img {
   width: 140px;
@@ -40,19 +49,22 @@ body {
   font-size: 1.5em;
 }
 #sub-head {
-  font-size: 0.8em;
-  padding: 5px 20px;
+  font-size: 0.9em;
+  padding: 14px 20px;
 }
 .input label {
-  font-size: 0.7em;
+  font-size: 0.9em;
   font-weight: 600;
+  margin-top: 1rem;
+  color: #251b2c
+ 
   /* padding-bottom: 20px; */
 }
 .label {
-  margin-bottom: 2px;
+  margin-bottom: 7px;
 }
 .input {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .registration {
   margin-top: 2vh;
@@ -61,14 +73,15 @@ body {
   /* width should be here */
 }
 .registration form input {
-  padding: 13px;
-  margin-bottom: 5px;
-  border-radius: 8px;
-  border: 2px solid #bdb8b8;
+  padding: 15px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 0.5px solid rgb(189, 188, 188);
   width: 100%;
 }
 input {
   outline-color: #a535f1;
+ 
 }
 .password input {
   padding-right: 50px;
@@ -165,12 +178,25 @@ span {
   height: 40px;
   width: 80px;
 }
-
+#acct, #forgot-pw {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+}
 a{
   text-decoration: none;
 }
 @media screen and (min-width: 40em) {
   .registration {
-    width: 640px;
+    width: 440px;
+  }
+  .content {
+    height: 600px;
+  }
+  input {
+    margin-top: 0.7rem;
+    
+  }
+  label {
+    font-size: 2rem;
   }
 }

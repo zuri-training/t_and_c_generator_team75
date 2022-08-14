@@ -69,7 +69,7 @@ const lines =document.querySelectorAll('#hamburger div')
         });
         
         /** user dropdown **/
-        const user = document.querySelector('.user');
+        const user = document.querySelector('.user-dropdown');
         const closed = document.querySelector('.user-info')
         user.addEventListener('click', function(){
           closed.classList.toggle("open");

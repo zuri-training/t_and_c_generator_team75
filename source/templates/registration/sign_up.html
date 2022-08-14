@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{%static 'css/registration/sign_up.css' %}" />
+    <link rel="stylesheet" href="{%static 'css/registration/sign_ups.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,7 +34,7 @@
     <main>
         <div class="overall_div">
             <div class="policify_logo">
-                <svg width="246" height="119" viewBox="0 0 246 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="190" height="90" viewBox="0 0 246 119" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M16 35.5C7.16344 35.5 0 42.6634 0 51.5V67.5C0 76.3366 7.16344 83.5 16 83.5H32C40.8366 83.5 48 76.3366 48 67.5V51.5C48 42.6634 40.8366 35.5 32 35.5H16ZM14 47.5H22V71.5H14V47.5ZM26 47.5H34V59.5H26V47.5Z"
                         fill="#A535F1" />
@@ -63,15 +63,16 @@
                 </svg>
             </div>
             <div class="body_text">
-                <h1 class="centre_aligned_texts">SIGN UP</h1>
-                <br>
-                <figcaption class="centre_aligned_texts">Sign up for free to access any of our products</p>
+                <h1 class="centre_aligned_texts">Sign Up</h1>
+                
+                <div class="centre_aligned_texts">
+                    <p>Sign up for free to access any of our products</p>
                     <br>
                     <form method="POST">
                         {% csrf_token %}       
                         <div>
                             <div class="labels"><label for="Username">Full Name</label></div>
-                            <div>
+                            <div class="input">
                                 {% comment %} <input type="text" class="Signup_Fields" name="username"
                                     placeholder="Enter your full name" required /> {% endcomment %}
                                 {{form.first_name}}</div>
@@ -95,7 +96,7 @@
                                 {% comment %} <input type="password" id="password" class="Signup_Fields" name="password"
                                     placeholder="Enter your password" minlength="8" required /> {% endcomment %}
                                 {{form.password1}}                 
-                                <i class="far fa-eye" id="togglePassword"></i>
+                                
                                 <script>
                                     const togglePassword = document.querySelector('#togglePassword');
                                     const password = document.querySelector('#password');
@@ -123,7 +124,7 @@
                                 {% comment %} <input type="password" id="password" class="Signup_Fields" name="password"
                                     placeholder="Enter your password" minlength="8" required /> {% endcomment %}
                                 {{form.password2}}                 
-                                <i class="far fa-eye" id="togglePassword"></i>
+                                
                                 <script>
                                     const togglePassword = document.querySelector('#togglePassword');
                                     const password = document.querySelector('#password');
@@ -147,7 +148,7 @@
                             </figcaption>
                         </div>
                         
-                        <br>
+                        
                         <p id="signup_clause" class="extra-paddings">
                             By signing up, you agree to our
                             <a href="/terms-of-service" class="purple_text">Terms of Service</a> and
@@ -163,24 +164,10 @@
                         <a href="/login" class="purple_text">Log in </a>.
                     </p>
                     <br>
-                    <div class="container">
-                        <div class="lines">
-                            <div class="circle">
-                                <p class="centre_aligned_texts"> OR</p>
-                            </div>
-                        </div>
-                    </div>
+                    
 
-                    <br>
-                    <div class="centre_aligned_texts" class="social_media">
-                        <a href="#" target="_blank" class="other_signup_options" id="google"><img src="{%static '/images/registration/sign_up/google.jpeg' %}"
-                                alt="Google" width="25px" style="border-radius: 50%"></a>
-                        <a href="#" target="_blank" class="other_signup_options" id="facebook"><img  src="{%static '/images/registration/sign_up/facebook.png' %}"
-                                alt="Facebook" width="25px" style="border-radius: 50%"></a>
-                        <a href="#" target="_blank" class="other_signup_options" id="apple"><img src="{%static '/images/registration/sign_up/apple.png' %}"
-                                alt="iphone" width="25px" style="border-radius: 50%"></a>
-                    </div>
-                    <br>
+                    
+                    
                    
             </div>
 
