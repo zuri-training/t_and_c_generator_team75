@@ -15,10 +15,37 @@
 </div>
 <div id ="header2">
     <a href="/pdf/1/{{posts.id}}"> <img src="{% static 'images/policypreview/download.svg' %}" alt=""></a>
+    <a href = "#" class= "share"> <img src="{% static 'images/policypreview/share.svg' %}" alt="">
+    <a href = "#" class="copy-btn1"> <img src="{% static 'images/policypreview/copy.svg' %}" alt="">
+    <a href = "#" class="embed"> <img src="{% static 'images/policypreview/embed.svg' %}" alt="">
     <a href = "/word-post/1/{{posts.id}}"> <img src="{% static 'images/policypreview/export.svg' %}" alt="">
     </a>
 </div>
+<div class="functions">
+    <div class="inputs">
+        <input class="input1" type="text" value=""/>
+      
+        
+    </div>
+    <div class="these">
+    <div class="textarea-main">
+        <h3>Embed Privacy Policy in your page</h3>
+        <textarea class ="textarea2" value=""></textarea>
+        <button class="copy-btn2">Copy code</button>
+        <p class="close-pop">Close</p>
+    </div>
 
+    <div class="socials">
+  
+  <div class="social-links">
+    <a class="facebook" href="#" target="_blank"><img src="{% static 'images/socials/facebook.svg' %}"/></a>
+    <a class="twitter" href="#" target="_blank"><img src="{% static 'images/socials/twiter.svg' %}"/></a>
+    <a class="linkedin" href="#" target="_blank"><img src="{% static 'images/socials/linkedin.svg' %}"/></a>
+    
+
+  </div>
+    </div>
+</div>
 
 <div class="preview-content">
     <h2> Your free Privacy policy</h2>
@@ -205,6 +232,98 @@
     </div>
 </div>
 
+<script>
+    const input1 = document.querySelector(".input1");
+    const URL = window.location.href;
+    const copybtn1 = document.querySelector('.copy-btn1')
+    input1.value = URL;
 
+    copybtn1.addEventListener("click", function(event){
+        event.preventDefault();
+        let text = input1.select();
+        document.execCommand("copy");
+
+        
+        
+        let notice = document.createElement("span");
+       
+        notice.className ="notice visible";
+        notice.innerHTML = "Copied to clipboard!";
+        document.body.appendChild(notice);
+        setTimeout(() => {
+            document.body.removeChild(notice);
+        }, 2000);
+       
+
+
+    });
+
+    const embed = document.querySelector(".embed");
+    const textarea = document.querySelector(".textarea2");
+    const copybtn2 = document.querySelector('.copy-btn2')
+    
+    const textareamain = document.querySelector(".textarea-main");
+    const width = 800;
+    const height = 400;
+    const style="border: 1px solid rgba(0, 0, 0, 0.1);"
+    
+    const embedded = `<iframe style="${style}" width="${width}" height ="${height}" src="${URL}" allowfullscreen></iframe>`;
+    
+    embed.addEventListener("click", function(event){
+        event.preventDefault();
+        textarea.value = embedded;
+        textareamain.classList.toggle("active")
+        
+
+
+    });
+    copybtn2.addEventListener("click", function(event){
+        event.preventDefault();
+        let text = textarea.select();
+        document.execCommand("copy");
+
+        let notice = document.createElement("span");
+        notice.className ="notice visible";
+        notice.innerHTML = "Copied to clipboard!";
+        document.body.appendChild(notice);
+        setTimeout(() => {
+            document.body.removeChild(notice);
+        }, 3000);
+
+
+    });
+
+    const share = document.querySelector(".share");
+    const socialinks = document.querySelector(".socials")
+
+    share.addEventListener("click", function(e) {
+        e.preventDefault();
+        socialinks.classList.toggle("active")
+    });
+
+    const fbshare = "https://www.facebook.com/sharer/sharer.php?u="
+    const fblink = document.querySelector(".facebook");
+    
+    fblink.addEventListener("click", function(){
+      fblink.href= fbshare + URL;
+    })
+
+    const twittershare = "https://twitter.com/intent/tweet?text="
+    const twitterlink = document.querySelector(".twitter");
+    
+    twitterlink.addEventListener("click", function(){
+      twitterlink.href= twittershare + URL;
+    })
+
+    const linkedinshare = "https://www.linkedin.com/sharing/share-offsite/?url="
+    const linkedinlink = document.querySelector(".linkedin");
+    
+    linkedinlink.addEventListener("click", function(){
+      linkedinlink.href= linkedinshare + URL;
+    })
+    
+
+
+</script>
 
 {% endblock content %}

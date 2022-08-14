@@ -35,7 +35,7 @@
                 </nav>
                 {% if user.is_authenticated%}
                 <div class="desktop-register-and-login">
-                    <a class="login-link" href ="/dashboard">{{user.email}}</a>
+                    {% comment "" %}<a class="login-link" href ="/dashboard">{{user.email}}</a>{% endcomment %}
                     <a class="signup-link" href="/logout"> Log out</a>
                 </div>
                 {%else%}
