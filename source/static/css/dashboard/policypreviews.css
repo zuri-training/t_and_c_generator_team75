@@ -19,6 +19,9 @@ li {
 }
  p {
     color: #49414f;
+    
+ }
+ .preview-content > p  {
     margin: 2rem 1rem;
  }
 ul {
@@ -153,6 +156,30 @@ ul {
     border-radius: 25px;
     cursor: pointer;
 }
+.export-as {
+    position: absolute; 
+    right: 10px;
+    top: 30%;
+    
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px rgba(161, 151, 151, 0.1), -5px -5px 5px rgba(161, 151, 151, 0.1);
+    background-color: #fff;
+   font-size: 0.85rem;
+    height: 100px;
+    width: 220px;
+    background-color: #f9f9f9;
+    z-index: 999;
+    margin-left: 0;
+    
+    padding-left: 2rem;
+
+    animation: fadeout .5s;
+}
+.formats > * {
+    margin-top: 1.4rem;
+}
+ 
 .close-pop {
     margin-top: 5rem;
     position: absolute;

@@ -2,7 +2,7 @@
 
 {% load static %}
 {% block extrahead %}
-<link rel="stylesheet" href="{% static 'css/dashboard/policypreview.css' %}">
+<link rel="stylesheet" href="{% static 'css/dashboard/policypreviews.css' %}">
 
 {% endblock extrahead %}
 
@@ -18,7 +18,7 @@
     <a href = "#" class= "share"> <img src="{% static 'images/policypreview/share.svg' %}" alt="">
     <a href = "#" class="copy-btn1"> <img src="{% static 'images/policypreview/copy.svg' %}" alt="">
     <a href = "#" class="embed"> <img src="{% static 'images/policypreview/embed.svg' %}" alt="">
-    <a href = "/word-post/1/{{posts.id}}"> <img src="{% static 'images/policypreview/export.svg' %}" alt="">
+    <a class ="export" href = "/word-post/1/{{posts.id}}"> <img src="{% static 'images/policypreview/export.svg' %}" alt="">
     </a>
 </div>
 <div class="functions">
@@ -28,22 +28,28 @@
         
     </div>
     <div class="these">
-    <div class="textarea-main">
-        <h3>Embed Privacy Policy in your page</h3>
-        <textarea class ="textarea2" value=""></textarea>
-        <button class="copy-btn2">Copy code</button>
-        <p class="close-pop">Close</p>
-    </div>
+        <div class="textarea-main">
+            <h3>Embed Privacy Policy in your page</h3>
+            <textarea class ="textarea2" value=""></textarea>
+            <button class="copy-btn2">Copy code</button>
+            <p class="close-pop">Close</p>
+        </div>
 
     <div class="socials">
   
-  <div class="social-links">
-    <a class="facebook" href="#" target="_blank"><img src="{% static 'images/socials/facebook.svg' %}"/></a>
-    <a class="twitter" href="#" target="_blank"><img src="{% static 'images/socials/twiter.svg' %}"/></a>
-    <a class="linkedin" href="#" target="_blank"><img src="{% static 'images/socials/linkedin.svg' %}"/></a>
-    
+        <div class="social-links">
+            <a class="facebook" href="#" target="_blank"><img src="{% static 'images/socials/facebook.svg' %}"/></a>
+            <a class="twitter" href="#" target="_blank"><img src="{% static 'images/socials/twiter.svg' %}"/></a>
+            <a class="linkedin" href="#" target="_blank"><img src="{% static 'images/socials/linkedin.svg' %}"/></a>
+        
 
-  </div>
+        </div>
+    </div>
+    <div class="export-as">
+        <div class="formats">
+            <div>PDF Document (.pdf)</div>
+            <div>Ms Word Document (.docx)</div>
+        </div>
     </div>
 </div>
 
