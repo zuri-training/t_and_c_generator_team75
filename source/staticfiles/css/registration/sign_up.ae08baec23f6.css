@@ -1,0 +1,573 @@
+* , 
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    padding: 2rem;
+    background: url("and-machines-vqTWfa4DjEk-unsplash 1.6144aac81985.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    
+    justify-content: center;
+}
+.centre_aligned_texts > p {
+  margin-top: 0.4rem;
+}
+p {
+  color: #666666;
+}
+main {
+    width: 95%;
+    height: 600px;
+    
+    margin-bottom: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding: 1%;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+  font-size: 1.4rem;
+}
+.overall_div {
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    padding-bottom: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: 100%;
+}
+
+.policify_logo {
+    text-align: center;
+    height: 75px;
+    
+   
+}
+
+input[type=text]:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.5px blueviolet;
+    border: 0.5px solid blueviolet;
+}
+
+input[type=email]:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.5px blueviolet;
+    border: 0.5px solid blueviolet;
+}
+
+input[type=password]:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.5px blueviolet;
+    border: 0.5px solid blueviolet;
+}
+
+
+#togglePassword {
+    margin-left: -18px;
+    cursor: pointer;
+}
+
+.body_text {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* .policify_logo{
+  width: 150px;
+  align-items: center;
+} */
+
+.labels {
+    text-align: justify;
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+}
+
+.centre_aligned_texts {
+    text-align: center;
+}
+.centre_aligned_texts > p {
+  font-size: 0.85rem;
+}
+
+/*.other_signup_options {
+    margin-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
+    border: 0.5px solid rgb(189, 188, 188);
+    border-radius: 15px;
+}*/
+
+#togglePassword {
+    margin-left: -18px;
+    cursor: pointer;
+}
+
+.Signup_Fields {
+  border: 2px solid rgb(100, 98, 98);
+  color: black;
+  width: 100%;
+  border-radius: 5px;
+  text-align: left;
+  padding: 0.7rem 2rem;
+  margin-bottom: 0.6rem;
+  border: 0.2px solid #BBBBBB;
+}
+
+/* input:focus{} */
+
+#signup_button {
+    background-color: blueviolet;
+    border: 0px;
+    color: white;
+    /*padding-left: 45%;
+    padding-right: 45%;*/
+    width: 100%;
+    
+    height: 40px;
+    
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+
+/*.container {
+    padding-left: 20%;
+    padding-left: 20%;
+}
+*/
+.lines {
+    width: 80%;
+    height: 45px;
+    position: relative;
+}
+
+.lines::after,
+.lines::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background: rgb(189, 188, 188);
+    width: 45%;
+    top: 23%;
+}
+
+.lines::after {
+    left: 0;
+}
+
+.lines::before {
+    right: 0;
+}
+
+.circles {
+    height: 40px;
+    width: 40px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+figcaption {
+    font-size: 10px;
+    padding-left: 5%;
+}
+
+.errorlist .helptext ul  li{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+text-decoration: none;
+letter-spacing: 0.02em;
+
+/* Error/600 */
+
+color: #DA1E28;
+
+}
+
+.purple_text {
+    color: blueviolet;
+}
+
+.purple_text:hover {
+    color: rgb(198, 123, 233);
+}
+
+.signup_clause {
+    text-align: left;
+}
+
+#signup_button:hover {
+    color: ffffff;
+    background-color: rgb(198, 123, 233);
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        width: 490px;
+       height: 654px;
+        
+        margin-bottom: 25%;
+       
+       
+        padding: 1%;
+        background-color: #f9f9f9;
+        border-radius: 16px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .overall_div {
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        font-family: "Inter", sans-serif;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-left: 0;
+    }
+
+    .Signup_Fields {
+        border: 2px solid rgb(100, 98, 98);
+        color: black;
+        width: 100%;
+        border-radius: 5px;
+        text-align: left;
+        padding: 0.9rem 2rem;
+        margin-bottom: 1.1rem;
+        border: 0.2px solid #BBBBBB;
+    }
+
+    #signup_button {
+        background-color: blueviolet;
+        border: 0px;
+        color: white;
+        /*padding-left: 45%;
+        padding-right: 45%;*/
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 15px;
+        text-align: center;
+        font-size: 15px;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .signup_button {
+        align-items: center;
+        justify-content: center;
+    }
+
+    figcaption {
+        text-align: left;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .other_signup_options {
+        margin-right: 7%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 4%;
+        padding-right: 4%;
+        border: 0.5px solid rgb(189, 188, 188);
+        border-radius: 15px;
+    }
+
+    #togglePassword {
+        margin-left: -18px;
+        cursor: pointer;
+    }
+    .policify_logo {
+      height: 70px;
+      
+    }
+    .lines::after,
+    .lines::before {
+        content: "";
+        position: absolute;
+        margin: auto;
+        height: 1px;
+        background: rgb(189, 188, 188);
+        width: 45%;
+        top: 45%;
+    }
+
+    #google {
+        margin-left: 6%;
+        width: 70px;
+    }
+
+    #facebook {
+        margin-left: 6%;
+        width: 70px;
+    }
+
+    #apple {
+        margin-left: 6%;
+        width: 70px;
+    }
+}   .overall_div {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+  .body_text {
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 200px;
+}
+
+@media screen and (min-width: 1024px) {
+    #togglePassword {
+        margin-left: -55px;
+        cursor: pointer;
+    }
+}
+
+
+/* main {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 50%;
+  margin-left: 20%;
+  margin-right: 20%;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-family: "Inter", sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.labels {
+  text-align: justify;
+}
+
+.centre_aligned_texts {
+  text-align: center;
+}
+
+.Signup_Fields {
+  border: 2px solid rgb(100, 98, 98);
+  color: black;
+  padding-left: 2%;
+  padding-right: 70%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 5px;
+  text-align: left;
+}
+
+#signup_button {
+  background-color: blueviolet;
+  border: 0px;
+  color: white;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+figcaption {
+  text-align: left;
+}
+
+.purple_text {
+  color: blueviolet;
+}
+
+.purple_text:hover {
+  color: rgb(198, 123, 233);
+}
+
+#signup_button:hover {
+  color: ffffff;
+  background-color: rgb(198, 123, 233);
+}
+
+.other_signup_options {
+  margin-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  border: 1px solid rgb(189, 188, 188);
+  border-radius: 15px;
+}
+
+.container{
+  padding-left:20%;
+  padding-left: 20%;
+}
+.lines{
+  width:80%;
+  height: 45px;
+  position: relative;
+}
+.lines::after, .lines::before{
+  content:"";
+  position: absolute;
+  margin: auto;
+  height: 1px;
+  background: rgb(189, 188, 188);
+  width: 45%;
+  top:45%;
+
+}
+.lines::after{
+  left: 0;
+}
+
+.lines::before{
+  right: 0;
+}
+
+.circles{
+  height: 40px;
+  width: 40px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+
+@media screen and (min-width: 375px) {
+  .Signup_Fields {
+    border: 2px solid rgb(100, 98, 98);
+    color: black;
+    padding-left: 2%;
+    padding-right: 70%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 5px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .Signup_Fields {
+    border: 2px solid rgb(100, 98, 98);
+    color: black;
+    padding-left: 2%;
+    padding-right: 15%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 5px;
+    text-align: left;
+  }
+
+  #signup_button {
+    background-color: blueviolet;
+    border: 0px;
+    color: white;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .other_signup_options {
+    margin-right: 4%;
+    
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+      margin-top: 5%;
+      margin-bottom: 5%;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      padding-left: 10%;
+      padding-right: 10%;
+
+      }
+  .Signup_Fields {
+    border: 2px solid rgb(100, 98, 98);
+    color: black;
+    padding-left: 2%;
+    padding-right: 7%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 5px;
+    text-align: left;
+  }
+
+  #signup_button {
+    background-color: blueviolet;
+    border: 0px;
+    color: white;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+  }
+}   */
