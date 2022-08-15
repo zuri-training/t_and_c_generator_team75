@@ -3,11 +3,10 @@ from .views import HomePageView, FeedbackPageView
 from django.contrib.auth import views
 from .views import sign_up , create_policiy_post , create_terms_post , all_post , preview_post , edit_post ,GeneratePdf ,doc_view , policies,delete_post,text_view
 
-<<<<<<< HEAD
-from .views import HomePageView, FeedbackPageView, ProductPageView, ContactPageView, PPPreviewPageView, TCPreviewPageView
-=======
-from .views import HomePageView, FeedbackPageView, DashboardPageView, PrivacyDashboardPageView, TermsDashboardPageView, PolicyPreviewPageView, ProductPageView, ContactPageView, TermsPreviewPageView, PPPreviewPageView, TCPreviewPageView, AboutPageView
->>>>>>> c08140d1d6a08b30e3f7363e5ce137fac8af4da3
+
+from .views import HomePageView, FeedbackPageView, ProductPageView, ContactPageView, PPPreviewPageView, TCPreviewPageView, AboutPageView
+
+
 
 urlpatterns = [
     path("", HomePageView.as_view(), name="home"),
