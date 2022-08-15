@@ -19,6 +19,9 @@ li {
 }
  p {
     color: #49414f;
+    
+ }
+ .preview-content > p  {
     margin: 2rem 1rem;
  }
 ul {
@@ -34,6 +37,9 @@ ul {
     margin-top: 1rem;
     padding-top: 1.5rem;
     
+}
+p {
+    margin-left: 1rem;
 }
 #header2 img:hover {
     transform: scale(1.1)
@@ -95,9 +101,9 @@ ul {
     font-size: 14px;
     font-weight: 700;
     text-align: center;
-    background-color: #A535F1;
+    background-color: black;
     color: #F9F9F9;
-    border-radius: 14px;
+    /*border-radius: 14px;*/
     z-index: 100;
     
     
@@ -153,6 +159,73 @@ ul {
     border-radius: 25px;
     cursor: pointer;
 }
+.export-as {
+    position: absolute; 
+<<<<<<< HEAD:source/static/css/dashboard/policypreviews.css
+    right: 10px;
+    top: 30%;
+    
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px rgba(161, 151, 151, 0.1), -5px -5px 5px rgba(161, 151, 151, 0.1);
+    background-color: #fff;
+   font-size: 0.85rem;
+    height: 100px;
+    width: 220px;
+    background-color: #f9f9f9;
+    z-index: 999;
+    margin-left: 0;
+    
+    padding-left: 2rem;
+
+    animation: fadeout .5s;
+}
+.formats > * {
+    margin-top: 1.4rem;
+}
+ 
+=======
+    right: 10%;
+    top: 30%;
+    
+    display: none;
+    
+    box-shadow: 5px 5px 5px rgba(161, 151, 151, 0.1), -5px -5px 5px rgba(161, 151, 151, 0.1);
+    background-color: rgb(252, 246, 247);
+   font-size: 0.85rem;
+    height: 160px;
+    width: 200px;
+    line-height: 3;
+    z-index: 999;
+    margin-left: 0;
+    color: #49414f;
+    padding-left: 1rem;
+
+    animation: fadeout .5s;
+    
+}
+.formats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formats a {
+    margin-top: 0rem;
+    color: #49414f;
+   
+}
+.formats a:hover {
+    cursor: pointer;
+    color: #A535F1;
+    font-weight: 600;
+}
+ .export-as img {
+    width: 24px;
+    margin-top: 1rem;
+    padding-bottom: 0rem;
+ }
+>>>>>>> a881eae4698911e32992f1ae8192a1bc579f665c:source/static/css/dashboard/policypreview.css
 .close-pop {
     margin-top: 5rem;
     position: absolute;

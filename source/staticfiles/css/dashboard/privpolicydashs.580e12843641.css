@@ -38,12 +38,14 @@ section {
     margin-left: 0.3rem;
    
     border-radius: 23px;
+    cursor: pointer;
     
 }
 .save {
     border: 1px solid;
     background-color: #fff;
     padding: 0.75rem 1.8rem;
+    cursor: pointer;
 }
 .preview {
     background-color: #A535F1;
@@ -104,7 +106,7 @@ label {
    
 }
 .type label {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .type input {
@@ -174,9 +176,10 @@ input[type="checkbox"]:checked{
     .progress {
         padding-bottom: 2%;
         display: flex;
-        flex-direction: flex-start;
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
         justify-content: space-between;
+        
        
 
     }
@@ -198,10 +201,12 @@ input[type="checkbox"]:checked{
         margin-top: 0.6rem;
     } 
     #progress {
-        margin-top: 1.6rem;
-        padding-left: 230px;
-      }
+    margin-top: 1.6rem;
+    padding-left: 230px;
+  }
+  
 }
+
 .steps.open-tab {
     display: block;
     color: purple;
@@ -211,9 +216,9 @@ input[type="checkbox"]:checked{
   }
   
   .step-head{
-    color: purple;
-    border-bottom: 3px solid purple;
-    width: 220px;
+    color: #A535F1;
+    border-bottom: 3px solid #A535F1;
+    width: 230px;
     padding-bottom: 5px;
       display: block;
   }
@@ -232,10 +237,3 @@ input[type="checkbox"]:checked{
     margin-top: 1.6rem;
     padding-left: 1.3rem;
   }
-/*.steps.open-tab {
-    display: block;
-    color: purple;
-  }
-  .tab.open-tab {
-    display: block;
-  }*/
