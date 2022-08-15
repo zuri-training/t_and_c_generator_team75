@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/homer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 
     {% block extrahead %}{% endblock extrahead %}
     <script src="{% static 'js/bases.js' %}" defer></script>
@@ -24,7 +24,7 @@
         <div id ="header">
             <img src="{% static 'images/headerlogo.svg' %}" alt="headerlogo">
             <div class="desktop-navbar">
-                <nav class="desktop-navigation">
+                <nav style="font-weight: 600;" class="desktop-navigation">
                     <a href="{% url 'product' %}" class ="nav-item product-dropdown">Products</a>
                     
                     <a href="{% url 'feedback' %}" class ="nav-item">Feedbacks</a>
@@ -40,7 +40,7 @@
                 </div>
                 {%else%}
                 <div class="desktop-register-and-login">
-                    <a class="login-link" href ="/login">Login</a>
+                    <a style="font-weight: 600;" class="login-link" href ="/login">Login</a>
                     <a class="signup-link" href="/sign-up">Sign Up</a>
                 </div>
                 {% endif %}
@@ -57,8 +57,8 @@
                 <a href="#products" class ="nav-item product-dropdown">Products</a>
                
                 <a href="{% url 'feedback' %}" class ="nav-item">Feedbacks</a>
-                <a href="#faq" class ="nav-item">About Us</a>
-                <a href="#{% url 'contact' %}" class ="nav-item">Contact us</a>
+                <a href="#{% url 'about' %}" class ="nav-item">About Us</a>
+                <a href="{% url 'contact' %}" class ="nav-item">Contact us</a>
     
             </nav>
             <div class="register-and-login">
@@ -88,10 +88,10 @@
             <img class="footer-logo" src="{% static 'images/footerlog.svg' %}">
             <nav class="footer-nav">
                 <div class="first">
-                    <a href="#" class="product-dropdown">Products</a>
+                    <a href="{% url 'product' %}" class="product-dropdown">Products</a>
                     <a href="#">Templates</a>
                     <a href="{% url 'feedback' %}">Feedbacks</a>
-                    <a href="#">About Us</a>
+                    <a href="{% url 'about' %}">About Us</a>
                 </div>
                 <div class="second">
                     <a href="#">Contact Us</a>

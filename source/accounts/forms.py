@@ -25,20 +25,22 @@ class CustomUserChangeForm(UserChangeForm):
 class UserLoginForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        #self.fields['email'].widget.attrs.update(
-        #    {
-        #        'type':"email",'name':"email",'id':"email",'placeholder':"olescharlie@gmail.com",'required':'','autofocus':''
-        #    }
-        #)
-        self.fields['password'].widget.attrs.update(
-            {
-                 'type':"password",
-                    'name':"password",
-                    'id':"password",
-                    'placeholder':"Password",
-                    'maxlength':"20",
-                    'required':'',
-                    'autofocus':''
-            }
-        )
+        # self.fields['email'].widget.attrs.update(
+        #     {
+        #         'type':"email",'name':"email",'id':"email",'placeholder':"olescharlie@gmail.com",'required':'','autofocus':''
+        #     }
+        # )
+        # self.fields['password'].widget.attrs.update(
+        #     {
+        #          'type':"password",
+        #             'name':"password",
+        #             'id':"password",
+        #             'placeholder':"Password",
+        #             'maxlength':"20",
+        #             'required':'',
+        #             'autofocus':''
+        #     }
+        # )
+
+
    

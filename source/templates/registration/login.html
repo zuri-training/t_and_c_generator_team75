@@ -19,17 +19,7 @@
     />
   </head>
   <style>
-    body {
-      background: url({%static '/images/registration/sign_up/and-machines-vqTWfa4DjEk-unsplash 1.png' %});
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      font-family: "Inter", sans-serif;
-      scroll-behavior: smooth;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-      overflow: hidden;
-    }
+  
   </style>
   <body>
     <div class="container">
@@ -70,8 +60,7 @@
               <div class="password">
                 <div class="input-icon">
                 
-                 <p id="password-hint" > {{form.email.errors}}</p>
-                  <i class="fa-solid fa-eye-slash" id="font-icon"></i>
+                 
                 </div>
                 <p id="password-hint">
                   {{form.errors}}
@@ -82,7 +71,7 @@
             </div>
              <button type="submit" value="Login" class="btn">Login </button>
           <div class="last-section">
-            <a href="/password-reset"> <p id="forgot-pw">Forgot Password?</p> </a>
+            <a href="/reset_password"> <p id="forgot-pw">Forgot Password?</p> </a>
             <p id="acct">Don't have an account? <a href="/sign-up">Sign Up</a></p>
           </div>
         </div>
