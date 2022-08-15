@@ -39,23 +39,25 @@ class HomePageView(TemplateView):
 class FeedbackPageView(TemplateView):
     template_name = "feedback.html"
 
- 
+@login_required(login_url="/login") 
 class DashboardPageView(TemplateView):
     template_name = "dashboard/dashboard.html"
     
-    
+@login_required(login_url="/login")   
 class PrivacyDashboardPageView(TemplateView):
     template_name = "dashboard/privpolicydash.html"
 
-
+@login_required(login_url="/login")
 class TermsDashboardPageView(TemplateView):
     template_name = "dashboard/termscondash.html"
-    
-class PolicyPreviewPageView(TemplateView):
-    template_name = "dashboard/policypreview.html"
-    
-class TermsPreviewPageView(TemplateView):
-    template_name = "dashboard/termspreview.html"
+
+# @login_required(login_url="/login")   
+# class PolicyPreviewPageView(TemplateView):
+#     template_name = "dashboard/policypreview.html"
+
+# @login_required(login_url="/login")   
+# class TermsPreviewPageView(TemplateView):
+#     template_name = "dashboard/termspreview.html"
 
 class ProductPageView(TemplateView):
     template_name = "product.html"
@@ -70,7 +72,7 @@ class PPPreviewPageView(TemplateView):
     template_name = "ppp.html"   
 
    
-#@login_required(login_url="/login")
+@login_required(login_url="/login")
 def create_policiy_post(request):
     if request.method == 'POST':
         form = PoliciesForm(request.POST)
@@ -85,6 +87,7 @@ def create_policiy_post(request):
 
     return render(request, 'dashboard/privpolicydash.html',{"form" : form})
 
+@login_required(login_url="/login")
 def create_terms_post(request):
     if request.method == 'POST':
         form = TermsForm(request.POST)
@@ -99,7 +102,7 @@ def create_terms_post(request):
 
     return render(request, 'dashboard/termscondash.html',{"form" : form})
 
-
+@login_required(login_url="/login")
 def all_post(request):
      posts = PolicyPost.objects.all()
      terms = TermPost.objects.all()
@@ -186,6 +189,7 @@ def text_view(request,post_type,my_id):
 def policies(request):
     return render(request,"dashboard/policies.html",{})
 
+@login_required(login_url="/login")
 def edit_post(request,post_type ,my_id):
      if post_type == 1:
         obj = get_object_or_404(PolicyPost,id=my_id)
@@ -201,7 +205,8 @@ def edit_post(request,post_type ,my_id):
           form.save()
           return redirect("/dashboard")
         return render(request, "dashboard/edit_term_post.html",{'form': form})
-     
+
+@login_required(login_url="/login")     
 def delete_post(request,post_type,my_id):
       if post_type == 1:
         post = PolicyPost.objects.filter(id=my_id).first()

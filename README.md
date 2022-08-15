@@ -94,7 +94,9 @@ Policify aims at reducing the hassles of individuals and Companies of  having to
 * cd into the source folder 
 * run python manage.py makemigrations
 * run Python manage.py migrate
-* run python mange.py runserver --insecure or switch the DEBUG= False in policifyProject to True and run python manage.py runserver
+* run python manage.py collectstatic
+* run python manage.py runserver
+* if having issue linking static files, then set DEBUG in settings.py in policifyProject to False then run python manage.py runserver --insecure or switch the DEBUG = False  to True and run python manage.py runserver
 
 ## Product Specification
 * Mobile Phones

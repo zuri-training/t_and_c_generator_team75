@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-y5nd&=v=yo(r55um!99ps
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://abbytee.herokuapp.com/']
 
 
 # Application definition
@@ -86,33 +86,35 @@ WSGI_APPLICATION = 'policifyProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE':'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'dv_4',
-#         'USER': 'postgres', 
-#         'PASSWORD': 'nothingmore',
-#         'HOST': '127.0.0.1', 
-#         'PORT': '5432',
-#         #  'ENGINE': 'django.db.backends.sqlite3',
-#         #  'NAME': BASE_DIR / 'db.sqlite3',
-        
-#         #comment my own when you want to start
-
-#     }
-# }
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.postgresql_psycopg2',
-        'NAME': 'de7sk7uo3u5bou',
-        'USER': 'xdaxtwlpctkjvs', 
-        'PASSWORD': 'd4f3096617169b76cdbff7c8212707fee207cf6969f1e1516fee647bf2a7ef4c',
-        'HOST': 'ec2-52-207-15-147.compute-1.amazonaws.com', 
+        'NAME': 'dv_4',
+        'USER': 'postgres', 
+        'PASSWORD': 'nothingmore',
+        'HOST': '127.0.0.1', 
         'PORT': '5432',
-       
+        #  'ENGINE': 'django.db.backends.sqlite3',
+        #  'NAME': BASE_DIR / 'db.sqlite3',
+        
+        #comment my own when you want to start
 
     }
 }
+
+#Remote database
+# DATABASES = {
+#     'default': {
+#         'ENGINE':'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'de7sk7uo3u5bou',
+#         'USER': 'xdaxtwlpctkjvs', 
+#         'PASSWORD': 'd4f3096617169b76cdbff7c8212707fee207cf6969f1e1516fee647bf2a7ef4c',
+#         'HOST': 'ec2-52-207-15-147.compute-1.amazonaws.com', 
+#         'PORT': '5432',
+       
+
+#     }
+# }
 
 
 
