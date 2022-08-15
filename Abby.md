@@ -24,3 +24,6 @@ https://github.com/zuri-training/t_and_c_generator_team75/issues/47
 
 ## Authenticated user dashboard issue
 https://github.com/zuri-training/t_and_c_generator_team75/issues/48
+
+## Privacy Policy dashboard page issue
+https://github.com/zuri-training/t_and_c_generator_team75/issues/117
