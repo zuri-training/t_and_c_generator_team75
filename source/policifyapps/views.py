@@ -69,7 +69,10 @@ class TCPreviewPageView(TemplateView):
     template_name = "tcp.html"
     
 class PPPreviewPageView(TemplateView):
-    template_name = "ppp.html"   
+    template_name = "ppp.html"  
+     
+class AboutPageView(TemplateView):
+    template_name = "about.html"   
 
    
 @login_required(login_url="/login")

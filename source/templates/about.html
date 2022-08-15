@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block  extrahead%}
+<link rel ="stylesheet" href ={% static 'css/aboutus.css' %}>
+
+{% endblock extrahead%}
+
+{% block content %}
+<div class="about-container">
+    <h1>About Us</h1>
+    
+    <div class="flex">
+        <div class="pic">
+            <img src="{% static 'images/about.svg' %}" alt="picture">
+        </div>
+        <div class="text">
+            <p>
+                Policify is a platform that helps business 
+owners thrive. As a business owner, it is 
+your responsibility to lay out your terms of 
+use otherwise your business might be 
+liable in legal disputes relating to misuse of 
+your website. products, or services.
+<p>Policify’s terms and conditions generator 
+will take care of all that for you, creating a 
+customized terms and conditions 
+agreement that is completely up to date 
+with all law changes. </p>
+<p>Two of the most important things at 
+Policify are our customers and our team. 
+We are your biggest fans, cheering you on 
+to online success.</p>
+            </p>
+        </div>
+    </div><br><br><br>
+    <div class="container">
+        <div class="subscribe">
+                <h3 id="one" class="small-text">Sign Up Now for our Newsletter</h3>
+                <div class="sign">
+                    <input id="two" type="email" name="mail" value="">
+                 <button id="but">Subscribe</button>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}

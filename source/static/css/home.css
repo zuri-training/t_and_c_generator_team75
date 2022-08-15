@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 *,
 *::before,
 *::after {
@@ -88,7 +88,7 @@ h1 {
     /*align-content: center;*/
     align-items: center;
     /*justify-content: center;*/
-    height: 30%;
+    height: 100%;
     white-space: nowrap;
     font-size: 1em;
     line-height: 2.2em;
@@ -99,9 +99,12 @@ h1 {
 }
 .navigation a {
     color: #251B2C;
+    
+    font-weight: 700;
 }
 .navigation a:hover {
-    color: #A535F1;
+   /* color: #A535F1;*/
+   color: #251B2C;
 }
 .line1, .line2 {
     width: 24px;
@@ -141,7 +144,9 @@ h1 {
     border-radius: 24px;
 }
 .login-link {
-    color: #251B2C
+    color: #251B2C;
+    font-weight: 600;
+
 }
 .signup-btn {
 
@@ -160,6 +165,7 @@ h1 {
     margin-bottom: 0;
    
 }
+
 .product-header {
 
     text-align: center;
@@ -353,10 +359,17 @@ h1 {
     color: #49414f;
     display: flex;
     flex-direction: column;
-    
+    animation: fadein .5s;
     align-items: center;
 }
-
+@keyframes fadein {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
 .stars {
     padding-bottom: 10%;
     color: #251B2C;
@@ -532,7 +545,7 @@ footer p {
     padding-block: 10%;
     width: 100%;
     margin-top: 20px;
-   font-size: 0.7rem;
+   font-size: 0.8rem;
    text-align: left;
    padding-left: 12px;
    font-weight: 600;
