@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
-#import django_heroku
+
 from email.policy import default
 from decouple import config
 from pathlib import Path
@@ -180,3 +180,6 @@ EMAIL_HOST_USER = '*********'
 EMAIL_HOST_PASSWORD = '*********'
 
 DEBUG = False
+
+import django_heroku
+django_heroku.settings(locals())
