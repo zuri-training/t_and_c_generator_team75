@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import HomePageView, FeedbackPageView, DashboardPageView
+from .views import HomePageView, FeedbackPageView
 from django.contrib.auth import views
 from .views import sign_up , create_policiy_post , create_terms_post , all_post , preview_post , edit_post ,GeneratePdf ,doc_view , policies,delete_post,text_view
 
-from .views import HomePageView, FeedbackPageView, DashboardPageView, PrivacyDashboardPageView, TermsDashboardPageView, ProductPageView, ContactPageView, PPPreviewPageView, TCPreviewPageView
+from .views import HomePageView, FeedbackPageView, ProductPageView, ContactPageView, PPPreviewPageView, TCPreviewPageView
 
 urlpatterns = [
     path("", HomePageView.as_view(), name="home"),

@@ -5,9 +5,7 @@
 {% block content %}
     <main>
       <div class="dashboard-head"><h2>Dashboard</h2></div>
-      {% for post in posts %}
-            
-      {%if user.username != post.author.username %} 
+
       <div class= "not-generated"> <!-----when user has not generated-->
         <div class="image">
           <img class="illustration" src="{% static 'images/dashboard/illustration.svg' %}" alt="Logo">
@@ -23,11 +21,17 @@
               <p class="close">Close</p>
             </div>
           </div>
-          
-            
+          {% comment %} <P>  {% for post in posts %}
+            {{user.email }} 1
+            {{post.author}} 1
+            {%if user.email != post.author %} 
+            {{user.email }} 2
+            {{post.author}} 2
+            {%endif%}
+            {%endfor%}</p> {% endcomment %}
         </div>
       </div>
-    {%else%}
+    
         <div class="generated"><!---When user has generated-->
           <div class="overflow">
             <div class="boxes">
@@ -46,6 +50,7 @@
                 </a>
               </div>
             </div>
+           
             <div class="crud">
             <table>
               <tr>
@@ -58,8 +63,9 @@
                 <th><img class="kebab" src="{% static 'images/dashboard/kebab.svg' %}"/></th>
               </tr>
               {% for post in posts %}
+             
+              {%if user.email != post.author %} 
             
-            {%if user.username == post.author.username %} 
               <tr>
                 <td>{{post.app_name}}</td>
                 <td>{{post.type_form}}</td>
@@ -80,7 +86,7 @@
               {%endfor%}
                {% for term in terms %}
              
-              {%if user.username == term.author.username %} 
+               {%if user.email != term.author %} 
               <tr>
                 <td>{{term.app_name}}</td>
                 <td>{{term.type_form}}</td>
@@ -104,8 +110,6 @@
             
            
           </div>
-          {%endif%}
-          {%endfor%}
 
     </main>
     <script>

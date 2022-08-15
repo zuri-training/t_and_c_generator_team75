@@ -132,7 +132,6 @@ class PoliciesForm(forms.ModelForm):
     pay_for_service =forms.ChoiceField(required=True,widget=forms.RadioSelect, choices=pay_for_CHOICES)
     from_kids_CHOICES =[('Yes, we collect information from kids under the age of 13.','Yes, we collect information from kids under the age of 13.'),(' No',' No')]
     collect_information_from_kids = forms.ChoiceField(required=True,widget=forms.RadioSelect, choices=from_kids_CHOICES)
-    is_notify_me = forms.BooleanField(required= True)
     class Meta:
         model = PolicyPost 
         fields = ['is_website',
@@ -237,7 +236,7 @@ class TermsForm(forms.ModelForm):
     buy_goods = forms.ChoiceField(required=True,widget=forms.RadioSelect, choices=buy_goods_CHOICES)
     exclusive_CHOICES = [('Yes, our content (logo and trademarks) is our exclusive property','Yes, our content (logo and trademarks) is our exclusive property'),(' No',' No')]
     exclusive = forms.ChoiceField(required=True,widget=forms.RadioSelect, choices=exclusive_CHOICES)
-    is_notify_me = forms.BooleanField(required= True)
+
     class Meta:
         model = TermPost 
         fields = ['is_website',

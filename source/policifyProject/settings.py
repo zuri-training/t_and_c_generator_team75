@@ -86,35 +86,35 @@ WSGI_APPLICATION = 'policifyProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE':'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dv_4',
-        'USER': 'postgres', 
-        'PASSWORD': 'nothingmore',
-        'HOST': '127.0.0.1', 
-        'PORT': '5432',
-        #  'ENGINE': 'django.db.backends.sqlite3',
-        #  'NAME': BASE_DIR / 'db.sqlite3',
-        
-        #comment my own when you want to start
-
-    }
-}
-
-#Remote database
 # DATABASES = {
 #     'default': {
 #         'ENGINE':'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'de7sk7uo3u5bou',
-#         'USER': 'xdaxtwlpctkjvs', 
-#         'PASSWORD': 'd4f3096617169b76cdbff7c8212707fee207cf6969f1e1516fee647bf2a7ef4c',
-#         'HOST': 'ec2-52-207-15-147.compute-1.amazonaws.com', 
+#         'NAME': 'dv_4',
+#         'USER': 'postgres', 
+#         'PASSWORD': 'nothingmore',
+#         'HOST': '127.0.0.1', 
 #         'PORT': '5432',
-       
+#         #  'ENGINE': 'django.db.backends.sqlite3',
+#         #  'NAME': BASE_DIR / 'db.sqlite3',
+        
+#         #comment my own when you want to start
 
 #     }
 # }
+
+# Remote database
+DATABASES = {
+    'default': {
+        'ENGINE':'django.db.backends.postgresql_psycopg2',
+        'NAME': 'de7sk7uo3u5bou',
+        'USER': 'xdaxtwlpctkjvs', 
+        'PASSWORD': 'd4f3096617169b76cdbff7c8212707fee207cf6969f1e1516fee647bf2a7ef4c',
+        'HOST': 'ec2-52-207-15-147.compute-1.amazonaws.com', 
+        'PORT': '5432',
+       
+
+    }
+}
 
 
 
