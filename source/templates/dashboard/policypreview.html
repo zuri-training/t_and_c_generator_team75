@@ -15,18 +15,12 @@
 </div>
 <div id ="header2">
     <a href="/pdf/1/{{posts.id}}"> <img src="{% static 'images/policypreview/download.svg' %}" alt=""></a>
-<<<<<<< HEAD
-    <a href = "#" class= "share"> <img src="{% static 'images/policypreview/share.svg' %}" alt="">
-    <a href = "#" class="copy-btn1"> <img src="{% static 'images/policypreview/copy.svg' %}" alt="">
-    <a href = "#" class="embed"> <img src="{% static 'images/policypreview/embed.svg' %}" alt="">
-    <a class ="export" href = "/word-post/1/{{posts.id}}"> <img src="{% static 'images/policypreview/export.svg' %}" alt="">
-    </a>
-=======
+
     <a href = "#" class= "share"> <img src="{% static 'images/policypreview/share.svg' %}" alt=""></a>
     <a href = "#" class="copy-btn1"> <img src="{% static 'images/policypreview/copy.svg' %}" alt=""></a>
     <a href = "#" class="embed"> <img src="{% static 'images/policypreview/embed.svg' %}" alt=""></a>
     <a class="export" href = "/word-post/1/{{posts.id}}"> <img src="{% static 'images/policypreview/export.svg' %}" alt=""></a>
->>>>>>> a881eae4698911e32992f1ae8192a1bc579f665c
+
 </div>
 <div class="functions">
     <div class="inputs">
@@ -35,21 +29,21 @@
         
     </div>
     <div class="these">
-<<<<<<< HEAD
-        <div class="textarea-main">
+
+        {% comment %} <div class="textarea-main">
             <h3>Embed Privacy Policy in your page</h3>
             <textarea class ="textarea2" value=""></textarea>
             <button class="copy-btn2">Copy code</button>
             <p class="close-pop">Close</p>
-        </div>
-=======
+        </div> {% endcomment %}
+
     <div class="textarea-main">
         <h3>Embed Privacy Policy in your page</h3>
         <textarea class ="textarea2" value=""></textarea>
         <button class="copy-btn2">Copy code</button>
         <!--<p class="close-pop">Close</p>-->
     </div>
->>>>>>> a881eae4698911e32992f1ae8192a1bc579f665c
+
 
     <div class="socials">
   
@@ -61,16 +55,16 @@
 
         </div>
     </div>
-    <div class="export-as">
+    {% comment %} <div class="export-as">
         <div class="formats">
             <div>PDF Document (.pdf)</div>
             <div>Ms Word Document (.docx)</div>
         </div>
-    </div>
+    </div> {% endcomment %}
     <div class="export-as">
         <img  class="exit" src="{% static 'images/policypreview/back.svg' %}"/>
         <div class="formats">
-            
+            <a href="/text-post/1/{{posts.id}}">TXT Document (.txt)</a>
             <a href="/pdf/1/{{posts.id}}">PDF Document (.pdf)</a>
             <a href="/word-post/1/{{posts.id}}">Ms Word Document (.docx)</a>
         </div>
