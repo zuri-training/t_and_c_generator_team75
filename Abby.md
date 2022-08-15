@@ -10,7 +10,7 @@ I created the directory structure and created static files and templates and als
 
 * Co-presented during our first presentation
 
-* Wrote the code for Team 75 landing page, feedback page and authenticated user dashboard using html css and   javascript. I also created views, urls and  linked them to the project.  
+* Wrote the code for Team 75 landing page, feedback page and authenticated user dashboard using html css and  every javascript line of code. I also created views, urls and  linked them to the project.  
 
 ## custom user model issue 
 https://github.com/zuri-training/t_and_c_generator_team75/issues/51
