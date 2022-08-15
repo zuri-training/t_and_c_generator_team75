@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default='django-insecure-y5nd&=v=yo(r55um!99ps^i+06(8189j4j5=o6%mor0zje7)^d')
+SECRET_KEY = config('SECRET_KEY')#, default='django-insecure-y5nd&=v=yo(r55um!99ps^i+06(8189j4j5=o6%mor0zje7)^d')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-     "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
     
     #local apps
@@ -48,6 +47,7 @@ INSTALLED_APPS = [
     
     #3rd party
     'django_extensions',
+    'whitenoise.runserver_nostatic'
 ]
 
 MIDDLEWARE = [
@@ -150,7 +150,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
@@ -168,7 +168,11 @@ LOGOUT_REDIRECT_URL = "/home"
 
 #SMTP Configuration
 
-EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
-EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = '*********'
+EMAIL_HOST_PASSWORD = '*********'
 
-DEBUG = False
+DEBUG = True

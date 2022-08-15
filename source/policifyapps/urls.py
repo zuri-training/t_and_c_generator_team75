@@ -3,7 +3,7 @@ from .views import HomePageView, FeedbackPageView, DashboardPageView
 from django.contrib.auth import views
 from .views import sign_up , create_policiy_post , create_terms_post , all_post , preview_post , edit_post ,GeneratePdf ,doc_view , policies,delete_post,text_view
 
-from .views import HomePageView, FeedbackPageView, DashboardPageView, PrivacyDashboardPageView, TermsDashboardPageView, PolicyPreviewPageView, ProductPageView, ContactPageView, TermsPreviewPageView, PPPreviewPageView, TCPreviewPageView
+from .views import HomePageView, FeedbackPageView, DashboardPageView, PrivacyDashboardPageView, TermsDashboardPageView, PolicyPreviewPageView, ProductPageView, ContactPageView, TermsPreviewPageView, PPPreviewPageView, TCPreviewPageView, AboutPageView
 
 urlpatterns = [
     path("", HomePageView.as_view(), name="home"),
@@ -18,7 +18,7 @@ urlpatterns = [
     path("termspreview/", TermsPreviewPageView.as_view(), name="policypreview"),
     path("tcpreview/", TCPreviewPageView.as_view(), name="tcpreview"),
     path("pppreview/", PPPreviewPageView.as_view(), name="pppreview"),
-    
+    path("about/", AboutPageView.as_view(), name="about"),
     path("privacypolicydashboard/", create_policiy_post, name="privacypolicydashboard"),
     path("termsdashboard/", create_terms_post, name="termsdashboard"),
     path('sign-up',sign_up,name='sign_up'),
