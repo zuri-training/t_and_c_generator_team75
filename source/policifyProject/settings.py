@@ -14,7 +14,7 @@ import django_heroku
 from email.policy import default
 from decouple import config
 from pathlib import Path
-
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -113,7 +113,8 @@ DATABASES = {
 
     }
 }
-
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -156,6 +157,9 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 django_heroku.settings(locals())
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+url = '/media/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
@@ -175,4 +179,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = '*********'
 EMAIL_HOST_PASSWORD = '*********'
 
-DEBUG = True
+DEBUG = False
