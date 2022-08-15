@@ -9,10 +9,11 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
+import os
+import django_heroku
 from email.policy import default
 from decouple import config
 from pathlib import Path
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -85,21 +86,34 @@ WSGI_APPLICATION = 'policifyProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE':'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'dv_4',
+#         'USER': 'postgres', 
+#         'PASSWORD': 'nothingmore',
+#         'HOST': '127.0.0.1', 
+#         'PORT': '5432',
+#         #  'ENGINE': 'django.db.backends.sqlite3',
+#         #  'NAME': BASE_DIR / 'db.sqlite3',
+        
+#         #comment my own when you want to start
+
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dv_4',
-        'USER': 'postgres', 
-        'PASSWORD': 'nothingmore',
-        'HOST': '127.0.0.1', 
+        'NAME': 'de7sk7uo3u5bou',
+        'USER': 'xdaxtwlpctkjvs', 
+        'PASSWORD': 'd4f3096617169b76cdbff7c8212707fee207cf6969f1e1516fee647bf2a7ef4c',
+        'HOST': 'ec2-52-207-15-147.compute-1.amazonaws.com', 
         'PORT': '5432',
-        #  'ENGINE': 'django.db.backends.sqlite3',
-        #  'NAME': BASE_DIR / 'db.sqlite3',
-        
-        #comment my own when you want to start
+       
 
     }
 }
+
 
 
 # Password validation
@@ -139,7 +153,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
