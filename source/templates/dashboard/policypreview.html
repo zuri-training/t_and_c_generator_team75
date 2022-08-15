@@ -15,11 +15,10 @@
 </div>
 <div id ="header2">
     <a href="/pdf/1/{{posts.id}}"> <img src="{% static 'images/policypreview/download.svg' %}" alt=""></a>
-    <a href = "#" class= "share"> <img src="{% static 'images/policypreview/share.svg' %}" alt="">
-    <a href = "#" class="copy-btn1"> <img src="{% static 'images/policypreview/copy.svg' %}" alt="">
-    <a href = "#" class="embed"> <img src="{% static 'images/policypreview/embed.svg' %}" alt="">
-    <a href = "/word-post/1/{{posts.id}}"> <img src="{% static 'images/policypreview/export.svg' %}" alt="">
-    </a>
+    <a href = "#" class= "share"> <img src="{% static 'images/policypreview/share.svg' %}" alt=""></a>
+    <a href = "#" class="copy-btn1"> <img src="{% static 'images/policypreview/copy.svg' %}" alt=""></a>
+    <a href = "#" class="embed"> <img src="{% static 'images/policypreview/embed.svg' %}" alt=""></a>
+    <a class="export" href = "/word-post/1/{{posts.id}}"> <img src="{% static 'images/policypreview/export.svg' %}" alt=""></a>
 </div>
 <div class="functions">
     <div class="inputs">
@@ -32,7 +31,7 @@
         <h3>Embed Privacy Policy in your page</h3>
         <textarea class ="textarea2" value=""></textarea>
         <button class="copy-btn2">Copy code</button>
-        <p class="close-pop">Close</p>
+        <!--<p class="close-pop">Close</p>-->
     </div>
 
     <div class="socials">
@@ -44,6 +43,14 @@
     
 
   </div>
+    </div>
+    <div class="export-as">
+        <img  class="exit" src="{% static 'images/policypreview/back.svg' %}"/>
+        <div class="formats">
+            
+            <a href="/pdf/1/{{posts.id}}">PDF Document (.pdf)</a>
+            <a href="/word-post/1/{{posts.id}}">Ms Word Document (.docx)</a>
+        </div>
     </div>
 </div>
 
@@ -310,7 +317,9 @@
 
     const twittershare = "https://twitter.com/intent/tweet?text="
     const twitterlink = document.querySelector(".twitter");
-    
+    const exit = document.querySelector(".exit");
+
+
     twitterlink.addEventListener("click", function(){
       twitterlink.href= twittershare + URL;
     })
@@ -321,7 +330,23 @@
     linkedinlink.addEventListener("click", function(){
       linkedinlink.href= linkedinshare + URL;
     })
+
+    const expo = document.querySelector(".export");
+    const exportas = document.querySelector(".export-as");
+
+    expo.addEventListener("click", function(e){
+        e.preventDefault();
+        exportas.style.display = "block";
+    });
     
+
+    exit.addEventListener("click", function(){
+    exportas.style.display = "none";
+
+
+    
+    });
+
 
 
 </script>

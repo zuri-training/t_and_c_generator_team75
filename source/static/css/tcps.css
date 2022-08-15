@@ -213,3 +213,53 @@ h1, h2 {
   }
 }
 
+/**** popup***/
+body {
+  font-family: "Inter", sans-serif;
+}
+.popup-container {
+  padding: 0 2em;
+  background-color: #ffffff;
+}
+.cancel-image {
+  text-align: right;
+  margin-bottom: 4vh;
+}
+.header {
+  font-weight: 900;
+  color: #251b2c;
+  margin-top: 1.5rem;
+}
+.sub-head {
+  color: #251b2c;
+}
+
+.popup-container p {
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.popup-container {
+  position: absolute;
+  top: 70px;
+  display: none;
+  animation: fade .7s;
+}
+
+.eks-btn {
+  width: 30px;
+  float: right;
+  margin-right: 10px;
+  padding-bottom: 150px;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.popup-container {
+  text-align: left;
+}

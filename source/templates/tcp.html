@@ -72,5 +72,71 @@
       </div>
     <!--</div>
     <!-- Second section starts here -->
+
+    <div class="popup-background">
+      <div class="popup-container">
+        <div class="cancel-image">
+          <img src="./images/close-circle.png" alt="" />
+        </div>
+        <div class="custom-writeup">
+          <img class="eks-btn" src="{% static 'images/dashboard/eks.svg' %}"/>
+          <div class="update">
+            <p class="update-text">Last Updated on …………………</p>
+          </div>
+          <div class="consent">
+            <p class="header">Introduction</p>
+            <p class="sub-head">
+              These terms govern your use of our site. Please read these terms in full
+before you use this website. If you do not accept these terms of use,
+please do not use this website. Your continued use of this site confirms
+your acceptance of these terms. Please note separate advertising terms
+and conditions are available upon request.            </p>
+          </div>
+          <div class="consent">
+            <p class="header">(1) Intellectual Property Rights</p>
+            <p class="sub-head">
+              Unless otherwise stated, we or our licensors own the intellectual property
+rights in the website and material on the website. Subject to the licence
+below, all our intellectual property rights are reserved
+            </p>
+          </div>
+          <div class="consent">
+            <p class="header">(2) Site Up Time</p>
+            <p class ="sub-head">All reasonable measures are taken by us to ensure that this website is
+              operational all day, every day. However, occasionally technical issues may
+              result in some downtime and accordingly we will not be liable if this
+              website is unavailable at any time.</p>
+              <p class="sub-head">Where possible we always try to give advance warning of maintenance
+                issues that may result in website down time but we shall not be obliged to
+                provide such notice.</p>
+          </div>
+          <div class="consent">
+            <p class="header">(3) License To Use Website</p>
+            <p class ="sub-head">You may view, download for caching purposes only, and print pages from
+              the website, provided that:</p>
+            <p class="sub-head">a) You must not republish material from this website (including
+              republication on another website), or reproduce or store material
+              from this website in any public or private electronic retrieval system</p>
+          </div>
+          
+        </div>
+      </div>
+
+      <script>
+        const preview = document.querySelector("#pre");
+        const eks = document.querySelector(".eks-btn");
+        const popup = document.querySelector(".popup-container");
+    
+        preview.addEventListener("click", function(e){
+            event.preventDefault();
+          popup.style.display ="block";
+        });
+    
+        eks.addEventListener("click", function(){
+          popup.style.display ="none";
+        });
+    
+      </script>
+  
   </main>
     {% endblock content %}

@@ -106,7 +106,7 @@ label {
    
 }
 .type label {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .type input {
@@ -216,9 +216,9 @@ input[type="checkbox"]:checked{
   }
   
   .step-head{
-    color: purple;
-    border-bottom: 3px solid purple;
-    width: 220px;
+    color: #A535F1;
+    border-bottom: 3px solid #A535F1;
+    width: 230px;
     padding-bottom: 5px;
       display: block;
   }
