@@ -103,7 +103,7 @@
         {%endif%}
         <div class="user-info">
             <div class="closed">
-                <p><img src="{% static 'images/dashboard/account.svg' %}" alt="account"></p>
+                {% comment %} <p><img src="{% static 'images/dashboard/account.svg' %}" alt="account"></p> {% endcomment %}
                 <div class="user-account"></div>
                 <a style="color: black" href="{% url 'logout' %}"><img src="{% static 'images/dashboard/logout.svg' %}" alt="logout"></a>
             </div>
