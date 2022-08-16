@@ -27,3 +27,6 @@ https://github.com/zuri-training/t_and_c_generator_team75/issues/48
 
 ## Privacy Policy dashboard page issue
 https://github.com/zuri-training/t_and_c_generator_team75/issues/117
+
+## Terms and conditions dashboard page issue
+https://github.com/zuri-training/t_and_c_generator_team75/issues/119
