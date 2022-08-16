@@ -98,7 +98,7 @@ Policify aims at reducing the hassles of individuals and Companies of  having to
 * run python manage.py runserver
 * if having issue linking static files, then set DEBUG in settings.py in policifyProject to False then run python manage.py runserver --insecure or switch the DEBUG = False  to True and run python manage.py runserver
 
-## Details on deployment orunning on local machine
+## Details on deployment orunning on Hosted machine
 
 * Git clone
 * create a virtual env
