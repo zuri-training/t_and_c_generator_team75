@@ -113,7 +113,7 @@ class PoliciesForm(forms.ModelForm):
          'type':"checkbox", 'name':"user-contact" ,'value':"postmail", 'class':"input-checkbox"
         })
         self.fields['is_i_agree'].widget.attrs.update({
-         'type':"checkbox", 'name':"terminfo", 'value':"agree", 'class':"input-checkbox"
+         'type':"checkbox", 'name':"terminfo", 'value':"agree", 'class':"input-checkbox" , 'required':''
         })
         self.fields['is_notify_me'].widget.attrs.update({
          'type':"checkbox", 'name':"terminfo", 'value':"notify" ,'class':"input-checkbox"
@@ -216,7 +216,7 @@ class TermsForm(forms.ModelForm):
          'type':"checkbox", 'name':"user-contact" ,'value':"postmail", 'class':"input-checkbox"
         })
         self.fields['is_i_agree'].widget.attrs.update({
-         'type':"checkbox", 'name':"terminfo", 'value':"agree", 'class':"input-checkbox"
+         'type':"checkbox", 'name':"terminfo", 'value':"agree", 'class':"input-checkbox" , 'required':''
         })
         self.fields['is_notify_me'].widget.attrs.update({
          'type':"checkbox", 'name':"terminfo", 'value':"notify" ,'class':"input-checkbox"
@@ -236,6 +236,7 @@ class TermsForm(forms.ModelForm):
     buy_goods = forms.ChoiceField(required=True,widget=forms.RadioSelect, choices=buy_goods_CHOICES)
     exclusive_CHOICES = [('Yes, our content (logo and trademarks) is our exclusive property','Yes, our content (logo and trademarks) is our exclusive property'),(' No',' No')]
     exclusive = forms.ChoiceField(required=True,widget=forms.RadioSelect, choices=exclusive_CHOICES)
+
     class Meta:
         model = TermPost 
         fields = ['is_website',
