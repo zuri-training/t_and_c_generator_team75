@@ -629,23 +629,23 @@ nav {
   flex-direction: column;
   
 }
-
+.transparent{
+  background-color: red;
+  border-radius: 10px;
+}
 .close-crud {
   align-items: center;
 }
 .crud-popup {
   
-  height: 120px;
-    width: 100px;
-    background-color: #f9f9f9;
-    text-align: center;
-    display: flex;
-    border: 1.3px solid #c9c6c6;
-    padding: 0px;
-    padding-top: 0px;
-    border-radius: 10px;
+  height: 140px;
+  width: 100px;
+  background-color: #f9f9f9;
+  text-align: center;
+  display:flex;
+  border: 1.3px solid #c9c6c6;
 }
-tr:hover {background-color: #A535F1;;}
+
 
 .closing {
   margin-top: 1rem;
@@ -655,8 +655,6 @@ tr:hover {background-color: #A535F1;;}
 .crud {
   display: flex;
   width: 100%;
-  overflow-x:auto;
-  flex-direction: column;
 }
 .kebab {
   cursor: pointer;

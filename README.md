@@ -84,7 +84,7 @@ Policify aims at reducing the hassles of individuals and Companies of  having to
 * __Database__<br/>
       Postgres sql
 
-## Details on deployment
+## Details on deployment orunning on local machine
 
 * Git clone
 * create a virtual env
@@ -94,6 +94,20 @@ Policify aims at reducing the hassles of individuals and Companies of  having to
 * cd into the source folder 
 * run python manage.py makemigrations
 * run Python manage.py migrate
+* run python manage.py collectstatic
+* run python manage.py runserver
+* if having issue linking static files, then set DEBUG in settings.py in policifyProject to False then run python manage.py runserver --insecure or switch the DEBUG = False  to True and run python manage.py runserver
+
+## Details on deployment orunning on Hosted machine
+
+* Git clone
+* create a virtual env
+* Install all dependencies in requirements.txt
+* Make a Postgresql databaseon heroku and connect it to the app by filling the database options in settings.py
+* if you don't want to create a database. You can connect to the postgress database hosted already, provided its still online
+* cd into the source folder 
+* run python manage.py makemigrations to migrate to the database
+* run Python manage.py migrate to host the data
 * run python manage.py collectstatic
 * run python manage.py runserver
 * if having issue linking static files, then set DEBUG in settings.py in policifyProject to False then run python manage.py runserver --insecure or switch the DEBUG = False  to True and run python manage.py runserver

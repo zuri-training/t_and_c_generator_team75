@@ -22,14 +22,16 @@
     <header>
         
         <div id ="header">
-            <img src="{% static 'images/headerlogo.svg' %}" alt="headerlogo">
+            <a href="{%url 'home' %}">
+            <img src="{% static 'images/headerlogo.svg' %}" alt="headerlogo" style = "width: 138px;height: 38px;">
+            </a>
             <div class="desktop-navbar">
                 <nav style="font-weight: 600;" class="desktop-navigation">
                     <a href="{% url 'product' %}" class ="nav-item product-dropdown">Products</a>
                     
                     <a href="{% url 'feedback' %}" class ="nav-item">Feedbacks</a>
                     
-                    <a href="#faq" class ="nav-item">About Us</a>
+                    <a href="{%url 'about' %}" class ="nav-item">About Us</a>
                     <a href="{% url 'contact' %}" class ="nav-item">Contact us</a>
         
                 </nav>
@@ -54,7 +56,7 @@
          <!-- Start  Nav Bar -->
         <div class="navbar">
             <nav class="navigation">
-                <a href="#products" class ="nav-item product-dropdown">Products</a>
+                <a href="{%url 'product' %}" class ="nav-item product-dropdown">Products</a>
                
                 <a href="{% url 'feedback' %}" class ="nav-item">Feedbacks</a>
                 <a href="{% url 'about' %}" class ="nav-item">About Us</a>
@@ -94,7 +96,7 @@
             <nav class="footer-nav">
                 <div class="first">
                     <a href="{% url 'product' %}" class="product-dropdown">Products</a>
-                    <a href="#">Templates</a>
+                    {% comment %} <a href="#">Templates</a> {% endcomment %}
                     <a href="{% url 'feedback' %}">Feedbacks</a>
                     <a href="{% url 'about' %}">About Us</a>
                 </div>

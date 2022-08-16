@@ -4,13 +4,26 @@
 
 {% block content %}
     <main>
+      
       <div class="dashboard-head"><h2>Dashboard</h2></div>
       <div class= "not-generated"> <!-----when user has not generated-->
         <div class="image">
           <img class="illustration" src="{% static 'images/dashboard/illustration.svg' %}" alt="Logo">
            {% comment %} <h2>You have no generated policy</h2>  {% endcomment %}
           <p class="serif">Empower your business, create unique policies and terms of service with just a few clicks.</p>
+          {% comment %} {% for term in terms %}
+          <p>
+             1 posts <br />
+             {{user.email }} 1 <br />
+             {{term.author}} 1 <br />
+             {%if user.email == term.author.email %} <br />
+             {{user.email }} 2 <br />
+             {{term.author.email}} 2 <br />
+             {%endif%}
+          </p>
+             {%endfor%} {% endcomment %}
           <a href="#" class="policy-button">Generate policy</a>
+
           <div class="popup-container">
             <div class="policy-popup">
               <div class="gen-buttons">
@@ -19,15 +32,9 @@
               </div>
               <p class="close">Close</p>
             </div>
+          
           </div>
-          {% comment %} <P>  {% for post in posts %}
-            {{user.email }} 1
-            {{post.author}} 1
-            {%if user.email != post.author %} 
-            {{user.email }} 2
-            {{post.author}} 2
-            {%endif%}
-            {%endfor%}</p> {% endcomment %}
+         
         </div>
       </div>
 
@@ -49,8 +56,9 @@
                 </a>
               </div>
             </div>
-           
+          
             <div class="crud">
+              <h2 style="margin-left:20px">My Policies</h2>
             <table>
               <tr>
                 <th>Company name</th>
@@ -59,11 +67,11 @@
                 <th>Location</th>
                 <th>Date modified</th>
                 <th>icon</th>
-                <th><img class="kebab" src={% static 'images/dashboard/kebab.svg' %}/></th>
+                <th><img class="kebab" src="{% static 'images/dashboard/threedot.svg' %}"/></th>
               </tr>
               {% for post in posts %}
              
-              {%if user.email != post.author %} 
+              {%if user.email == post.author.email %} 
             
               <tr>
                 <td>{{post.app_name}}</td>
@@ -71,7 +79,7 @@
                 <td>{{post.companyURL}}</td>
                 <td>{{post.location}}</td>
                 <td>{{post.created_at}}</td>
-                <td>policy</td>
+                <td style='color':"#D59F00">policy</td>
                 <td><div class="crud-popup">
                  
                    
@@ -85,15 +93,16 @@
               {%endfor%}
                {% for term in terms %}
              
-               {%if user.email != term.author %} 
+               {%if user.email == term.author.email %} 
               <tr>
                 <td>{{term.app_name}}</td>
                 <td>{{term.type_form}}</td>
                 <td>{{term.companyURL}}</td>
                 <td>{{term.location}}</td>
                 <td>{{term.created_at}}</td>
-                <td>term</td>
-                <td><div class="crud-popup">
+                <td style="color: #198038;">term</td>
+                <td>
+                  <div class="crud-popup {{term.id}}">
                   
                   
                    
@@ -106,9 +115,10 @@
               {%endif%}
               {%endfor%} 
             </table>
-            
+           
            
           </div>
+          
     </main>
     <script>
         
@@ -129,28 +139,42 @@
           });
     
         /* kebab */
+         
+    // const kebab = document.querySelectorAll(".kebab");
+    //    const crud = document.querySelector(".crud");
+        {% comment %} let crudpopup = document.getElementsByClassName("kebab");
+     //   const closing = document.querySelector(".closing");
+     
 
-      {% comment %} const kebab = document.querySelectorAll(".kebab");
-        const crud = document.querySelector(".crud");
-        const crudpopup = document.querySelector(".crud-popup");
-        const closing = document.querySelector(".closing");
+       for(var i = 0; i < crudpopup.length; i++){
+        let display = document.getElementsByClassName("kebab").style.color;
+        crudpopup[i].addEventListener("mouseover",function(){
+          
+          console.log("clicked")
+          if(display === "flex")
+          {
+            this.style.color = "none"
 
-        for(let i = 0; i < kebab.length; i++) {
-          kebab[i].addEventListener("click", function() {
-            crudpopup.style.display="block";
-            
-          });
-        }
-
-        closing.addEventListener("click", function(e) {
+          }
+        
+        })
+       }
+       const kebab = document.getElementsByClassName("kebab");
+       for(var i = 0; i < kebab.length; i++){
+        kebab[i].addEventListener("mouseover",function(){
+          console.log("clicked")
+         this.classList.add("transparent")
+        })
+       } {% endcomment %}
+        {% comment %} closing.addEventListener("click", function(e) {
           
           crudpopup.style.display="none";
-        })  {% endcomment %}
-        {% comment %} const crudpopup = document.querySelector(".crud-popup");
+        })
+       let crudpopup = document.querySelector(".crud-popup");
         function showMsg()
         {
           crudpopup.style.display="block";
-        } {% endcomment %}
+        }   {% endcomment %}
 
     </script>
 

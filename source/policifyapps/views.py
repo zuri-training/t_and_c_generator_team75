@@ -113,8 +113,10 @@ def all_post(request):
         "posts":posts,
         "terms":terms,
      }
-     print(posts)
-     print(terms)
+     if posts:
+          print('sending posts')
+     if terms:
+          print( 'sending terms')
                
      return render(request,"dashboard/dashboard.html",context)
 
@@ -129,7 +131,6 @@ def preview_post(request, post_type,my_id):
     
 
 def doc_view(request,post_type,my_id):
-        print(request) 
         if post_type == 1:
             data = PolicyPost.objects.filter(id=my_id).first()
             open('templates/temp.html', "w").write(render_to_string('pdf.html', {'posts': data}))
@@ -164,7 +165,6 @@ def textify(html):
     return text_only.replace('\n ', '\n').strip()
 
 def text_view(request,post_type,my_id):
-        print(request) 
         if post_type == 1:
             data = PolicyPost.objects.filter(id=my_id).first()
             open('templates/temp.html', "w").write(render_to_string('pdf.html', {'posts': data}))
@@ -173,7 +173,6 @@ def text_view(request,post_type,my_id):
             open('templates/temp.html', "w").write(render_to_string('pdf2.html', {'posts': data}))
         html = render_to_string('temp.html')
         text = textify(html)
-        print(text)
         response = HttpResponse(
                     text,
                     content_type = 'text/plain'
@@ -205,21 +204,21 @@ def edit_post(request,post_type ,my_id):
 @login_required(login_url="/login")     
 def delete_post(request,post_type,my_id):
       if post_type == 1:
-        post = PolicyPost.objects.filter(id=my_id).first()
+        post = PolicyPost.objects.filter(id=my_id).first() 
         if post and post.author == request.user:
              post.delete()
              return redirect("/dashboard")
-      if post_type == 2:
-         post = PolicyPost.objects.filter(id=my_id).first()
+      if post_type == 2:     
+         post = TermPost.objects.filter(id=my_id).first()
          if post and post.author == request.user:
              post.delete()
              return redirect("/dashboard")
+      #return render(request, "dashboard/",{}) 
 
 #Creating a class based view
 class GeneratePdf(View):
      def get(self, request,post_type, my_id):
         if post_type == 1:
-            print(request)
             data = PolicyPost.objects.filter(id=my_id).first()
             open('templates/temp.html', "w").write(render_to_string('pdf.html', {'posts': data}))
             # Converting the HTML template into a PDF file
