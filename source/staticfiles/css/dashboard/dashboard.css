@@ -404,7 +404,7 @@ nav {
 }
 .overflow {
     overflow-x: scroll;
-    width: 800px;
+    width: 100%;
     
   }
   .circle {
@@ -442,6 +442,7 @@ nav {
     align-items: center;
     background-color: #fff;
     text-align: center;
+    justify-content: space-between;
   }
   .box h2 {
     margin-top: 1.2rem;
