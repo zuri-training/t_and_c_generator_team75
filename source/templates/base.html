@@ -65,10 +65,11 @@
             </nav>
          
             <div class="register-and-login">
-                <a class="login-link" href ="/login">Login</a>
+               
                 {% if user.is_authenticated%}
                 <a class="signup-link" href="/logout">Logout</a>
                 {%else%}
+                <a class="login-link" href ="/login">Login</a>
                 <a class="signup-link" href="/sign-up">Sign Up</a>
                 {%endif%}
             </div>
